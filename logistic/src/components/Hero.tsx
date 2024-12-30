@@ -1,28 +1,33 @@
-import React from 'react';
+import { Truck } from 'lucide-react';
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <section className="pt-24 pb-16 bg-gradient-to-br from-teal-50 to-teal-100">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Contact Us For A Seamless Inventory Transport Process
-          </h1>
-          <p className="text-lg text-gray-600 mb-8">
-            Trust in our expertise to deliver your goods safely and efficiently. With years of experience and a commitment to excellence, we're your reliable partner in logistics.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-teal-600 text-white px-8 py-3 rounded-full hover:bg-teal-700 transition-all hover:shadow-lg">
+    <div className="relative bg-teal-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          <div className="lg:w-1/2 space-y-8 animate-fade-in">
+            <h1 className="text-4xl lg:text-6xl font-bold">
+              Contact Us For A Seamless Inventory Transport Process
+            </h1>
+            <p className="text-lg text-teal-100">
+              We deliver excellence in logistics solutions with reliability and precision
+            </p>
+            <button className="bg-orange-500 hover:bg-orange-600 transition-colors px-8 py-3 rounded-full font-semibold">
               Get Started
             </button>
-            <button className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-full hover:bg-teal-50 transition-all">
-              Learn More
-            </button>
+          </div>
+          <div className="lg:w-1/2 mt-12 lg:mt-0">
+            <div className="relative animate-float">
+              <Truck size={48} className="text-orange-500 absolute -top-6 -left-6" />
+              <img
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Logistics Hero"
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
-
-export default Hero;

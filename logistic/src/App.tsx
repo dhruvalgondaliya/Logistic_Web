@@ -1,41 +1,29 @@
-import React from 'react';
-import { 
-  Truck, Shield, Plane, Warehouse, 
-  ArrowRight, ArrowLeft,
-  Star, Search, ChevronRight
-} from 'lucide-react';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import Hero from './components/Hero';
+import Business from './components/Business/Business';
+import About from './components/About/About';
 import Features from './components/Features';
-import MainSection from './components/MainSection';
 import Services from './components/Services';
-import CaseStudies from './components/CaseStudies';
-import Reviews from './components/Reviews';
-import Process from './components/Process';
-import CallToAction from './components/CallToAction';
-import FAQ from './components/FAQ';
-import Blog from './components/Blog';
-import Footer from './components/Footer';
+import Testimonials from './components/Testimonials/Testimonials';
+import CaseStudies from './components/CaseStudies/CaseStudies';
+import ContactForm from './components/ContactForm';
+import Footer from './components/Footer/Footer';
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Header />
       <main>
         <Hero />
+        <Business />
+        <About />
         <Features />
-        <MainSection />
         <Services />
+        <Testimonials />
         <CaseStudies />
-        <Reviews />
-        <Process />
-        <CallToAction />
-        <FAQ />
-        <Blog />
+        <ContactForm />
       </main>
       <Footer />
     </div>
   );
 }
-
-export default App;
