@@ -6,7 +6,6 @@ import Features from './components/Features';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials/Testimonials';
 import CaseStudies from './components/CaseStudies/CaseStudies';
-import ContactForm from './components/ContactForm';
 import Footer from './components/Footer/Footer';
 
 export default function App() {
@@ -21,7 +20,6 @@ export default function App() {
         <Services />
         <Testimonials />
         <CaseStudies />
-        <ContactForm />
       </main>
       <Footer />
     </div>
