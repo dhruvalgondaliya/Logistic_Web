@@ -1,8 +1,11 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Package, Truck } from 'lucide-react';
 import AboutFeature from './AboutFeature';
 import AboutStats from './AboutStats';
+
+import h5_8 from "../../image/h5-8.jpg";
+import h5_9 from "../../image/h5-9.png";
+import h1_6 from "../../image/h1-6.webp"
 
 export default function AboutSection() {
   return (
@@ -47,16 +50,14 @@ export default function AboutSection() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+           
             className="relative"
           >
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="relative">
                   <img
-                    src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    src={h5_8}
                     alt="Air Transport"
                     className="rounded-2xl"
                   />
@@ -66,14 +67,13 @@ export default function AboutSection() {
                   </div>
                 </div>
                 <img
-                  src="https://images.unsplash.com/photo-1577494998872-b93a5a0c4428?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Container Transport"
+                  src={h5_9}
                   className="rounded-2xl"
                 />
               </div>
               <div className="mt-8">
                 <img
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  src={h1_6}
                   alt="Team"
                   className="rounded-2xl h-full object-cover"
                 />

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react"; 
+import { ArrowRight } from "lucide-react";
 
 export default function LoraicTransportation() {
   return (
@@ -12,6 +12,7 @@ export default function LoraicTransportation() {
         }}
       ></div>
 
+      {/* Content Container */}
 
       {/* Background Decorative Circles */}
       <div className="absolute right-0 bottom-0 w-64 h-64 transform translate-x-1/2 translate-y-1/2 animate-pulse">
@@ -31,7 +32,7 @@ export default function LoraicTransportation() {
             className="relative"
           >
             <img
-              src="https://images.unsplash.com/photo-1577514726675-cc821df98d22?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+              src="./src/image/h2-12.webp"
               alt="Cargo Ship"
               className="rounded-2xl shadow-2xl"
             />
@@ -50,8 +51,32 @@ export default function LoraicTransportation() {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <span className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
-              Loraic Transportation Inc
+            <span className="relative inline-flex items-center group ">
+              {/* Upper Left Circle */}
+              <span
+                className="absolute top-3 left-0 bg-white w-3 h-3 rounded-full"
+                style={{
+                  animation: "wave 1.5s infinite ease-in-out",
+                  boxShadow: "0 0 10px rgba(20, 184, 166, 0.5)" // Teal shadow matching gradient
+                }}
+              ></span>
+
+              {/* Text */}
+              <span
+                className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 group-hover:text-left group-hover:pl-10"
+                style={{ textAlign: "center" }} 
+              >
+                Loraic Transportation Inc
+              </span>
+
+              {/* Upper Right Circle */}
+              <span
+                className="absolute top-3 right-0 bg-white w-3 h-3 rounded-full"
+                style={{
+                  animation: "wave 1.5s infinite ease-in-out",
+                  boxShadow: "0 0 10px rgba(255, 165, 0, 0.5)" // Orange shadow matching gradient
+                }}
+              ></span>
             </span>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-teal-900 leading-tight">

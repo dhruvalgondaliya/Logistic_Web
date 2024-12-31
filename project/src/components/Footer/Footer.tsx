@@ -1,4 +1,3 @@
-import React from 'react';
 import FooterNewsletter from './FooterNewsletter';
 import FooterLinks from './FooterLinks';
 import FooterContact from './FooterContact';

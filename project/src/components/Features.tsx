@@ -1,4 +1,3 @@
-import React from 'react';
 import { Clock, Shield, Globe, Truck } from 'lucide-react';
 
 const features = [
