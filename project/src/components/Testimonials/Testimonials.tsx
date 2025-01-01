@@ -1,9 +1,32 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import {  AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import TransportMode from './TransportMode';
 import TestimonialCard from './TestimonialCard';
-import { transportModes, testimonials } from './constants';
+
+const transportModes = [
+  {
+    image: "./src/image/h6-12.webp",
+    alt: "Road Transport"
+  }
+];
+
+const testimonials = [
+  {
+    quote: "I saved over 50% using LogiTrans over my previous provider. The customer support staff was very helpful. I will definitely be using LogiTrans for all my future shipments. Thank you!!!",
+    author: "Rachel Ballinger",
+    position: "CEO, Bizzbreak Inc.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+  },
+  {
+    quote: "Outstanding service and reliability. LogiTrans has transformed our supply chain efficiency.",
+    author: "Michael Chen",
+    position: "Operations Director, Global Tech",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+  }
+];
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,16 +40,14 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-24 bg-teal-900 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:20px_20px]" />
-      </div>
-
+    <section
+      className="py-24 relative overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: "url('./src/image/bg-h6.jpg')" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Transport Modes Grid */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {transportModes.map((mode, index) => (
               <TransportMode key={index} {...mode} />
             ))}

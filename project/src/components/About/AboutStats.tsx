@@ -36,13 +36,11 @@ export default function AboutStats() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: index * 0.2 }}
-          className="flex flex-col "
-        >
+          className="flex flex-col">
           <div className="text-4xl font-bold text-teal-900 mb-2">
             <Counter endValue={stat.value} />
             <span className="ms-2">{stat.label}</span>
           </div>
-          
           <div className="text-gray-600">{stat.suffix}</div>
         </motion.div>
       ))}

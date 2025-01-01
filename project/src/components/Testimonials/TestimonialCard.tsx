@@ -37,7 +37,7 @@ export default function TestimonialCard({ quote, author, position, rating, image
           />
         ))}
       </div>
-      <div className="absolute -right-4 top-4 text-orange-400 text-6xl font-serif">"</div>
+      <div className="absolute right-4 top-4 text-orange-400 text-6xl font-serif">"</div>
     </motion.div>
   );
 }

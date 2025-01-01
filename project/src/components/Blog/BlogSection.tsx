@@ -1,4 +1,3 @@
-import React from 'react';
 import BlogCard from './BlogCard';
 import { blogPosts } from './constants';
 

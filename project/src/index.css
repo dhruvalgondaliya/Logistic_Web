@@ -59,3 +59,39 @@
   animation: rotate-infinity 7s linear infinite;
 }
 
+/* footer section animation key */
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-wave {
+  animation: wave 2s infinite ease-in-out;
+}
+
+@keyframes ring {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.phone-ring {
+  animation: ring 1s infinite;
+}
+
