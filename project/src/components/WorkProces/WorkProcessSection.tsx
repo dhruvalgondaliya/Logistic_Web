@@ -47,10 +47,10 @@ export default function WorkProcessSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+          <span className="inline-block bg-orange-400 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
             OUR WORK PROCESS
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-teal-900 mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 pt-2 sm:text-4xl">
             We always follow the best
             <br />
             ways of logistics

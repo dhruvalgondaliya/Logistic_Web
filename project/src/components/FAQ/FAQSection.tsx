@@ -1,54 +1,46 @@
-import { motion } from 'framer-motion';
-import FAQAccordion from './FAQAccordion';
+import { motion } from "framer-motion";
+import FAQAccordion from "./FAQAccordion";
+import h13Image from "../../image/h13.webp";
 
 export default function FAQSection() {
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute right-0 top-0 w-1/3 h-full">
-          <div className="w-full h-full " />
-        </div>
-        <div className="absolute left-0 bottom-0">
-          <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-            <path
-              d="M0 200L200 0M20 200L200 20M40 200L200 40"
-              stroke="#FF6B2C"
-              strokeWidth="0.5"
-              strokeOpacity="0.2"
-            />
-          </svg>
-        </div>
-      </div>
+    <section
+      className="relative w-full py-24 overflow-hidden flex items-center justify-center"
+      style={{
+        backgroundImage: `url(${h13Image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black bg-opacity-30"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
+      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 flex justify-center items-center min-h-screen">
+        <div className="grid lg:grid-cols-2 items-start max-w-6xl w-full">
+          {/* Text Section */}
+          <motion.div>
             <span className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
               FREQUENTLY ASKED QUESTIONS
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-teal-900 mb-6">
-              Do you have<br />
-              any question?<br />
-              Find answer here
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center lg:text-left">
+              Do you have
+              <br />
+              any questions?
+              <br />
+              Find answers here
             </h2>
-            <p className="text-gray-600 text-lg mb-8">
-              Some frequently asked questions about<br />
+            <p className="text-gray-200 text-lg mb-8 text-center lg:text-left">
+              Some frequently asked questions about
+              <br />
               Loraic's cargo services
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          {/* FAQ Accordion */}
+          <div className="mt-8 lg:mt-0">
             <FAQAccordion />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
