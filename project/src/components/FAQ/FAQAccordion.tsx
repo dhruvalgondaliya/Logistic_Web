@@ -19,7 +19,9 @@ function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps) {
           isOpen ? "bg-orange-500 text-white" : "bg-white text-teal-900"
         }`}
       >
-        <span className="text-lg font-semibold text-left overflow-clip ">{question}</span>
+        <span className="text-lg font-semibold text-left overflow-clip ">
+          {question}
+        </span>
         <motion.div
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.2 }}
@@ -56,31 +58,45 @@ export default function FAQAccordion() {
 
   const faqs = [
     {
-      question: "What is the LBS weight cost of goods transportation?",
+      question: "What is 3PL?",
       answer:
-        "The LBS weight cost varies depending on distance, weight, and shipping method. Contact us for a detailed quote based on your specific requirements."
+        "3PL stands for Third-Party Logistics. It refers to outsourcing logistics and supply chain management activities to a specialized third-party provider. These services can include warehousing, transportation, order fulfillment, inventory management, and more."
     },
     {
-      question: "How much time it takes for LTL Freight transport?",
+      question: "Why should I consider using a 3PL service?",
       answer:
-        "LTL freight transport typically takes 2-5 business days depending on the distance and route. We provide real-time tracking for all shipments."
+        "There are several reasons to consider using a 3PL service. It allows you to focus on your core business activities while leaving logistics operations to experts. It can save you time, reduce costs, provide access to advanced technologies and infrastructure, and improve overall efficiency and customer satisfaction."
     },
     {
-      question: "What are the pick up points of logistics?",
+      question: "How do I choose the right 3PL provider for my business?",
       answer:
-        "We have multiple pickup points across major cities. You can schedule a pickup from your location or drop off at our nearest facility."
+        "When choosing a 3PL provider, consider factors such as their experience and expertise in your industry, their range of services, their technology capabilities, their geographic reach, their reputation, and their ability to scale and adapt to your business needs. It's important to evaluate their track record, customer reviews, and ask for references."
     },
     {
-      question: "What is the cost of goods transportation?",
+      question:
+        "Can a 3PL provider integrate with my existing systems and platforms",
       answer:
-        "Transportation costs are calculated based on weight, distance, and service level. Contact our team for a customized quote."
+        "Yes, a reputable 3PL provider should have the ability to integrate with your existing systems and platforms. They should be able to connect with your order management system, inventory management system, and other relevant software to facilitate seamless data exchange and improve operational efficiency."
+    },
+
+    {
+      question:
+        "How will a 3PL provider handle my inventory and order fulfillment",
+      answer:
+        "A 3PL provider will handle the warehousing, inventory management, and order fulfillment processes for your business. They will receive, store, and manage your inventory in their warehouses. When an order is placed, they will pick, pack, and ship the products to the end customer on your behalf. They will also handle any necessary returns and manage inventory levels."
+    },
+    {
+      question:
+        "How do 3PL providers ensure the security and safety of my inventory",
+      answer:
+        "Reputable 3PL providers have strict security measures in place to protect your inventory. This can include secure warehouse facilities, surveillance systems, access controls, and inventory tracking technologies. They also implement quality control measures to ensure the accuracy and integrity of your inventory throughout the fulfillment process."
     }
   ];
 
   return (
     <div className="space-y-4 w-11/12 mx-auto">
       {faqs.map((faq, index) => (
-        <div key={index} className="w-full r">
+        <div key={index} className="w-full ">
           <FAQItem
             question={faq.question}
             answer={faq.answer}

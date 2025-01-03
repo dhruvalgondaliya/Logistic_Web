@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion';
-import { Package, Truck } from 'lucide-react';
-import AboutFeature from './AboutFeature';
-import AboutStats from './AboutStats';
+import { motion } from "framer-motion";
+import { Package, Truck } from "lucide-react";
+import AboutFeature from "./AboutFeature";
+import AboutStats from "./AboutStats";
 
 import h5_8 from "../../image/h5-8.jpg";
 import h5_9 from "../../image/h5-9.png";
-import h1_6 from "../../image/h1-6.webp"
+import h1_6 from "../../image/h1-6.webp";
 
 export default function AboutSection() {
   return (
@@ -20,11 +20,12 @@ export default function AboutSection() {
             <span className="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
               ABOUT LORAIC
             </span>
-            
-            <h2 className="text-4xl font-bold text-teal-900 mb-8">
-              Loraic Transportation<br />
-              Introducing The most Modern<br />
-              way of Transportation
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-teal-900 mb-8 ps-3">
+              Loraic Transportation
+              <br />
+              Introducing The most <br />
+              Modern way of Transportation
             </h2>
 
             <div className="space-y-8 mb-12">
@@ -39,37 +40,29 @@ export default function AboutSection() {
                 description="Get Full-Service From Truckload Section"
               />
             </div>
-
-            <p className="text-gray-600 mb-12">
-              Loraic Air freight service deliver the knowledge & opportunity to optimize every mile 
-              on every lane. Get full-service Truckload division provide more options to manage 
-              global Logistics for you.
+            <p className="text-gray-600 mb-12 pl-2">
+              Loraic Air freight service deliver the knowledge & opportunity to
+              optimize every mile on every lane. Get full-service Truckload
+              division provide more options to manage global Logistics for you.
             </p>
-
             <AboutStats />
           </motion.div>
 
-          <motion.div
-           
-            className="relative"
-          >
+          <motion.div className="relative">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="relative">
-                  <img
-                    src={h5_8}
-                    alt="Air Transport"
-                    className="rounded-2xl"
-                  />
+                  <img src={h5_8} alt="Air Transport" className="rounded-2xl" />
                   <div className="absolute top-4 right-4 bg-orange-500 text-white p-4 rounded-xl">
                     <div className="text-4xl font-bold">20</div>
-                    <div className="text-sm">Years of<br />Experience</div>
+                    <div className="text-sm">
+                      Years of
+                      <br />
+                      Experience
+                    </div>
                   </div>
                 </div>
-                <img
-                  src={h5_9}
-                  className="rounded-2xl"
-                />
+                <img src={h5_9} className="rounded-2xl" />
               </div>
               <div className="mt-8">
                 <img

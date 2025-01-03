@@ -2,44 +2,29 @@ import { motion } from "framer-motion";
 import PricingBadge from "./PricingBadge";
 import PricingCard from "./PricingCard";
 
+
 const plans = [
   {
-    title: "Basic Plan",
-    price: "138",
-    period: "month",
+    title: "FBA I PREP Charges",
+    price: "0.50",
     features: [
-      "Single warehouse access",
-      "Basic business rules",
-      "Standard tracking system",
-      "Up to 100 shipments/month",
-      "24/7 email support"
+      "At Zeetech3PL, we believe in transparency and providing our clients with the best value for their investment. Our pricing structure is designed to offer competitive rates while delivering exceptional 3PL services."
     ]
   },
   {
-    title: "Business Pro",
-    price: "238",
-    period: "month",
+    title: "Supplies (Poly Bag I Box I Wrapping)",
+    price: "1.50",
+
     features: [
-      "Multiple warehouse access",
-      "Advanced business rules",
-      "Premium tracking system",
-      "Up to 250 shipments/month",
-      "24/7 priority support",
-      "Custom analytics dashboard"
+      "At Zeetech3PL, we believe in transparency and providing our clients with the best value for their investment. Our pricing structure is designed to offer competitive rates while delivering exceptional 3PL services."
     ],
     isPopular: true
   },
   {
-    title: "Enterprise",
-    price: "338",
-    period: "month",
+    title: "Bundling Poly Bags / Boxes I Wrapping",
+    price: "0.50",
     features: [
-      "Unlimited warehouse access",
-      "Custom business solutions",
-      "Real-time tracking & analytics",
-      "Unlimited shipments",
-      "Dedicated account manager",
-      "Custom API integration"
+      "At Zeetech3PL, we believe in transparency and providing our clients with the best value for their investment. Our pricing structure is designed to offer competitive rates while delivering exceptional 3PL services."
     ]
   }
 ];
@@ -47,7 +32,9 @@ const plans = [
 export default function PricingSection() {
   return (
     <>
-      <section className="relative py-24 overflow-hidden">
+      
+
+      <section className="relative py-20 overflow-hidden">
         {/* Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-teal-900 via-teal-800 to-teal-900">
           <div className="absolute inset-0 bg-[url('./src/image/pricing1.jpg')] opacity-20 bg-cover bg-center bg-fixed" />

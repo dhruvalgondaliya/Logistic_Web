@@ -1,72 +1,50 @@
-import { useState } from 'react';
-import { ShoppingCart, Search, Menu, X } from 'lucide-react';
-import {  Link } from "react-router-dom";
+import { Link, useLocation } from 'react-router-dom';
+
+interface NavigationProps {
+  className?: string;
+  isMobile?: boolean;
+  isNavMenuOpen?: boolean;
+  setIsNavMenuOpen?: (value: boolean) => void;
+}
+
 const navItems = [
-    { label: "Home", to: "/" },
-    { label: "Services", to: "/pricing" },
-    // { label: "About", to: "/about" }
-    // { label: "Testimonials", to: "/testimonials" },
-    // { label: "Work Process", to: "/work-process" },
-    // { label: "FAQ", to: "/faq" },
-    // { label: "Blog", to: "/blog" },
-    // { label: "Case Studies", to: "/case-studies" },
-  ];
-  
-  export default function Navigation() {
-    const [isOpen, setIsOpen] = useState(false);
-  
-    return (
-      <>
-        <nav className="hidden lg:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              to={item.to}
-              className="flex items-center text-gray-700 hover:text-orange-500 transition-colors group"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-  
-        {/* Tablet/Mobile Navigation */}
-        <div className="lg:hidden flex items-center space-x-4">
-          <button className="relative">
-            <ShoppingCart className="h-6 w-6 text-gray-700 hover:text-orange-500" />
-            <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-              0
-            </span>
-          </button>
-          <button>
-            <Search className="h-6 w-6 text-gray-700 hover:text-orange-500" />
-          </button>
-          <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? (
-              <X className="h-6 w-6 text-gray-700 hover:text-orange-500" />
-            ) : (
-              <Menu className="h-6 w-6 text-gray-700 hover:text-orange-500" />
-            )}
-          </button>
+  { label: 'Home', to: '/' },
+  { label: 'About Us', to: '/aboutUS' },
+  { label: 'Pricing', to: '/pricing' }
+];
+
+export default function Navigation({ 
+  className = "", 
+  isMobile = false,
+  isNavMenuOpen,
+  setIsNavMenuOpen 
+}: NavigationProps) {
+  const location = useLocation();
+
+  return (
+    <nav className={className}>
+      {navItems.map((item) => (
+        <div key={item.label} className={isMobile ? "w-full " : ""}>
+          <Link
+            to={item.to}
+            className={`
+              flex items-center justify-between
+              ${isMobile 
+                ? 'px-6 py-3 w-full text-gray-700 hover:bg-gray-50' 
+                : 'mx-4 text-gray-700 hover:text-orange-500 transition-colors'
+              }
+              ${location.pathname === item.to ? 'text-orange-500 font-bold' : ''}
+            `}
+            onClick={() => {
+              if (isMobile && setIsNavMenuOpen) {
+                setIsNavMenuOpen(!isNavMenuOpen);
+              }
+            }}
+          >
+            <span>{item.label}</span>
+          </Link>
         </div>
-  
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-4 border-t">
-            <div className="space-y-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.to}
-                  className="flex items-center justify-between text-gray-700 hover:text-orange-500 py-2"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-      </>
-    );
-  }
-  
+      ))}
+    </nav>
+  );
+}
