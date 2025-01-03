@@ -1,14 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero";
-import ServicesSection from "./components/Services/ServicesSection";
-import AboutSection from "./components/About/AboutSection";
 import Footer from "./components/Footer/Footer";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Blog from "./components/Blog";
-import FAQSection from "./components/FAQ/FAQSection";
-import WorkProcessSection from "./components/WorkProces/WorkProcessSection";
-import { CaseStudiesSlider } from "./components/CaseStudy/CaseStudiesSlider";
+import PricingSection from "./components/Pricing/PricingSection";
+
 
 export default function App() {
   return (
@@ -17,6 +12,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Hero />} />
+          <Route path="/pricing" element={<PricingSection/>} />
           {/* <Route path="/services" element={<ServicesSection />} /> */}
           {/* <Route path="/about" element={<AboutSection />} /> */}
           {/* <Route path="/testimonials" element={<Testimonials />} /> */}

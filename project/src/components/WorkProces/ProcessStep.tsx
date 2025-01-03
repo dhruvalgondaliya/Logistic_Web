@@ -10,7 +10,7 @@ interface ProcessStepProps {
 export default function ProcessStep({ number, title, description, image }: ProcessStepProps) {
   return (
     <motion.div 
-      className="relative"
+      className="relative pb-2"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

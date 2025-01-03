@@ -3,13 +3,13 @@ import { ShoppingCart, Search, Menu, X } from 'lucide-react';
 import {  Link } from "react-router-dom";
 const navItems = [
     { label: "Home", to: "/" },
-    { label: "Services", to: "/services" },
-    { label: "About", to: "/about" },
-    { label: "Testimonials", to: "/testimonials" },
-    { label: "Work Process", to: "/work-process" },
-    { label: "FAQ", to: "/faq" },
-    { label: "Blog", to: "/blog" },
-    { label: "Case Studies", to: "/case-studies" },
+    { label: "Services", to: "/pricing" },
+    // { label: "About", to: "/about" }
+    // { label: "Testimonials", to: "/testimonials" },
+    // { label: "Work Process", to: "/work-process" },
+    // { label: "FAQ", to: "/faq" },
+    // { label: "Blog", to: "/blog" },
+    // { label: "Case Studies", to: "/case-studies" },
   ];
   
   export default function Navigation() {

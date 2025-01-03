@@ -50,7 +50,7 @@ export default function WorkProcessSection() {
           <span className="inline-block bg-orange-400 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
             OUR WORK PROCESS
           </span>
-          <h2 className="text-3xl font-bold text-gray-900 pt-2 sm:text-4xl">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl text-lg py-2">
             We always follow the best
             <br />
             ways of logistics

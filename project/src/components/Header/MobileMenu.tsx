@@ -2,10 +2,10 @@ import  { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { label: 'Home', href: '#' },
-  { label: 'Services', href: '#services' },
-  { label: 'Features', href: '#features' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: "Services", to: "/pricing" }
+  // { label: 'Features', href: '#features' },
+  // { label: 'Contact', href: '#contact' },
 ];
 
 export default function MobileMenu() {

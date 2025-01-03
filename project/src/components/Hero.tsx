@@ -7,6 +7,7 @@ import WorkProcessSection from "./WorkProces/WorkProcessSection";
 import FAQSection from "./FAQ/FAQSection";
 import Blog from "./Blog";
 import { CaseStudiesSlider } from "./CaseStudy/CaseStudiesSlider";
+import PricingSection from "./Pricing/PricingSection";
 
 export default function LoraicTransportation() {
   return (
@@ -28,9 +29,8 @@ export default function LoraicTransportation() {
           <div className="absolute inset-0 bg-orange-500/10 rounded-br-full"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Right Image with Animations */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-32">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -40,13 +40,13 @@ export default function LoraicTransportation() {
               <img
                 src="./src/image/h2-12.webp"
                 alt="Cargo Ship"
-                className="rounded-2xl shadow-2xl"
+                className="rounded-2xl shadow-2xl w-full"
               />
 
               {/* Decorative Animated Circles */}
-              <div className="absolute -right-8 -bottom-8 w-48 h-48 animate-spin-slow">
-                <div className="absolute right-0 bottom-0 w-32 h-32 border-4 border-orange-500 rounded-tr-3xl" />
-                <div className="absolute left-0 top-0 w-32 h-32 border-4 border-teal-500 rounded-bl-3xl" />
+              <div className="absolute -right-8 -bottom-8 w-40 sm:w-48 h-40 sm:h-48 animate-spin-slow">
+                <div className="absolute right-0 bottom-0 w-24 sm:w-32 h-24 sm:h-32 border-4 border-orange-500 rounded-tr-3xl"></div>
+                <div className="absolute left-0 top-0 w-24 sm:w-32 h-24 sm:h-32 border-4 border-teal-500 rounded-bl-3xl"></div>
               </div>
             </motion.div>
 
@@ -55,23 +55,20 @@ export default function LoraicTransportation() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
             >
-              <span className="relative inline-flex items-center group ">
+              <span className="relative inline-flex items-center group">
                 {/* Upper Left Circle */}
                 <span
                   className="absolute top-3 left-0 bg-white w-3 h-3 rounded-full"
                   style={{
                     animation: "wave 1.5s infinite ease-in-out",
-                    boxShadow: "0 0 10px rgba(20, 184, 166, 0.5)" // Teal shadow matching gradient
+                    boxShadow: "0 0 10px rgba(20, 184, 166, 0.5)"
                   }}
                 ></span>
 
                 {/* Text */}
-                <span
-                  className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 group-hover:text-left group-hover:pl-10"
-                  style={{ textAlign: "center" }}
-                >
+                <span className="inline-block bg-orange-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 group-hover:text-left group-hover:pl-10">
                   Loraic Transportation Inc
                 </span>
 
@@ -80,27 +77,27 @@ export default function LoraicTransportation() {
                   className="absolute top-3 right-0 bg-white w-3 h-3 rounded-full"
                   style={{
                     animation: "wave 1.5s infinite ease-in-out",
-                    boxShadow: "0 0 10px rgba(255, 165, 0, 0.5)" // Orange shadow matching gradient
+                    boxShadow: "0 0 10px rgba(255, 165, 0, 0.5)"
                   }}
                 ></span>
               </span>
 
-              <h1 className="text-4xl lg:text-6xl font-bold text-teal-900 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-900 leading-tight">
                 Contact Us For A Seamless Inventory Transport Process
               </h1>
 
-              <p className="text-lg text-gray-600">
+              <p className="text-base sm:text-lg text-gray-600">
                 Take your business to the next level with Loraic new business
                 management tools. Loraic will open a new horizon for us.
               </p>
 
-              <div className="flex items-center space-x-6">
-                <button className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-lg font-semibold flex items-center transition-colors">
+              <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <button className="bg-teal-600 hover:bg-teal-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center transition-colors">
                   Contact Loraic
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
 
-                <div className="flex items-center space-x-4 bg-white px-6 py-3 rounded-lg shadow-lg">
+                <div className="flex items-center space-x-4 bg-white px-4 sm:px-6 py-3 rounded-lg shadow-lg">
                   <div className="p-2 bg-orange-100 rounded-full">
                     <ArrowRight className="h-6 w-6 text-orange-500" />
                   </div>
@@ -119,25 +116,28 @@ export default function LoraicTransportation() {
         </div>
       </div>
 
-      {/* service section */}
+      {/* Service Section */}
       <ServicesSection />
 
-      {/* About section */}
+      {/* About Section */}
       <AboutSection />
-      {/* Testimony Section */}
+
+      {/* Testimonials Section */}
       <Testimonials />
 
-      {/* WorkProcessSection */}
+      {/* Work Process Section */}
       <WorkProcessSection />
 
-      {/* FAQ section */}
+      {/* FAQ Section */}
       <FAQSection />
 
       {/* Blog Section */}
       <Blog />
 
-      {/* CaseStudiesSlider section */}
+      {/* Case Studies Slider */}
       <CaseStudiesSlider />
+
+      <PricingSection />
     </>
   );
 }

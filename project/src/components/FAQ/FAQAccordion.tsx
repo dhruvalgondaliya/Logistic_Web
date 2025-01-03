@@ -19,7 +19,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps) {
           isOpen ? "bg-orange-500 text-white" : "bg-white text-teal-900"
         }`}
       >
-        <span className="text-lg font-semibold text-left overflow-clip">{question}</span>
+        <span className="text-lg font-semibold text-left overflow-clip ">{question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.2 }}

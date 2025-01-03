@@ -73,8 +73,8 @@ export function CaseStudiesSlider() {
     <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="flex justify-between items-center mb-12">
         <div>
-          <div className="inline-block px-4 py-2 bg-orange-100 rounded-full mb-4">
-            <span className="text-orange-600 font-medium text-sm">OUR CASE STUDIES</span>
+          <div className="inline-block px-4 py-2 bg-orange-500 rounded-full mb-4">
+            <span className="text-white font-medium text-sm">OUR CASE STUDIES</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
             Best Cases by Loraic
