@@ -7,7 +7,7 @@ export default function Footer() {
     <footer
       className=""
       style={{
-        backgroundImage: 'url("./src/image/bg2-ft.webp")',
+        backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg2-ft.webp?alt=media&token=642027db-1f14-423b-97ba-26790d03bdbd")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>

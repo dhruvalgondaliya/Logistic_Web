@@ -42,7 +42,7 @@ export default function Testimonials() {
   return (
     <section
       className="py-24 relative overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: "url('./src/image/bg-h6.jpg')" }}
+      style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-h6.jpg?alt=media&token=94136f7f-13dd-40e3-a836-757827503293')" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

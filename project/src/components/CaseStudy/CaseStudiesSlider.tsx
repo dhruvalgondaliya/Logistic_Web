@@ -1,44 +1,46 @@
-import { useEffect, useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { CaseStudyCard } from './CaseStudyCard';
+import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { CaseStudyCard } from "./CaseStudyCard";
 
 const caseStudies = [
   {
     id: 1,
     title: "Relief Transportation For United Nations",
     category: "SEA",
-    image: "./src/image/pr1.png",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/pr1.png?alt=media&token=fbb0dfff-9110-4996-9e1a-68def35523ce"
   },
   {
     id: 2,
     title: "Shipping Large Container From China",
     category: "SEA",
-    image: "./src/image/pr2.png",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/pr2.png?alt=media&token=9f7194cc-0ca6-4f93-87c0-ef599c348174"
   },
   {
     id: 3,
     title: "200 Matric Ton Grain Freight For Mexico",
     category: "SEA",
-    image: "./src/image/pr4.png",
+    image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/pr4.png?alt=media&token=8c29d22e-b20b-4a7a-9c02-cfa7d7124526"
   },
   {
     id: 4,
     title: "Expedited Air Freight for Pharmaceuticals",
     category: "AIR",
-    image: "./src/image/pr5.png",
+    image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/pr5.png?alt=media&token=ae7e4346-6ef8-45c6-8659-0a53ac58423b"
   },
   {
     id: 5,
     title: "Luxury Vehicle Shipping Across Europe",
     category: "LAND",
-    image: "./src/image/pr2.png",
+    image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/pr2.png?alt=media&token=9f7194cc-0ca6-4f93-87c0-ef599c348174"
   },
   {
     id: 6,
     title: "Luxury Vehicle Shipping Across Europe",
     category: "LAND",
-    image: "./src/image/pr1.png",
-  },
+    image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/pr1.png?alt=media&token=fbb0dfff-9110-4996-9e1a-68def35523ce"
+  }
 ];
 
 export function CaseStudiesSlider() {
@@ -58,7 +60,9 @@ export function CaseStudiesSlider() {
   }, [slides.length]);
 
   const handlePrev = () => {
-    setActiveIndex((current) => (current === 0 ? slides.length - 1 : current - 1));
+    setActiveIndex((current) =>
+      current === 0 ? slides.length - 1 : current - 1
+    );
   };
 
   const handleNext = () => {
@@ -74,7 +78,9 @@ export function CaseStudiesSlider() {
       <div className="flex justify-between items-center mb-12">
         <div>
           <div className="inline-block px-4 py-2 bg-orange-500 rounded-full mb-4">
-            <span className="text-white font-medium text-sm">OUR CASE STUDIES</span>
+            <span className="text-white font-medium text-sm">
+              OUR CASE STUDIES
+            </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
             Best Cases by Loraic
@@ -102,7 +108,10 @@ export function CaseStudiesSlider() {
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <div key={index} className="flex-shrink-0 w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              key={index}
+              className="flex-shrink-0 w-full grid grid-cols-1 md:grid-cols-3 gap-8"
+            >
               {slide.map((study) => (
                 <CaseStudyCard
                   key={study.id}
@@ -123,7 +132,7 @@ export function CaseStudiesSlider() {
             key={index}
             onClick={() => handleDotClick(index)}
             className={`w-3 h-3 rounded-full mx-1 transition-all duration-300 ${
-              activeIndex === index ? 'bg-orange-500 scale-125' : 'bg-gray-300'
+              activeIndex === index ? "bg-orange-500 scale-125" : "bg-gray-300"
             }`}
           />
         ))}

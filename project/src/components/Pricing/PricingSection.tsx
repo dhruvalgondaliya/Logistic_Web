@@ -37,7 +37,7 @@ export default function PricingSection() {
       <section className="relative py-20 overflow-hidden">
         {/* Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-teal-900 via-teal-800 to-teal-900">
-          <div className="absolute inset-0 bg-[url('./src/image/pricing1.jpg')] opacity-20 bg-cover bg-center bg-fixed" />
+          <div className="absolute inset-0 bg-[url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/pricing1.jpg?alt=media&token=194f1d42-12d3-4321-88c0-c4d1bca78f87')] opacity-20 bg-cover bg-center bg-fixed" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">

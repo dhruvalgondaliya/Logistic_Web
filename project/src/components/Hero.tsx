@@ -17,7 +17,7 @@ export default function LoraicTransportation() {
         <div
           className="absolute inset-0 bg-cover bg-center opacity-90"
           style={{
-            backgroundImage: `url('./src/image/bg4-h6.jpg')`
+            backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg4-h6.jpg?alt=media&token=87d9488d-b4e7-4679-b7df-8258fd793fa8')`
           }}
         ></div>
 

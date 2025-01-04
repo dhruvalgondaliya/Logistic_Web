@@ -27,7 +27,7 @@ export default function ServiceCard({ icon, title, href }: ServiceCardProps) {
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         style={{
-          backgroundImage: `url('./src/image/bg-icb.png')`,
+          backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-icb.png?alt=media&token=c58dd774-3164-41e0-835f-3c4b5569736d')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -46,7 +46,7 @@ export default function ServiceCard({ icon, title, href }: ServiceCardProps) {
         </h3>
 
         {/* Arrow Right with "Read More" */}
-        {/* <div className="flex items-center space-x-2 group-hover:text-orange-400 transition-colors duration-300">
+        <div className="flex items-center space-x-2 group-hover:text-orange-400 transition-colors duration-300">
           <a
             href={href}
             className="inline-flex items-center text-white bg-orange-400 p-2 rounded-full group-hover:bg-orange-500 transition-all duration-300"
@@ -56,7 +56,7 @@ export default function ServiceCard({ icon, title, href }: ServiceCardProps) {
           <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             Read More
           </span>
-        </div> */}
+        </div>
       </div>
     </motion.div>
   );

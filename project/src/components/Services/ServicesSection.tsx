@@ -33,7 +33,7 @@ export default function ServicesSection() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg2-ft.webp?alt=media&token=642027db-1f14-423b-97ba-26790d03bdbd')",
+            backgroundImage: "url(' https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg3-h6.jpg?alt=media&token=d2b58599-5e50-4c2a-82ba-86e5cd7c5800')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
