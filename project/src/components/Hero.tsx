@@ -12,7 +12,7 @@ import PricingSection from "./Pricing/PricingSection";
 export default function LoraicTransportation() {
   return (
     <>
-      <div className="relative min-h-screen bg-gradient-to-r from-teal-50 to-white overflow-hidden">
+      <div className="relative   bg-gradient-to-r from-teal-50 to-white overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-90"

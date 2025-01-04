@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 
 interface NavigationProps {
   className?: string;
@@ -8,32 +8,36 @@ interface NavigationProps {
 }
 
 const navItems = [
-  { label: 'Home', to: '/' },
-  { label: 'About Us', to: '/aboutUS' },
-  { label: 'Pricing', to: '/pricing' }
+  { label: "Home", to: "/" },
+  { label: "About Us", to: "/aboutUS" },
+  { label: "Services", to: "/services" },
+  { label: "Pricing", to: "/pricing" },
 ];
 
-export default function Navigation({ 
-  className = "", 
+export default function Navigation({
+  className = "",
   isMobile = false,
   isNavMenuOpen,
-  setIsNavMenuOpen 
+  setIsNavMenuOpen
 }: NavigationProps) {
   const location = useLocation();
 
   return (
     <nav className={className}>
-      {navItems.map((item) => (
-        <div key={item.label} className={isMobile ? "w-full " : ""}>
+      {navItems.map((item, index) => (
+        <div key={index} className={isMobile ? "w-full " : ""}>
           <Link
             to={item.to}
             className={`
               flex items-center justify-between
-              ${isMobile 
-                ? 'px-6 py-3 w-full text-gray-700 hover:bg-gray-50' 
-                : 'mx-4 text-gray-700 hover:text-orange-500 transition-colors'
+              ${
+                isMobile
+                  ? "px-6 py-3 w-full text-gray-700 hover:bg-gray-50"
+                  : "mx-4 text-gray-700 hover:text-orange-500 transition-colors"
               }
-              ${location.pathname === item.to ? 'text-orange-500 font-bold' : ''}
+              ${
+                location.pathname === item.to ? "text-orange-500 font-bold" : ""
+              }
             `}
             onClick={() => {
               if (isMobile && setIsNavMenuOpen) {

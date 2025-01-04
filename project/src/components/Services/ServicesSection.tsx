@@ -1,27 +1,25 @@
 import { motion } from "framer-motion";
 import { Truck, Shield, Plane, Building2 } from "lucide-react";
 import ServiceCard from "./ServiceCard";
-import ServiceIcon from "./ServiceIcon";
 
 const services = [
   {
-    icon: <Truck className="w-8 h-8" />,
-    
+    icon: Truck,
     title: "Land Freight Transportation",
     href: "#land-freight",
   },
   {
-    icon: <Shield className="w-8 h-8" />,
+    icon: Shield,
     title: "Logistics Insurance",
     href: "#insurance",
   },
   {
-    icon: <Plane className="w-8 h-8" />,
+    icon: Plane,
     title: "Air Freight Transportation",
     href: "#air-freight",
   },
   {
-    icon: <Building2 className="w-8 h-8" />,
+    icon: Building2,
     title: "Warehouse Support",
     href: "#warehouse",
   },
@@ -35,7 +33,7 @@ export default function ServicesSection() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('./src/image/bg3-h6.jpg')",
+            backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg2-ft.webp?alt=media&token=642027db-1f14-423b-97ba-26790d03bdbd')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -58,9 +56,9 @@ export default function ServicesSection() {
             best in business
           </h2>
           <p className="text-teal-100 max-w-3xl mx-auto">
-            Loraic Air freight service deliver the knowledge & opportunity to
+            Loraic Air freight service delivers the knowledge & opportunity to
             optimize every mile on every lane. Get full-service Truckload
-            division provide more options to manage costs by combining
+            division provides more options to manage costs by combining
             technology intelligence.
           </p>
         </motion.div>
@@ -74,7 +72,7 @@ export default function ServicesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <ServiceCard
-                icon={<ServiceIcon>{service.icon}</ServiceIcon>}
+                icon={<service.icon className="w-8 h-8 text-orange-500" />}
                 title={service.title}
                 href={service.href}
               />

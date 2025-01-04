@@ -1,11 +1,12 @@
 import  { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Home', href: '#' },
-  { label: 'Services', href: '#services' },
-  { label: 'Features', href: '#features' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', to: '/' },
+  { label: 'About Us', to: '/aboutUS' },
+  { label: 'Pricing', to: '/pricing' },
+  {Lable:'Services',to :'/services'}
 ];
 
 export default function MobileMenu() {
@@ -23,14 +24,14 @@ export default function MobileMenu() {
       {isOpen && (
         <div className="absolute top-full left-0 right-0 bg-white shadow-lg p-4 space-y-4">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.href}
+              to={item.to}
               className="block text-gray-600 hover:text-orange-500 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}

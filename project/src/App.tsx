@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import AboutHero from "./components/About/AboutHero";
 import PricingHero from "./components/Pricing/PricingHero";
 import Loader from "./components/Loader/Loader";
+import ServicesHero from "./components/ServiceHero/ServicesHero";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -13,7 +14,7 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -29,8 +30,9 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Hero />} />
               <Route path="/aboutUS" element={<AboutHero />} />
+              <Route path="/services" element={<ServicesHero/>}/>
               <Route path="/pricing" element={<PricingHero />} />
-           
+
             </Routes>
           </main>
           <Footer />
