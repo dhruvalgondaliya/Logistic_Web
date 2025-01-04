@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import FooterContact from "./FooterContact";
 import FooterLinks from "./FooterLinks";
 import FooterNewsletter from "./FooterNewsletter";
@@ -22,33 +23,33 @@ export default function Footer() {
             © 2025 Loraic transportation & logistics / All rights reserved
           </p>
           <div className="flex items-center gap-4 mt-4 md:mt-0">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-teal-100 hover:text-orange-500 transition-colors"
             >
               Privacy
-            </a>
+            </Link>
             <span className="text-teal-700">|</span>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-teal-100 hover:text-orange-500 transition-colors"
             >
               Terms & Conditions
-            </a>
+            </Link>
             <span className="text-teal-700">|</span>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-teal-100 hover:text-orange-500 transition-colors"
             >
               Site map
-            </a>
+            </Link>
             <span className="text-teal-700">|</span>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-teal-100 hover:text-orange-500 transition-colors"
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -38,7 +38,7 @@ export default function LoraicTransportation() {
               className="relative"
             >
               <img
-                src="./src/image/h2-12.webp"
+                src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/h2-12.webp?alt=media&token=b7b68995-48a7-4f15-a959-bb77c5f66557"
                 alt="Cargo Ship"
                 className="rounded-2xl shadow-2xl w-full"
               />

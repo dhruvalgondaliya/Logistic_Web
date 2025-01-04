@@ -1,16 +1,14 @@
+import { Link } from "react-router-dom";
+
 const sections = {
   'Industry Served': [
-    'Frozen Food', 'Automobile', 'Machineries',
-    'Export Import', 'Cargo Freight', 'Warehousing',
+    'Warehousing',
   ],
   'Company Info': [
-    'About Us', 'Our Expertise', 'Latest News',
-    'Transporters', 'Terms & Condition', 'Case Studies',
+    'About Us',  'Latest News','Terms & Condition', 'Case Studies',
   ],
   'Our Services': [
     'Less Than Truckload', 'Rail Freight Shipping',
-    'Hot Shot Trucking', 'Less-than-Truckload',
-    'Intermodal service', 'Container Freight',
   ],
 };
 
@@ -24,13 +22,13 @@ export default function FooterLinks() {
             <ul className="space-y-3">
               {links.map((link) => (
                 <li key={link}>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="text-teal-100 hover:text-orange-500 transition-colors flex items-center gap-2"
                   >
                     <span className="text-white hover:text-orange-500">→</span>
                     {link}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

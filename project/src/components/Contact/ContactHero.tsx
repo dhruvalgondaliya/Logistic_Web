@@ -1,7 +1,8 @@
-import ServicesSection1 from "./ServicesSection1";
+import ContactSection from "./ContactSection";
 import { ChevronRight } from "lucide-react";
 
-const ServicesHero: React.FC = () => {
+
+const ContactHero: React.FC = () => {
   return (
     <>
       <section className="relative h-[300px] flex items-center justify-center text-white">
@@ -14,24 +15,23 @@ const ServicesHero: React.FC = () => {
             filter: "brightness(0.3)"
           }}
         ></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Services
-          </h1>
+        <div className="relative z-10 text-center">
+          <h1 className="text-5xl font-bold mb-4">Contact</h1>
           <div className="flex items-center text-gray-300 text-sm">
             <a href="/" className="hover:text-white transition-colors">
               Home
             </a>
             <ChevronRight className="w-4 h-4 mx-2" />
-            <span className="text-orange-500">Services</span>
+            <span className="text-orange-500">Contact</span>
           </div>
         </div>
       </section>
 
-      {/* second component */}
-      <ServicesSection1 />
+      {/*  Second section */}
+            <ContactSection/>
+
     </>
   );
 };
 
-export default ServicesHero;
+export default ContactHero;

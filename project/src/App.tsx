@@ -7,6 +7,7 @@ import AboutHero from "./components/About/AboutHero";
 import PricingHero from "./components/Pricing/PricingHero";
 import Loader from "./components/Loader/Loader";
 import ServicesHero from "./components/ServiceHero/ServicesHero";
+import ContactHero from "./components/Contact/ContactHero";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,9 +31,9 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Hero />} />
               <Route path="/aboutUS" element={<AboutHero />} />
-              <Route path="/services" element={<ServicesHero/>}/>
+              <Route path="/services" element={<ServicesHero />} />
               <Route path="/pricing" element={<PricingHero />} />
-
+              <Route path="/contact" element={<ContactHero />} />
             </Routes>
           </main>
           <Footer />

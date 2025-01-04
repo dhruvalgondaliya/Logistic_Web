@@ -8,9 +8,9 @@ const ServicesSection1: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="w-12 h-[2px] bg-blue-600"></div>
-            <h2 className="text-blue-600 font-semibold uppercase tracking-wider">Our Services</h2>
-            <div className="w-12 h-[2px] bg-blue-600"></div>
+            <div className="w-12 h-[2px] bg-orange-300"></div>
+            <h2 className="text-orange-500 font-semibold uppercase tracking-wider">Our Services</h2>
+            <div className="w-12 h-[2px] bg-orange-300"></div>
           </div>
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
             We provide the necessary<br />services to you

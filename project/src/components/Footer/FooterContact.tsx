@@ -10,13 +10,13 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'SUPPORT 24/7',
-    value: '+12334 5678 899',
+    value: '+1 (548) 333-9453',
     hoverEffect: 'hover:bg-orange-500/20 hover:cursor-pointer',
   },
   {
     icon: MapPin,
     label: 'LOGISCO HEADQUARTER',
-    value: '116th Ave, WA 98058-5055, USA',
+    value: '70 Lynmont Road, Toronto ON M9V3X2 Canada',
     hoverEffect: '',
   },
 ];
