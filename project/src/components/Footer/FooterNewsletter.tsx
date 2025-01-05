@@ -1,29 +1,37 @@
 import { Globe } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function FooterNewsletter() {
   return (
     <div
-      className="flex  md:flex-row items-center justify-between bg-teal-900 p-8 bg-cover bg-center"
+      className="bg-teal-900 px-7 py-2 rounded-lg shadow-lg flex flex-col md:flex-row items-center justify-between bg-cover bg-center mb-4"
       style={{
-        backgroundImage: "url('./src/image/bg-ft.webp')"
+        backgroundImage:
+          "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-ft.webp?alt=media&token=2fa160c1-2710-408d-849a-8dac4e59a643')"
       }}
     >
-      <div className="flex items-center gap-4 mb-4 md:mb-0">
-        <Globe className="h-8 w-8 text-orange-500" />
+      <div className="mb-6 md:mb-0 w-full md:w-auto">
+        <Globe className="h-8 w-8 text-orange-500 mt-2" />
+
         <div>
-          <h2 className="text-2xl font-bold text-white">Track Your Freight</h2>
-          <p className="text-teal-100">Track your Goods with NorthPole Gateway trucking</p>
+          <h2 className="text-2xl font-bold text-white mt-2">Newsletter</h2>
+          <p className="text-teal-100 mt-2">
+            Subscribe our newsletter to get our latest update & news
+          </p>
         </div>
-      </div>
-      <div className="flex w-full md:w-auto">
-        <input
-          type="email"
-          placeholder="Email Address"
-          className="w-full md:w-80 px-4 py-2 rounded-l-lg focus:outline-none"
-        />
-        <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-r-lg transition-colors whitespace-nowrap">
-          Subscribe
-        </button>
+
+        <div className="flex items-center gap-2 bg-gray-200 px-4 py-1 rounded-lg mt-2">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="bg-transparent text-orange-500 placeholder-gray-500 focus:outline-none w-full"
+          />
+          <button
+            className="py-1 px-2 rounded-md text-white bg-orange-500 transition-colors"
+          >
+            <Mail className="text-white" />
+          </button>
+        </div>
       </div>
     </div>
   );

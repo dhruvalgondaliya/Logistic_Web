@@ -4,24 +4,23 @@ import ProcessStep from './ProcessStep';
 const steps = [
   {
     number: 1,
-    title: "Step 1: Receive Packages",
+    title: "Step 1: Warehouse Storage",
     description: "NorthPole Gateway Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
     image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/young-courier-his-colleague-unloading-cardboard-boxes-from-delivery-van_637285-2293.jpg?alt=media&token=3da246e8-ea4f-4240-abd0-6f3c13787b65",
   },
   {
     number: 2,
-    title: "Step 2: Transport Packages",
+    title: "Step 2: priparing Order",
     description: "NorthPole Gateway Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
     image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Delivery.jpg?alt=media&token=33d2c50d-1536-4939-bd44-61a1aa84cffc",
   },
   {
     number: 3,
-    title: "Step 3: Deliver Packages",
+    title: "Step 3: Ship the Order",
     description: "NorthPole Gateway Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
     image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/delivery-male-with-packages_23-2148869427.jpg?alt=media&token=a0476964-8b64-4797-ab6f-ea8190ef7e2f",
   }
 ];
-
 
 
 export default function WorkProcessSection() {
@@ -29,7 +28,7 @@ export default function WorkProcessSection() {
     <section
       className="py-24 relative overflow-hidden bg-gradient-to-b from-white to-gray-50"
       style={{
-        backgroundImage: "url('./src/image/bg_workprocess.jpg')",
+        backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg_workprocess.jpg?alt=media&token=de050f80-b1b9-4430-bfa3-1eb64899add5')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

@@ -3,8 +3,7 @@ import { Package, Truck } from "lucide-react";
 import AboutFeature from "./AboutFeature";
 import AboutStats from "./AboutStats";
 
-import h5_8 from "../../image/h5-8.jpg";
-import h5_9 from "../../image/h5-9.png";
+
 import h1_6 from "../../image/h1-6.webp";
 
 export default function AboutSection() {
@@ -52,7 +51,7 @@ export default function AboutSection() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="relative">
-                  <img src={h5_8} alt="Air Transport" className="rounded-2xl" />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/h5-8.jpg?alt=media&token=6060a879-7c82-4d52-b58d-b7466736147e' alt="Air Transport" className="rounded-2xl" />
                   <div className="absolute top-4 right-4 bg-orange-500 text-white p-4 rounded-xl">
                     <div className="text-4xl font-bold">01</div>
                     <div className="text-sm">
@@ -62,11 +61,11 @@ export default function AboutSection() {
                     </div>
                   </div>
                 </div>
-                <img src={h5_9} className="rounded-2xl" />
+                <img src='https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/h5-9.png?alt=media&token=fa482bf1-e34e-45f3-8db3-22b953898306' className="rounded-2xl" />
               </div>
               <div className="mt-8">
                 <img
-                  src={h1_6}
+                  src='https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/h1-6.webp?alt=media&token=0c9a954d-8d07-4a2f-9ec5-80144f1fa62e'
                   alt="Team"
                   className="rounded-2xl h-full object-cover"
                 />

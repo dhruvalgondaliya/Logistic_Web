@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 import FAQAccordion from "./FAQAccordion";
-import h13Image from "../../image/h13.webp";
 
 export default function FAQSection() {
   return (
     <section
       className="relative w-full py-15 overflow-hidden flex items-center justify-center"
       style={{
-        backgroundImage: `url(${h13Image})`,
+        backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/h13.webp?alt=media&token=a3ba2dfe-b723-404e-918c-9648d96a225c')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"

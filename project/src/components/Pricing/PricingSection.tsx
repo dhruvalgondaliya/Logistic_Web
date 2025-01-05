@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import PricingBadge from "./PricingBadge";
 import PricingCard from "./PricingCard";
 
-
 const plans = [
   {
     title: "FBA I PREP Charges",
@@ -32,12 +31,11 @@ const plans = [
 export default function PricingSection() {
   return (
     <>
-      
-
       <section className="relative py-20 overflow-hidden">
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-900 via-teal-800 to-teal-900">
-          <div className="absolute inset-0 bg-[url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/pricing1.jpg?alt=media&token=194f1d42-12d3-4321-88c0-c4d1bca78f87')] opacity-20 bg-cover bg-center bg-fixed" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,48,65,0.95),rgba(0,48,65,0.95))]">
+          <div className="absolute inset-0 bg-[url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/price_bg.jpg?alt=media&token=73266b58-970b-47fc-940f-be52b5be9310')] opacity-20 bg-cover bg-center " />
+          {/* <div className="absolute inset-0 bg-[linear-gradient(rgba(0,48,65,0.95),rgba(0,48,65,0.95))]" /> */}
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
