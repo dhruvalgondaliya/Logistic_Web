@@ -6,16 +6,20 @@ import "react-toastify/dist/ReactToastify.css";
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     from_name: "", // Matches {{from_name}} in EmailJS template
-    email: "",     // Matches {{email}} in EmailJS template
-    phone: "",     // Matches {{phone}} in EmailJS template
-    service: "",   // Matches {{service}} in EmailJS template
-    message: "",   // Matches {{message}} in EmailJS template
+    email: "", // Matches {{email}} in EmailJS template
+    phone: "", // Matches {{phone}} in EmailJS template
+    service: "", // Matches {{service}} in EmailJS template
+    message: "" // Matches {{message}} in EmailJS template
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
 
@@ -33,20 +37,20 @@ const ContactForm: React.FC = () => {
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           toast.success("Message sent successfully!", {
-            position: "top-right",
+            position: "top-right"
           });
           setFormData({
             from_name: "",
             email: "",
             phone: "",
             service: "",
-            message: "",
+            message: ""
           });
         },
         (error) => {
           console.error("FAILED...", error);
           toast.error("Failed to send the message. Please try again.", {
-            position: "top-right",
+            position: "top-right"
           });
         }
       );
@@ -54,12 +58,14 @@ const ContactForm: React.FC = () => {
 
   return (
     <>
-      <form className="space-y-6 bg-[#023B4C] p-8 rounded-lg" onSubmit={handleSubmit}>
+      <form
+        className="space-y-6 bg-[#023B4C] p-8 rounded-lg"
+        onSubmit={handleSubmit}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="flex justify-between text-sm mb-2">
               <span className="text-orange-500">Name</span>
-              <span className="text-white">(required)</span>
             </label>
             <input
               type="text"
@@ -67,14 +73,13 @@ const ContactForm: React.FC = () => {
               value={formData.from_name}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white"
-              placeholder="Your name*"
+              placeholder="First and Last Name"
               required
             />
           </div>
           <div>
             <label className="flex justify-between text-sm mb-2">
               <span className="text-orange-500">Email address</span>
-              <span className="text-white">(required)</span>
             </label>
             <input
               type="email"
@@ -82,7 +87,7 @@ const ContactForm: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white"
-              placeholder="Mail*"
+              placeholder="yourcompany@domain.com"
               required
             />
           </div>
@@ -92,7 +97,6 @@ const ContactForm: React.FC = () => {
           <div>
             <label className="flex justify-between text-sm mb-2">
               <span className="text-orange-500">Phone</span>
-              <span className="text-white">(optional)</span>
             </label>
             <input
               type="tel"
@@ -100,13 +104,13 @@ const ContactForm: React.FC = () => {
               value={formData.phone}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white"
-              placeholder="Your phone"
+              placeholder="+91 98765 43210"
+              required
             />
           </div>
           <div>
             <label className="flex justify-between text-sm mb-2">
               <span className="text-orange-500">Services</span>
-              <span className="text-white">(required)</span>
             </label>
             <select
               name="service"
@@ -117,12 +121,22 @@ const ContactForm: React.FC = () => {
             >
               <option value="">Select Service</option>
               <option value="Warehousing Services">Warehousing Services</option>
+              <option value="Wholesale FBA Prep">Wholesale FBA Prep</option>
+              <option value="Private Labeling">Private Labeling</option>
+              <option value="Fulfillment By Merchant (FBM)">
+                Fulfillmen By Merchant (FBM)
+              </option>
+              <option value="Fulfillment Services & Shipping">
+                Fulfillmen Services & Shipping
+              </option>
             </select>
           </div>
         </div>
 
         <div>
-          <label className="block text-sm mb-2 text-orange-500">Your message</label>
+          <label className="block text-sm mb-2 text-orange-500">
+            Your message
+          </label>
           <textarea
             name="message"
             value={formData.message}

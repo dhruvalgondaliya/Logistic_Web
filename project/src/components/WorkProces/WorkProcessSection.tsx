@@ -5,19 +5,19 @@ const steps = [
   {
     number: 1,
     title: "Step 1: Receive Packages",
-    description: "Loraic Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
+    description: "NorthPole Gateway Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
     image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/young-courier-his-colleague-unloading-cardboard-boxes-from-delivery-van_637285-2293.jpg?alt=media&token=3da246e8-ea4f-4240-abd0-6f3c13787b65",
   },
   {
     number: 2,
     title: "Step 2: Transport Packages",
-    description: "Loraic Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
+    description: "NorthPole Gateway Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
     image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Delivery.jpg?alt=media&token=33d2c50d-1536-4939-bd44-61a1aa84cffc",
   },
   {
     number: 3,
     title: "Step 3: Deliver Packages",
-    description: "Loraic Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
+    description: "NorthPole Gateway Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
     image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/delivery-male-with-packages_23-2148869427.jpg?alt=media&token=a0476964-8b64-4797-ab6f-ea8190ef7e2f",
   }
 ];
@@ -56,7 +56,7 @@ export default function WorkProcessSection() {
             ways of logistics
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Loraic Air freight service deliver the knowledge & opportunity to optimize every
+            NorthPole Gateway Air freight service deliver the knowledge & opportunity to optimize every
           </p>
         </motion.div>
 

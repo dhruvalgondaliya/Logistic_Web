@@ -65,7 +65,7 @@ const BlogSlider = () => {
             Read All Our Logistics Blogs
           </p>
           <p className="text-lg text-gray-500 mt-2 max-w-3xl mx-auto pt-2">
-            Loraic Air freight service delivers the knowledge & opportunity to
+            NorthPole Gateway Air freight service delivers the knowledge & opportunity to
             optimize every mile on every lane. Get full-service and elevate your
             logistics operations.
           </p>

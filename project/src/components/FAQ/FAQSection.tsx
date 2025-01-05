@@ -5,7 +5,7 @@ import h13Image from "../../image/h13.webp";
 export default function FAQSection() {
   return (
     <section
-      className="relative w-full py-24 overflow-hidden flex items-center justify-center"
+      className="relative w-full py-15 overflow-hidden flex items-center justify-center"
       style={{
         backgroundImage: `url(${h13Image})`,
         backgroundSize: "cover",
@@ -33,7 +33,7 @@ export default function FAQSection() {
             <p className="text-gray-200 text-lg mb-8 text-center lg:text-left">
               Some frequently asked questions about
               <br />
-              Loraic's cargo services
+              NorthPole Gateway's cargo services
             </p>
           </motion.div>
 

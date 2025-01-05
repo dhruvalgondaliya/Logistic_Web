@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+// import FooterNewsletter from "./FooterNewsletter";
 
 const sections = {
   'Industry Served': [
@@ -15,6 +16,7 @@ const sections = {
 export default function FooterLinks() {
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 rounded-xl ">
+
       <div className="flex flex-col md:flex-row justify-between gap-8  ">
         {Object.entries(sections).map(([title, links]) => (
           <div key={title} className="flex-1">

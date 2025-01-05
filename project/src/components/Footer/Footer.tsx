@@ -20,7 +20,7 @@ export default function Footer() {
         <FooterContact />
         <div className="flex flex-col md:flex-row justify-between items-center py-6 border-t border-teal-800 text-sm">
           <p className="text-teal-100">
-            © 2025 Loraic transportation & logistics / All rights reserved
+            © 2025 NorthPole Gateway logistics / All rights reserved
           </p>
           <div className="flex items-center gap-4 mt-4 md:mt-0">
             <Link
@@ -45,7 +45,7 @@ export default function Footer() {
             </Link>
             <span className="text-teal-700">|</span>
             <Link
-              to="#"
+              to="/contact"
               className="text-teal-100 hover:text-orange-500 transition-colors"
             >
               Contact

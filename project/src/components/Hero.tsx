@@ -6,8 +6,8 @@ import Testimonials from "./Testimonials/Testimonials";
 import WorkProcessSection from "./WorkProces/WorkProcessSection";
 import FAQSection from "./FAQ/FAQSection";
 import Blog from "./Blog";
-import { CaseStudiesSlider } from "./CaseStudy/CaseStudiesSlider";
 import PricingSection from "./Pricing/PricingSection";
+import { Link } from "react-router-dom";
 
 export default function LoraicTransportation() {
   return (
@@ -69,7 +69,7 @@ export default function LoraicTransportation() {
 
                 {/* Text */}
                 <span className="inline-block bg-orange-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 group-hover:text-left group-hover:pl-10">
-                  Loraic Transportation Inc
+                NorthPole Gateway Transportation Inc
                 </span>
 
                 {/* Upper Right Circle */}
@@ -87,15 +87,15 @@ export default function LoraicTransportation() {
               </h1>
 
               <p className="text-base sm:text-lg text-gray-600">
-                Take your business to the next level with Loraic new business
-                management tools. Loraic will open a new horizon for us.
+                Take your business to the next level with NorthPole Gateway new business
+                management tools. NorthPole Gateway will open a new horizon for us.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <button className="bg-teal-600 hover:bg-teal-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center transition-colors">
-                  Contact Loraic
+                <Link to="/contact" className="bg-teal-600 hover:bg-teal-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center transition-colors">
+                  Contact NorthPole Gateway
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </button>
+                </Link>
 
                 <div className="flex items-center space-x-4 bg-white px-4 sm:px-6 py-3 rounded-lg shadow-lg">
                   <div className="p-2 bg-orange-100 rounded-full">
@@ -133,9 +133,6 @@ export default function LoraicTransportation() {
 
       {/* Blog Section */}
       <Blog />
-
-      {/* Case Studies Slider */}
-      <CaseStudiesSlider />
 
       <PricingSection />
     </>

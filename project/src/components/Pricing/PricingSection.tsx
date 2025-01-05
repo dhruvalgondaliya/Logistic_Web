@@ -8,7 +8,7 @@ const plans = [
     title: "FBA I PREP Charges",
     price: "0.50",
     features: [
-      "At Zeetech3PL, we believe in transparency and providing our clients with the best value for their investment. Our pricing structure is designed to offer competitive rates while delivering exceptional 3PL services."
+      "NorthPole Gateway, we believe in transparency and providing our clients with the best value for their investment. Our pricing structure is designed to offer competitive rates while delivering exceptional 3PL services."
     ]
   },
   {
@@ -16,7 +16,7 @@ const plans = [
     price: "1.50",
 
     features: [
-      "At Zeetech3PL, we believe in transparency and providing our clients with the best value for their investment. Our pricing structure is designed to offer competitive rates while delivering exceptional 3PL services."
+      "NorthPole Gateway, we believe in transparency and providing our clients with the best value for their investment. Our pricing structure is designed to offer competitive rates while delivering exceptional 3PL services."
     ],
     isPopular: true
   },
@@ -24,7 +24,7 @@ const plans = [
     title: "Bundling Poly Bags / Boxes I Wrapping",
     price: "0.50",
     features: [
-      "At Zeetech3PL, we believe in transparency and providing our clients with the best value for their investment. Our pricing structure is designed to offer competitive rates while delivering exceptional 3PL services."
+      "NorthPole Gateway, we believe in transparency and providing our clients with the best value for their investment. Our pricing structure is designed to offer competitive rates while delivering exceptional 3PL services."
     ]
   }
 ];

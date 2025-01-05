@@ -56,7 +56,7 @@ export default function ServicesSection() {
             best in business
           </h2>
           <p className="text-teal-100 max-w-3xl mx-auto">
-            Loraic Air freight service delivers the knowledge & opportunity to
+            NorthPole Gateway Air freight service delivers the knowledge & opportunity to
             optimize every mile on every lane. Get full-service Truckload
             division provides more options to manage costs by combining
             technology intelligence.

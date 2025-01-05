@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const stats = [
-  { value: 5, label: "Star", suffix: "Ranked Company" }, // Numeric value for counter
-  { value: 150, label: "+", suffix: "Successful Logistics" } // Numeric value for counter
+  { value: 5, label: "Star", suffix: "Ranked Company" }, 
+  { value: 150, label: "+", suffix: "Successful Logistics" }
 ];
 
 function Counter({ endValue }: { endValue: number }) {
@@ -12,7 +12,7 @@ function Counter({ endValue }: { endValue: number }) {
   useEffect(() => {
     let start = 0;
     const end = endValue;
-    const duration = 2; // Duration for counting animation (in seconds)
+    const duration = 2; 
     const stepTime = Math.abs(Math.floor((duration * 1000) / end));
 
     const timer = setInterval(() => {

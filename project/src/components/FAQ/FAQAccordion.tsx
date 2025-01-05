@@ -77,19 +77,6 @@ export default function FAQAccordion() {
         "Can a 3PL provider integrate with my existing systems and platforms",
       answer:
         "Yes, a reputable 3PL provider should have the ability to integrate with your existing systems and platforms. They should be able to connect with your order management system, inventory management system, and other relevant software to facilitate seamless data exchange and improve operational efficiency."
-    },
-
-    {
-      question:
-        "How will a 3PL provider handle my inventory and order fulfillment",
-      answer:
-        "A 3PL provider will handle the warehousing, inventory management, and order fulfillment processes for your business. They will receive, store, and manage your inventory in their warehouses. When an order is placed, they will pick, pack, and ship the products to the end customer on your behalf. They will also handle any necessary returns and manage inventory levels."
-    },
-    {
-      question:
-        "How do 3PL providers ensure the security and safety of my inventory",
-      answer:
-        "Reputable 3PL providers have strict security measures in place to protect your inventory. This can include secure warehouse facilities, surveillance systems, access controls, and inventory tracking technologies. They also implement quality control measures to ensure the accuracy and integrity of your inventory throughout the fulfillment process."
     }
   ];
 

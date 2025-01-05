@@ -3,10 +3,11 @@ import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Home', to: '/' },
-  { label: 'About Us', to: '/aboutUS' },
-  { label: 'Pricing', to: '/pricing' },
-  {Lable:'Services',to :'/services'}
+  { label: 'Home', to: '/'},
+  { label: 'AboutUS', to: '/aboutus'},
+  { label: 'Services', to: '/services'},
+  { label: 'Pricing', to: '/pricing'},
+  { label: 'Contact', to: '/contact'}
 ];
 
 export default function MobileMenu() {

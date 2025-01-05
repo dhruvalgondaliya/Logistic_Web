@@ -3,7 +3,7 @@ import { Globe } from "lucide-react";
 export default function FooterNewsletter() {
   return (
     <div
-      className="flex flex-col md:flex-row items-center justify-between bg-teal-900 p-8 bg-cover bg-center"
+      className="flex  md:flex-row items-center justify-between bg-teal-900 p-8 bg-cover bg-center"
       style={{
         backgroundImage: "url('./src/image/bg-ft.webp')"
       }}
@@ -12,7 +12,7 @@ export default function FooterNewsletter() {
         <Globe className="h-8 w-8 text-orange-500" />
         <div>
           <h2 className="text-2xl font-bold text-white">Track Your Freight</h2>
-          <p className="text-teal-100">Track your Goods with Loraic trucking</p>
+          <p className="text-teal-100">Track your Goods with NorthPole Gateway trucking</p>
         </div>
       </div>
       <div className="flex w-full md:w-auto">
