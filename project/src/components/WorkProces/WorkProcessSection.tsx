@@ -1,37 +1,43 @@
-import { motion } from 'framer-motion';
-import ProcessStep from './ProcessStep';
+import { motion } from "framer-motion";
+import ProcessStep from "./ProcessStep";
 
 const steps = [
   {
     number: 1,
     title: "Step 1: Warehouse Storage",
-    description: "NorthPole Gateway Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
-    image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/young-courier-his-colleague-unloading-cardboard-boxes-from-delivery-van_637285-2293.jpg?alt=media&token=3da246e8-ea4f-4240-abd0-6f3c13787b65",
+    description:
+      "At NorthPole Gateway, we begin by assessing your storage needs to create a customized solution. Our flexible, secure storage options and advanced technology optimize space, inventory management, and accessibility",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP1.webp?alt=media&token=12d49599-1144-4553-808a-aaa08df6e988"
   },
   {
     number: 2,
-    title: "Step 2: priparing Order",
-    description: "NorthPole Gateway Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
-    image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Delivery.jpg?alt=media&token=33d2c50d-1536-4939-bd44-61a1aa84cffc",
+    title: "Step 2: Preparing Order",
+    description:
+      "Once storage is optimized, we move to the order preparation stage. At NorthPole Gateway, we ensure accurate picking, packing, and labeling of your products, using efficient processes and real-time tracking to guarantee timely and error-free order fulfillment.",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP2.webp?alt=media&token=c236ffc1-0398-4059-ae2c-b974143a6c95"
   },
   {
     number: 3,
     title: "Step 3: Ship the Order",
-    description: "NorthPole Gateway Air freight service deliver to know ledge & opportunity to optimize Logisco Air freight service deliver to know ledge and opportunity to optimize.",
-    image: "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/delivery-male-with-packages_23-2148869427.jpg?alt=media&token=a0476964-8b64-4797-ab6f-ea8190ef7e2f",
+    description:
+      "After preparing the order, we focus on timely and secure shipping. NorthPole Gateway ensures fast, reliable delivery through trusted logistics partners, tracking shipments every step of the way to ensure your products reach their destination on time.",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP3.webp?alt=media&token=6ade251d-b211-4c90-8064-b9391c9d7f04"
   }
 ];
-
 
 export default function WorkProcessSection() {
   return (
     <section
       className="py-24 relative overflow-hidden bg-gradient-to-b from-white to-gray-50"
       style={{
-        backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg_workprocess.jpg?alt=media&token=de050f80-b1b9-4430-bfa3-1eb64899add5')",
+        backgroundImage:
+          "url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg_workprocess.jpg?alt=media&token=de050f80-b1b9-4430-bfa3-1eb64899add5')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        backgroundRepeat: "no-repeat"
       }}
     >
       {/* Background Patterns */}
@@ -46,16 +52,17 @@ export default function WorkProcessSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block bg-orange-400 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+          <span className="inline-block bg-orange-400 text-white px-6 py-2 rounded-full text-sm font-semibold mb-3">
             OUR WORK PROCESS
           </span>
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl text-lg py-2">
-            We always follow the best
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 sm:text-4xl text-lg py-2 leading-tight sm:leading-snug md:leading-normal">
+            Optimized Warehousing Solutions
             <br />
-            ways of logistics
+            for Efficient Storage
           </h2>
+
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            NorthPole Gateway Air freight service deliver the knowledge & opportunity to optimize every
+          NorthPole Gateway offers expert warehousing services, providing the knowledge and tools to optimize storage and inventory management for your business.
           </p>
         </motion.div>
 

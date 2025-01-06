@@ -104,7 +104,7 @@ const ContactForm: React.FC = () => {
               value={formData.phone}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white"
-              placeholder="+91 98765 43210"
+              placeholder="+91 12345 67890"
               required
             />
           </div>
@@ -120,14 +120,15 @@ const ContactForm: React.FC = () => {
               required
             >
               <option value="">Select Service</option>
-              <option value="Warehousing Services">Warehousing Services</option>
               <option value="Wholesale FBA Prep">Wholesale FBA Prep</option>
               <option value="Private Labeling">Private Labeling</option>
+              <option value="Online Arbitrage">Online Arbitrage</option>
+              <option value="Retail Arbitrage">Retail Arbitrage</option>
               <option value="Fulfillment By Merchant (FBM)">
-                Fulfillmen By Merchant (FBM)
+                Fulfillment By Merchant (FBM)
               </option>
               <option value="Fulfillment Services & Shipping">
-                Fulfillmen Services & Shipping
+                Fulfillment Services & Shipping
               </option>
             </select>
           </div>

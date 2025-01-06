@@ -22,11 +22,6 @@ export const services = [
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/blog1-2.jpg?alt=media&token=a3cdaa57-3762-4eea-b039-02eb7f51001e'
   },
   {
-    title: 'DropShipping',
-    Icon: Store,
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/blog2-1.jpg?alt=media&token=c701b0ec-63eb-40ff-a4ac-a4472f6669a7'
-  },
-  {
     title: 'Retail Arbitrage',
     Icon: ShoppingBag,
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/premium_photo-1663047864659-dd046a328151.jpg?alt=media&token=9b5cb219-5447-4cc1-b94f-5bb0944ff8ae'

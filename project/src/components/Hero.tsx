@@ -70,7 +70,7 @@ export default function LoraicTransportation() {
 
                 {/* Text */}
                 <span className="inline-block bg-orange-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 group-hover:text-left group-hover:pl-10">
-                  NorthPole Gateway Transportation Inc
+                  NorthPole Gateway
                 </span>
 
                 {/* Upper Right Circle */}
@@ -83,38 +83,24 @@ export default function LoraicTransportation() {
                 ></span>
               </span>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-900 leading-tight">
-                Contact Us For A Seamless Inventory Transport Process
+              <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-teal-900 leading-tight">
+                Secure, Scalable, and Seamless <br /> Warehousing Solutions
               </h1>
 
               <p className="text-base sm:text-lg text-gray-600">
-                Take your business to the next level with NorthPole Gateway new
-                business management tools. NorthPole Gateway will open a new
-                horizon for us.
+                Elevate your business with NorthPole Gateway's innovative
+                management tools. Discover new horizons and unlock limitless
+                possibilities with NorthPole Gateway.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link
                   to="/contact"
-                  className="bg-teal-600 hover:bg-teal-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center transition-colors"
+                  className="bg-teal-600 hover:bg-teal-700 hover:text-teal-500  text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center transition-colors"
                 >
                   Contact NorthPole Gateway
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-
-                <div className="flex items-center space-x-4 bg-white px-4 sm:px-6 py-3 rounded-lg shadow-lg">
-                  <div className="p-2 bg-orange-100 rounded-full">
-                    <ArrowRight className="h-6 w-6 text-orange-500" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500">
-                      Shaping the Future of
-                    </p>
-                    <p className="font-semibold text-gray-900">
-                      Logistics transport
-                    </p>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>
@@ -141,7 +127,7 @@ export default function LoraicTransportation() {
       {/* pricing  section*/}
       <PricingSection />
 
-{/* GetRate */}
+      {/* GetRate */}
       <GetRate />
     </>
   );

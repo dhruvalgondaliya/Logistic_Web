@@ -1,5 +1,3 @@
-// src/components/LinkSection.tsx
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { LinkSectionProps } from './types';

@@ -5,22 +5,22 @@ import ServiceCard from "./ServiceCard";
 const services = [
   {
     icon: Truck,
-    title: "Land Freight Transportation",
+    title: "Xyz",
     href: "#land-freight",
   },
   {
     icon: Shield,
-    title: "Logistics Insurance",
+    title: "Xyz",
     href: "#insurance",
   },
   {
     icon: Plane,
-    title: "Air Freight Transportation",
+    title: "Xyx",
     href: "#air-freight",
   },
   {
     icon: Building2,
-    title: "Warehouse Support",
+    title: "Warehouse Services",
     href: "#warehouse",
   },
 ];
@@ -56,10 +56,10 @@ export default function ServicesSection() {
             best in business
           </h2>
           <p className="text-teal-100 max-w-3xl mx-auto">
-            NorthPole Gateway Air freight service delivers the knowledge & opportunity to
-            optimize every mile on every lane. Get full-service Truckload
-            division provides more options to manage costs by combining
-            technology intelligence.
+          NorthPole Gateway offers cutting-edge warehousing solutions that optimize storage and streamline inventory management, ensuring your goods are secure, organized, and ready for success.
+
+          {/* if needs new paragraph add a new */}
+          {/* NorthPole Gateway provides advanced warehousing solutions designed to streamline your inventory management and optimize storage efficiency. With state-of-the-art facilities and cutting-edge technology, we ensure your goods are secure, organized, and ready to meet your business needs, opening new horizons for operational excellence. */}
           </p>
         </motion.div>
 

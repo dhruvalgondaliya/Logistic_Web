@@ -65,9 +65,7 @@ const BlogSlider = () => {
             Read All Our Logistics Blogs
           </p>
           <p className="text-lg text-gray-500 mt-2 max-w-3xl mx-auto pt-2">
-            NorthPole Gateway Air freight service delivers the knowledge & opportunity to
-            optimize every mile on every lane. Get full-service and elevate your
-            logistics operations.
+          NorthPole Gateway's Warehousing Solutions: Unlock Expertise and Maximize Efficiency in Inventory Management and Storage. Experience Full-Service Support to Optimize Your Warehousing Operations.
           </p>
         </div>
 

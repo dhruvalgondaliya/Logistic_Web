@@ -9,7 +9,7 @@ interface NavigationProps {
 
 const navItems = [
   { label: "Home", to: "/" },
-  { label: "AboutUS", to: "/aboutus" },
+  { label: "About Us", to: "/aboutus" },
   { label: "Services", to: "/services" },
   { label: "Pricing", to: "/pricing" },
   { label: "Contact", to: "/contact" },

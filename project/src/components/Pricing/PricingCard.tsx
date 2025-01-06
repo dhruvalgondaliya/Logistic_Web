@@ -8,13 +8,14 @@ interface PricingCardProps {
   isPopular?: boolean;
 }
 
-export default function PricingCard({ title, price,  features, isPopular }: PricingCardProps) {
+export default function PricingCard({ title, price, features, isPopular }: PricingCardProps) {
   return (
     <motion.div
       whileHover={{ y: -8, scale: 1.02 }}
       className={`
         relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-shadow
-        hover:shadow-2xl hover:border-2 border-orange-500 ${isPopular ? 'border-2 border-orange-500' : ''}
+        hover:shadow-2xl ${isPopular ? 'border-2 border-orange-500' : ''}
+        h-full flex flex-col justify-between
       `}
     >
       {isPopular && (
@@ -33,7 +34,7 @@ export default function PricingCard({ title, price,  features, isPopular }: Pric
         </div>
       </div>
 
-      <div className="space-y-4 mb-8">
+      <div className="space-y-4 mb-8 flex-grow">
         {features.map((feature, index) => (
           <PricingFeature key={index} text={feature} />
         ))}
@@ -43,10 +44,10 @@ export default function PricingCard({ title, price,  features, isPopular }: Pric
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         className={`
-          w-full rounded-xl py-4 font-semibold transition-colors 
+          w-full rounded-xl py-4 font-semibold transition-colors
           ${isPopular 
             ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700' 
-            : 'bg-orange-400 text-white hover:bg-orange-500'
+            : 'bg-teal-50 text-teal-900 hover:text-white hover:bg-orange-600'
           }
         `}
       >

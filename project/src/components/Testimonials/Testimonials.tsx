@@ -6,10 +6,11 @@ import TestimonialCard from './TestimonialCard';
 
 const transportModes = [
   {
-    image: "./src/image/h6-12.webp",
-    alt: "Road Transport"
+    image: "",
+    alt: "testimonials image "
   }
 ];
+
 
 const testimonials = [
   {

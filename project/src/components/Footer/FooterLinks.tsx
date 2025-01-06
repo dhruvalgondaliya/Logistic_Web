@@ -2,12 +2,12 @@
 
 import React from 'react';
 import { LinkSection } from './LinkSection';
-import { FooterSection } from './types'; // Importing types
+import { FooterSection } from './types'; 
 
 const sections: FooterSection = {
   industryServed: ["Warehousing"],
   companyInfo: ["AboutUs", "Services", "Pricing", "Contact"],
-  ourServices: ["Container Freight"]
+  ourServices: ["Wholesale FBA Prep","Private Labeling","Online Arbitrage","Retail Arbitrage","Fulfillment By Merchant (FBM)","Fulfillment Services & Shipping"]
 };
 
 export const FooterLinks: React.FC = () => (

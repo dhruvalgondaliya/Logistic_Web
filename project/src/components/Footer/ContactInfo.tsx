@@ -6,9 +6,9 @@ export const ContactInfo: React.FC = () => (
   <div
     className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 px-3 border-t border-gray-700 rounded-lg"
     style={{
-      backgroundColor: "#115361", // Set the background color
-      opacity: 0.85, // Adjust opacity
-      borderBottom: "2px solid #f97316", // Orange bottom border
+      backgroundColor: "#115361", 
+      opacity: 0.85, 
+      borderBottom: "2px solid #f97316", 
     }}
   >
     <ContactItem 
@@ -23,7 +23,7 @@ export const ContactInfo: React.FC = () => (
     />
     <ContactItem 
       Icon={MapPin}
-      title="LOGISCO HEADQUARTER"
+      title="HEADQUARTER"
       content="70 Lynmont Road, Toronto ON M9V3X2 Canada"
     />
   </div>
