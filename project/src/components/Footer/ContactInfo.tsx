@@ -13,7 +13,7 @@ export const ContactInfo: React.FC = () => (
   >
     <ContactItem 
       Icon={Mail}
-      title="E-MAIL US"
+      title="EMAIL"
       content="Service@logiscocare.com"
     />
     <ContactItem 

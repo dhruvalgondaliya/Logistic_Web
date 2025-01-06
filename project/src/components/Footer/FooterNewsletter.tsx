@@ -14,13 +14,13 @@ export default function FooterNewsletter() {
         <Globe className="h-8 w-8 text-orange-500 mt-2" />
 
         <div>
-          <h2 className="text-2xl font-bold text-white mt-2">Newsletter</h2>
+          <h2 className="text-2xl font-bold text-white mt-2 mt-3">Newsletter</h2>
           <p className="text-teal-100 mt-2">
             Subscribe our newsletter to get our latest update & news
           </p>
         </div>
 
-        <div className="flex items-center gap-2 bg-gray-200 px-4 py-1 rounded-lg mt-2">
+        <div className="flex items-center gap-2 bg-gray-200 px-4 py-1 mt-6 rounded-lg mt-2">
           <input
             type="email"
             placeholder="Enter your email"

@@ -25,7 +25,7 @@ export const GetRate: React.FC = () => (
       shipping with leading carriers – boost your efficiency.
     </p>
 
-    <div className="flex justify-center md:justify-start">
+    <div className="flex justify-center md:justify-start ">
   <Link
     to="/contact"
     className="bg-orange-500 px-6 py-3 rounded-md font-semibold hover:bg-orange-700 transition-colors 

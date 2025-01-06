@@ -18,7 +18,7 @@ const ContactSection: React.FC = () => {
               With <span className="text-orange-500">Our Expertise</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We understand the importance of approaching each work integrally and believe in the power of simple.
+            We Recognize the Value of a Comprehensive Approach to Every Project, Emphasizing Simplicity for Streamlined Warehousing and Supply Chain Solutions
             </p>
           </div>
 

@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"; // Import the icons
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    from_name: "", // Matches {{from_name}} in EmailJS template
-    email: "", // Matches {{email}} in EmailJS template
-    phone: "", // Matches {{phone}} in EmailJS template
-    service: "", // Matches {{service}} in EmailJS template
-    message: "" // Matches {{message}} in EmailJS template
+    from_name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: ""
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // State to track dropdown open/close
+
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     setFormData({
       ...formData,
@@ -23,15 +27,32 @@ const ContactForm: React.FC = () => {
     });
   };
 
+  const handlePhoneChange = (value: string | undefined) => {
+    if (value) {
+      const countryCode = value.split(" ")[0]; // Extract country code
+      const actualNumber = value.slice(countryCode.length).trim(); // Extract actual number
+      setFormData({
+        ...formData,
+        phone: `${countryCode} ${actualNumber}` // Format with space
+      });
+    } else {
+      setFormData({
+        ...formData,
+        phone: "" // Reset if no value
+      });
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     emailjs
       .send(
-        "service_xlp9o7o", // Replace with your EmailJS service ID
-        "template_qovop2a", // Replace with your EmailJS template ID
+        "service_xlp9o7o",
+        "template_qovop2a",
         formData,
-        "sfzP8dARsTfHsyPE9" // Replace with your EmailJS public key
+        "sfzP8dARsTfHsyPE9"
       )
       .then(
         (response) => {
@@ -49,11 +70,21 @@ const ContactForm: React.FC = () => {
         },
         (error) => {
           console.error("FAILED...", error);
-          toast.error("Failed to send the message. Please try again.", {
-            position: "top-right"
-          });
+          toast.error(
+            `Failed to send the message. Please try again. ${error.message}`,
+            {
+              position: "top-right"
+            }
+          );
         }
-      );
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
+  };
+
+  const handleIconClick = () => {
+    setIsOpen(!isOpen); // Toggle the dropdown state when the icon is clicked
   };
 
   return (
@@ -98,39 +129,96 @@ const ContactForm: React.FC = () => {
             <label className="flex justify-between text-sm mb-2">
               <span className="text-orange-500">Phone</span>
             </label>
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white"
-              placeholder="+91 12345 67890"
+            <PhoneInput
+              international
+              defaultCountry="IN"
+              value={formData.phone || ""}
+              onChange={handlePhoneChange}
+              className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500  bg-white"
+              placeholder="Enter phone number"
               required
             />
           </div>
-          <div>
+          <div className="relative">
             <label className="flex justify-between text-sm mb-2">
               <span className="text-orange-500">Services</span>
             </label>
-            <select
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white appearance-none"
-              required
-            >
-              <option value="">Select Service</option>
-              <option value="Wholesale FBA Prep">Wholesale FBA Prep</option>
-              <option value="Private Labeling">Private Labeling</option>
-              <option value="Online Arbitrage">Online Arbitrage</option>
-              <option value="Retail Arbitrage">Retail Arbitrage</option>
-              <option value="Fulfillment By Merchant (FBM)">
-                Fulfillment By Merchant (FBM)
-              </option>
-              <option value="Fulfillment Services & Shipping">
-                Fulfillment Services & Shipping
-              </option>
-            </select>
+            <div className="relative">
+              <div
+                className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white cursor-pointer"
+                onClick={handleIconClick} 
+              >
+                <span>{formData.service || "Select Service"}</span>
+                <div
+                  className="absolute top-1/2 right-4 transform -translate-y-1/2"
+                  onClick={handleIconClick} 
+                >
+                  {isOpen ? (
+                    <IoIosArrowUp className="text-gray-500" />
+                  ) : (
+                    <IoIosArrowDown className="text-gray-500" />
+                  )}
+                </div>
+              </div>
+              {isOpen && (
+                <div className="absolute w-full bg-white border border-gray-200 rounded-lg shadow-md mt-1 z-10">
+                  <div
+                    className="p-3 cursor-pointer hover:bg-gray-100"
+                    onClick={() => {
+                      setFormData({ ...formData, service: "Wholesale FBA Prep" });
+                      setIsOpen(false);
+                    }}
+                  >
+                    Wholesale FBA Prep
+                  </div>
+                  <div
+                    className="p-3 cursor-pointer hover:bg-gray-100"
+                    onClick={() => {
+                      setFormData({ ...formData, service: "Private Labeling" });
+                      setIsOpen(false);
+                    }}
+                  >
+                    Private Labeling
+                  </div>
+                  <div
+                    className="p-3 cursor-pointer hover:bg-gray-100"
+                    onClick={() => {
+                      setFormData({ ...formData, service: "Online Arbitrage" });
+                      setIsOpen(false);
+                    }}
+                  >
+                    Online Arbitrage
+                  </div>
+                  <div
+                    className="p-3 cursor-pointer hover:bg-gray-100"
+                    onClick={() => {
+                      setFormData({ ...formData, service: "Retail Arbitrage" });
+                      setIsOpen(false);
+                    }}
+                  >
+                    Retail Arbitrage
+                  </div>
+                  <div
+                    className="p-3 cursor-pointer hover:bg-gray-100"
+                    onClick={() => {
+                      setFormData({ ...formData, service: "Fulfillment By Merchant (FBM)" });
+                      setIsOpen(false);
+                    }}
+                  >
+                    Fulfillment By Merchant (FBM)
+                  </div>
+                  <div
+                    className="p-3 cursor-pointer hover:bg-gray-100"
+                    onClick={() => {
+                      setFormData({ ...formData, service: "Fulfillment Services & Shipping" });
+                      setIsOpen(false);
+                    }}
+                  >
+                    Fulfillment Services & Shipping
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
@@ -152,8 +240,9 @@ const ContactForm: React.FC = () => {
         <button
           type="submit"
           className="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition-colors"
+          disabled={isSubmitting}
         >
-          Send message
+          {isSubmitting ? "Sending..." : "Send message"}
         </button>
       </form>
       <ToastContainer />

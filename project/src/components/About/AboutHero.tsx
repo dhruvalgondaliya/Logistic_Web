@@ -9,14 +9,15 @@ export default function AboutHero() {
   const renderContent = () => {
     switch (content) {
       case "Our Mission":
-        return "At NorthPole Gateway, our mission is to empower your success by providing exceptional NorthPole Gateway (Third-Party Logistics) solutions that drive your business forward. We are dedicated to supporting your growth, streamlining your operations, and delivering outstanding customer experiences. Our mission encompasses the following key principles";
+        return "At NorthPole Gateway, our mission is to empower your business with exceptional third-party logistics (3PL) and warehousing solutions. We streamline operations, optimize supply chains, and deliver outstanding customer experiences. Our services include efficient inventory management, secure storage, and timely order fulfillment, helping businesses reduce costs and scale seamlessly. With a focus on efficiency, scalability, and sustainability, we are committed to driving your success and enhancing your logistics operations. Our key principles include: Efficiency, Scalability, Customer-Centricity, Sustainability, Innovation.";
       case "Our Vision":
-        return "NorthPole Gateway, our vision is to be a transformative force in the NorthPole Gateway (Third-Party Logistics) industry. We envision a future where businesses of all sizes can thrive by leveraging our innovative solutions and expertise. Our vision encompasses the following key elements:";
+        return "At NorthPole Gateway, our vision is to be a transformative force in the NorthPole Gateway (Third-Party Logistics) industry. We envision a future where businesses of all sizes can thrive by leveraging our innovative solutions and expertise. Our vision is to redefine logistics by offering cutting-edge solutions that streamline operations, improve efficiency, and drive growth for our clients. We are committed to shaping the future of logistics with a focus on continuous improvement and delivering exceptional value.Key Elements of Our Vision: Innovation, Collaboration, Global Reach, Sustainability, Customer-Centricity.";
       case "Our Value":
-        return "At NorthPole Gateway, we are guided by a set of core values that shape our company culture and drive our commitment to excellence. These values form the foundation of our organization and guide our interactions with customers, partners, and team members";
+        return "At NorthPole Gateway, we are guided by a set of core values that shape our company culture and drive our commitment to excellence. These values form the foundation of our organization and guide our interactions with customers, partners, and team members. Our values are the cornerstone of our business, ensuring that we consistently deliver outstanding service and build strong, lasting relationships.Key Features of Our Values: Integrity, Excellence, Collaboration, Accountability, Innovation, Sustainability.";
       default:
         return "";
     }
+    
   };
 
   return (
@@ -53,19 +54,14 @@ export default function AboutHero() {
               viewport={{ once: true }}
             >
               <span className="inline-block text-orange-500 font-medium text-lg mb-4">
-                About us
+                About Us
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                Choose <span className="text-orange-500">The Best</span>
-                <br />
-                NorthPole Gateway Service Company
+              <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">
+              Choose <span className="text-orange-500">NorthPole Gateway </span> <br /> Your Trusted Logistics Partner
               </h2>
               <p className="text-gray-800 text-lg mb-8 leading-relaxed">
-                "Unlock the Competitive Edge with Our Exceptional NorthPole
-                Gateway <br /> Services – Discover a World of Streamlined
-                Operations,
-                <br /> Optimal Efficiency, and End-to-End Supply Chain Solutions{" "}
-                <br /> Tailored to Your Unique Business Needs!"
+              Unlock Your Competitive Advantage with NorthPole Gateway's Premier Logistics Solutions
+              Experience a world of seamless operations, optimized efficiency, and comprehensive supply chain management tailored specifically to your business needs. Our expert third-party logistics (3PL) services are designed to streamline your processes, reduce costs, and drive growth. Whether you're looking for reliable warehousing, inventory management, or end-to-end logistics solutions, NorthPole Gateway is your trusted partner in success.
               </p>
 
               <div className="flex space-x-6 mb-8">
