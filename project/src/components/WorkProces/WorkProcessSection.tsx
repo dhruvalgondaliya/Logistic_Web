@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { motion } from "framer-motion";
-import ProcessStep from "./ProcessStep";
+import ProcessStep from './ProcessStep';
 
 const steps = [
   {
@@ -29,6 +30,14 @@ const steps = [
 ];
 
 export default function WorkProcessSection() {
+  const [imageLoading, setImageLoading] = useState<boolean[]>(new Array(steps.length).fill(true));
+
+  const handleImageLoad = (index: number) => {
+    const newLoadingState = [...imageLoading];
+    newLoadingState[index] = false;
+    setImageLoading(newLoadingState);
+  };
+
   return (
     <section
       className="py-24 relative overflow-hidden bg-gradient-to-b from-white to-gray-50"
@@ -62,7 +71,7 @@ export default function WorkProcessSection() {
           </h2>
 
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-          NorthPole Gateway offers expert warehousing services, providing the knowledge and tools to optimize storage and inventory management for your business.
+            NorthPole Gateway offers expert warehousing services, providing the knowledge and tools to optimize storage and inventory management for your business.
           </p>
         </motion.div>
 
@@ -94,7 +103,14 @@ export default function WorkProcessSection() {
           {/* Process Steps */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {steps.map((step, index) => (
-              <ProcessStep key={index} {...step} />
+              <ProcessStep
+                key={index}
+                number={step.number}
+                title={step.title}
+                description={step.description}
+                image={step.image}
+                onImageLoad={() => handleImageLoad(index)} // Pass onImageLoad to each ProcessStep
+              />
             ))}
           </div>
         </div>

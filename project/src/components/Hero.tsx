@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Suspense, lazy } from "react";
+import { SkeletonLoader } from './Loader/SkeletonLoader'; 
 
 // Lazy load the sections
 const ServicesSection = lazy(() => import("./Services/ServicesSection"));
@@ -13,18 +14,20 @@ const Blog = lazy(() => import("./Blog"));
 const PricingSection = lazy(() => import("./Pricing/PricingSection"));
 const GetRate = lazy(() => import("./GetRate").then(module => ({ default: module.GetRate })));
 
-
 export default function LoraicTransportation() {
   return (
     <>
       <div className="relative bg-gradient-to-r from-teal-50 to-white overflow-hidden">
-        {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-90"
+          className="absolute inset-0 bg-cover bg-center opacity-80"
           style={{
-            backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg4-h6.jpg?alt=media&token=87d9488d-b4e7-4679-b7df-8258fd793fa8')`
+            backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/output-onlinepngtools.png?alt=media&token=423f17f3-347c-4d32-a503-14574ce6d19d')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
-        ></div>
+        >
+          <div className="absolute inset-0 bg-black opacity-50"></div> 
+        </div>
 
         {/* Background Decorative Circles */}
         <div className="absolute right-0 bottom-0 w-64 h-64 transform translate-x-1/2 translate-y-1/2 animate-pulse">
@@ -43,9 +46,9 @@ export default function LoraicTransportation() {
               className="relative"
             >
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/h2-12.webp?alt=media&token=b7b68995-48a7-4f15-a959-bb77c5f66557"
+                src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/home2.jpg?alt=media&token=be05024c-c550-48db-9564-293f2bcc7eee"
                 alt="Cargo Ship"
-                className="rounded-2xl shadow-2xl w-full"
+                className="rounded-lg shadow-2xl w-full"
               />
 
               {/* Decorative Animated Circles */}
@@ -86,11 +89,11 @@ export default function LoraicTransportation() {
                 ></span>
               </span>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-teal-900 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-white leading-tight">
                 Secure, Scalable, and Seamless <br /> Warehousing Solutions
               </h1>
 
-              <p className="text-base sm:text-lg text-gray-600">
+              <p className="text-base sm:text-lg text-white ">
                 Elevate your business with NorthPole Gateway's innovative
                 management tools. Discover new horizons and unlock limitless
                 possibilities with NorthPole Gateway.
@@ -99,7 +102,7 @@ export default function LoraicTransportation() {
               <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link
                   to="/contact"
-                  className="bg-teal-600 hover:bg-teal-700 hover:text-teal-500  text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center transition-colors"
+                  className="bg-teal-600 hover:bg-teal-700 hover:text-teal-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center transition-colors"
                 >
                   Contact NorthPole Gateway
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -110,8 +113,8 @@ export default function LoraicTransportation() {
         </div>
       </div>
 
-      {/* Lazy Loaded Sections */}
-      <Suspense fallback={<div>Loading...</div>}>
+      {/* Lazy Loaded Sections with Skeleton Loader Fallback */}
+      <Suspense fallback={<SkeletonLoader />}>
         <ServicesSection />
         <AboutSection />
         <Testimonials />
@@ -119,7 +122,7 @@ export default function LoraicTransportation() {
         <FAQSection />
         <Blog />
         <PricingSection />
-       <GetRate/>
+        <GetRate />
       </Suspense>
     </>
   );

@@ -1,5 +1,5 @@
-import  { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 interface ServiceCardProps {
   title: string;
@@ -14,7 +14,7 @@ export function ServiceCard({ title, imageUrl, details }: ServiceCardProps) {
     <div className="relative w-full h-[400px] perspective-1000">
       <div
         className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${
-          isFlipped ? 'rotate-y-180' : ''
+          isFlipped ? "rotate-y-180" : ""
         }`}
       >
         {/* Front of card */}
@@ -41,11 +41,14 @@ export function ServiceCard({ title, imageUrl, details }: ServiceCardProps) {
         {/* Back of card */}
         <div className="absolute w-full h-full backface-hidden rotate-y-180">
           <div className="h-full rounded-xl overflow-hidden shadow-lg bg-white p-6">
-            <h3 className="text-xl font-semibold mb-4">Services Details</h3>
-            <ul className="space-y-3">
+            <h3 className="text-xl font-semibold mb-4 text-orange-500">Services Details</h3>
+            <ul className="space-y-3 overflow-y-auto h-64">
               {details.map((detail, index) => (
-                <li key={index} className="flex items-start lg:text-lg sm:text-sm">
-                  <span className="inline-block w-2 h-2 mt-2 mr-2 bg-orange-500 rounded-full " />
+                <li
+                  key={index}
+                  className="flex items-start lg:text-lg sm:text-sm"
+                >
+                  <span className="inline-block w-2 h-2 mt-2 mr-2 bg-orange-500 rounded-full" />
                   <span>{detail}</span>
                 </li>
               ))}

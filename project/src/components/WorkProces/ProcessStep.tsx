@@ -1,15 +1,30 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 interface ProcessStepProps {
   number: number;
   title: string;
   description: string;
   image: string;
+  onImageLoad: () => void; // Function to notify parent when the image is loaded
 }
 
-export default function ProcessStep({ number, title, description, image }: ProcessStepProps) {
+export default function ProcessStep({
+  number,
+  title,
+  description,
+  image,
+  onImageLoad,
+}: ProcessStepProps) {
+  const [imageLoading, setImageLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setImageLoading(false);
+    onImageLoad(); // Notify parent that the image has loaded
+  };
+
   return (
-    <motion.div 
+    <motion.div
       className="relative pb-2"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -18,13 +33,19 @@ export default function ProcessStep({ number, title, description, image }: Proce
       transition={{ duration: 0.4 }}
     >
       <div className="relative rounded-2xl overflow-hidden shadow-xl">
-        <img 
-          src={image} 
+        {imageLoading && (
+          <div className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-50">
+            <div className="w-8 h-8 border-4 border-t-4 border-orange-400 border-solid rounded-full animate-spin" />
+          </div>
+        )}
+        <img
+          src={image}
           alt={title}
           className="w-full h-64 object-cover transform transition-transform duration-700 hover:scale-110"
+          onLoad={handleImageLoad} 
         />
-        <div className="absolute inset-0 " />
-        
+        <div className="absolute inset-0" />
+
         {/* Number Badge */}
         <div className="absolute -left-3 -top-3 w-16 h-16 bg-orange-500 rounded-2xl rotate-12 flex items-center justify-center shadow-lg">
           <span className="text-2xl font-bold text-white -rotate-12">{number}</span>
