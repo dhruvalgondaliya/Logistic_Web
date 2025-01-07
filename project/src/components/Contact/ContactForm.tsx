@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"; // Import the icons
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import PhoneInput from "react-phone-number-input";
+import PhoneInput, { formatPhoneNumberIntl } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
 const ContactForm: React.FC = () => {
@@ -16,7 +16,7 @@ const ContactForm: React.FC = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // State to track dropdown open/close
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -29,11 +29,10 @@ const ContactForm: React.FC = () => {
 
   const handlePhoneChange = (value: string | undefined) => {
     if (value) {
-      const countryCode = value.split(" ")[0]; // Extract country code
-      const actualNumber = value.slice(countryCode.length).trim(); // Extract actual number
+      const formattedNumber = formatPhoneNumberIntl(value); // Format phone number with international formatting
       setFormData({
         ...formData,
-        phone: `${countryCode} ${actualNumber}` // Format with space
+        phone: formattedNumber
       });
     } else {
       setFormData({
@@ -84,7 +83,7 @@ const ContactForm: React.FC = () => {
   };
 
   const handleIconClick = () => {
-    setIsOpen(!isOpen); // Toggle the dropdown state when the icon is clicked
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -139,6 +138,7 @@ const ContactForm: React.FC = () => {
               required
             />
           </div>
+          {/* Dropdown for services */}
           <div className="relative">
             <label className="flex justify-between text-sm mb-2">
               <span className="text-orange-500">Services</span>
@@ -146,12 +146,12 @@ const ContactForm: React.FC = () => {
             <div className="relative">
               <div
                 className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white cursor-pointer"
-                onClick={handleIconClick} 
+                onClick={handleIconClick}
               >
                 <span>{formData.service || "Select Service"}</span>
                 <div
                   className="absolute top-1/2 right-4 transform -translate-y-1/2"
-                  onClick={handleIconClick} 
+                  onClick={handleIconClick}
                 >
                   {isOpen ? (
                     <IoIosArrowUp className="text-gray-500" />
@@ -201,7 +201,10 @@ const ContactForm: React.FC = () => {
                   <div
                     className="p-3 cursor-pointer hover:bg-gray-100"
                     onClick={() => {
-                      setFormData({ ...formData, service: "Fulfillment By Merchant (FBM)" });
+                      setFormData({
+                        ...formData,
+                        service: "Fulfillment By Merchant (FBM)"
+                      });
                       setIsOpen(false);
                     }}
                   >
@@ -210,7 +213,10 @@ const ContactForm: React.FC = () => {
                   <div
                     className="p-3 cursor-pointer hover:bg-gray-100"
                     onClick={() => {
-                      setFormData({ ...formData, service: "Fulfillment Services & Shipping" });
+                      setFormData({
+                        ...formData,
+                        service: "Fulfillment Services & Shipping"
+                      });
                       setIsOpen(false);
                     }}
                   >

@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Hero from "./components/Hero";
-import AboutHero from "./components/About/AboutHero";
-import PricingHero from "./components/Pricing/PricingHero";
 import Loader from "./components/Loader/Loader";
-import ServicesHero from "./components/ServiceHero/ServicesHero";
-import ContactHero from "./components/Contact/ContactHero";
 import { Footer } from "./components/Footer/Footer";
+
+// Lazy load components
+const Hero = lazy(() => import("./components/Hero"));
+const AboutHero = lazy(() => import("./components/About/AboutHero"));
+const PricingHero = lazy(() => import("./components/Pricing/PricingHero"));
+const ServicesHero = lazy(() => import("./components/ServiceHero/ServicesHero"));
+const ContactHero = lazy(() => import("./components/Contact/ContactHero"));
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,16 +30,17 @@ export default function App() {
         <>
           <Header />
           <main>
-            <Routes>
-              <Route path="/" element={<Hero />} />
-              <Route path="/aboutus" element={<AboutHero />} />
-              <Route path="/services" element={<ServicesHero />} />
-              <Route path="/pricing" element={<PricingHero />} />
-              <Route path="/contact" element={<ContactHero />} />
-            </Routes>
+            <Suspense fallback={<Loader />}>
+              <Routes>
+                <Route path="/" element={<Hero />} />
+                <Route path="/aboutus" element={<AboutHero />} />
+                <Route path="/services" element={<ServicesHero />} />
+                <Route path="/pricing" element={<PricingHero />} />
+                <Route path="/contact" element={<ContactHero />} />
+              </Routes>
+            </Suspense>
           </main>
-          {/* <Footer /> */}
-          <Footer/>
+          <Footer />
         </>
       )}
     </div>

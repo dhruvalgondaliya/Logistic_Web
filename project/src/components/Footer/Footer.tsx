@@ -9,7 +9,6 @@ export const Footer: React.FC = () => (
   className="relative bg-cover bg-center bg-no-repeat" 
   style={{
     backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg2-ft.webp?alt=media&token=642027db-1f14-423b-97ba-26790d03bdbd')`
-    
   }}
 >
     <div className="container mx-auto px-4 pt-16">

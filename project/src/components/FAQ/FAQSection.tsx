@@ -25,7 +25,7 @@ export default function FAQSection() {
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 sm:pl-12 lg:text-left ">
               Do you have
               <br />
-              Some Comman questions?
+              Some Comman Questions?
               
             </h2>
             <p className="text-gray-200 text-lg mb-8 sm:pl-12 lg:text-left">

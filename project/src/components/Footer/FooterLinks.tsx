@@ -1,11 +1,11 @@
-// src/components/FooterLinks.tsx
+
 
 import React from 'react';
 import { LinkSection } from './LinkSection';
 import { FooterSection } from './types'; 
 
 const sections: FooterSection = {
-  industryServed: ["Warehousing"],
+  industryServed: ["E-commerce","Dropshipping","Warehousing","Logistics"],
   companyInfo: ["AboutUs", "Services", "Pricing", "Contact"],
   ourServices: ["Wholesale FBA Prep","Private Labeling","Online Arbitrage","Retail Arbitrage","Fulfillment By Merchant (FBM)","Fulfillment Services & Shipping"]
 };

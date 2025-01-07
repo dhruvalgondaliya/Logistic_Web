@@ -1,19 +1,23 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import ServicesSection from "./Services/ServicesSection";
-import AboutSection from "./About/AboutSection";
-import Testimonials from "./Testimonials/Testimonials";
-import WorkProcessSection from "./WorkProces/WorkProcessSection";
-import FAQSection from "./FAQ/FAQSection";
-import Blog from "./Blog";
-import PricingSection from "./Pricing/PricingSection";
 import { Link } from "react-router-dom";
-import { GetRate } from "./Footer/GetRate";
+import { Suspense, lazy } from "react";
+
+// Lazy load the sections
+const ServicesSection = lazy(() => import("./Services/ServicesSection"));
+const AboutSection = lazy(() => import("./About/AboutSection"));
+const Testimonials = lazy(() => import("./Testimonials/Testimonials"));
+const WorkProcessSection = lazy(() => import("./WorkProces/WorkProcessSection"));
+const FAQSection = lazy(() => import("./FAQ/FAQSection"));
+const Blog = lazy(() => import("./Blog"));
+const PricingSection = lazy(() => import("./Pricing/PricingSection"));
+const GetRate = lazy(() => import("./GetRate").then(module => ({ default: module.GetRate })));
+
 
 export default function LoraicTransportation() {
   return (
     <>
-      <div className="relative   bg-gradient-to-r from-teal-50 to-white overflow-hidden">
+      <div className="relative bg-gradient-to-r from-teal-50 to-white overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-90"
@@ -107,28 +111,17 @@ export default function LoraicTransportation() {
         </div>
       </div>
 
-      {/* Service Section */}
-      <ServicesSection />
-
-      {/* About Section */}
-      <AboutSection />
-
-      {/* Testimonials Section */}
-      <Testimonials />
-
-      {/* Work Process Section */}
-      <WorkProcessSection />
-
-      {/* FAQ Section */}
-      <FAQSection />
-
-      {/* Blog Section */}
-      <Blog />
-      {/* pricing  section*/}
-      <PricingSection />
-
-      {/* GetRate */}
-      <GetRate />
+      {/* Lazy Loaded Sections */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <ServicesSection />
+        <AboutSection />
+        <Testimonials />
+        <WorkProcessSection />
+        <FAQSection />
+        <Blog />
+        <PricingSection />
+       <GetRate/>
+      </Suspense>
     </>
   );
 }
