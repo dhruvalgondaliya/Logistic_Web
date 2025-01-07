@@ -27,9 +27,12 @@ const ServicesHero: React.FC = () => {
           </div>
         </div>
       </section>
+  
+       {/* card section */}
+       <ServicesSection1/>
 
-      {/* second component */}
-      <ServicesSection1 />
+
+      
     </>
   );
 };

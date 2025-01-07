@@ -71,8 +71,7 @@ export default function LoraicTransportation() {
                     boxShadow: "0 0 10px rgba(20, 184, 166, 0.5)"
                   }}
                 ></span>
-
-                {/* Text */}
+  
                 <span className="inline-block bg-orange-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 group-hover:text-left group-hover:pl-10">
                   NorthPole Gateway
                 </span>

@@ -24,7 +24,7 @@ const steps = [
     description:
       "After preparing the order, we focus on timely and secure shipping. NorthPole Gateway ensures fast, reliable delivery through trusted logistics partners, tracking shipments every step of the way to ensure your products reach their destination on time.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP3.webp?alt=media&token=6ade251d-b211-4c90-8064-b9391c9d7f04"
+      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP3.webp?alt=media&token=52316103-fcc0-4675-9cae-05b0faed23f7"
   }
 ];
 

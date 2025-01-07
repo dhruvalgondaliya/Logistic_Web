@@ -72,7 +72,7 @@ export default function Loader() {
             duration: 0.8,
             repeatType: "reverse"
           }}
-          className="text-white text-center mt-6 font-medium"
+          className="text-white text-center mt-6 font-medium "
         >
           Loading...
         </motion.p>
