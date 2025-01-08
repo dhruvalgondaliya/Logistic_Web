@@ -19,16 +19,16 @@ export default function FAQSection() {
         <div className="grid lg:grid-cols-2  items-start max-w-6xl w-full">
           {/* Text Section */}
           <motion.div>
-            <div className="max-w-80 relative  lg:ml-12 sm:ml-12 bg-orange-500 text-white px-2 py-2 mt-4 rounded-full text-sm text-center font-semibold mb-6">
+            <div className="max-w-80 relative lg:ml-12 sm:ml-12 bg-orange-500 text-white px-2 py-2 mt-4 rounded-full text-sm text-center font-semibold mb-6">
               FREQUENTLY ASKED QUESTIONS
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 sm:pl-12 lg:text-left ">
+            <h2 className="text-3xl md:text-5xl font-bold lg:pl-10 text-white mb-5 text-center md:text-left">
               Do you have
               <br />
-              Some Comman Questions?
-              
+              Some Common Questions?
             </h2>
-            <p className="text-gray-200 text-lg mb-8 sm:pl-12 lg:text-left">
+
+            <p className="text-gray-200 text-lg mb-5 sm:pl-12 lg:text-left">
               Some frequently asked questions about
               <br />
               NorthPole Gateway's 3PL services.

@@ -57,7 +57,7 @@ const ServicesSection1: React.FC = () => {
         <h2 className="text-base text-orange-500 font-semibold tracking-wide uppercase">
           OUR SERVICES
         </h2>
-        <p className="mt-2 text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <p className="mt-2 text-2xl lg:text-4xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl">
           We Provide The Necessary
           <br />
           Services To You

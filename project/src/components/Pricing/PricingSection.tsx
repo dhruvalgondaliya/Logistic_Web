@@ -137,7 +137,7 @@ export default function PricingSection() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            className="text-2xl md:text-4xl lg:text-4xl font-bold text-white mb-6"
           >
             Choose the Perfect Plan for
             <br />

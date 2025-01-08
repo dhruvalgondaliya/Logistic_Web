@@ -11,22 +11,22 @@ export function ServiceCard({ title, imageUrl, details }: ServiceCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="relative w-full h-[400px] perspective-1000">
+    <div className="relative w-[340px] h-[400px] lg:w-full sm:w-full perspective-1000 ">
       <div
-        className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${
+        className={`relative w-full h-full transition-transform duration-500 ml-6 sm:ml-0  lg:ml-0 transform-style-preserve-3d ${
           isFlipped ? "rotate-y-180" : ""
         }`}
       >
         {/* Front of card */}
-        <div className="absolute w-full h-full backface-hidden">
-          <div className="relative h-full rounded-xl overflow-hidden shadow-lg bg-white">
+        <div className="absolute w-full h-full backface-hidden ">
+          <div className="relativew w-[310px] h-[400px] lg:w-full  rounded-xl overflow-hidden shadow-lg bg-white">
             <img
               src={imageUrl}
               alt={title}
               className="w-full h-72 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">{title}</h3>
+              <h3 className="text-lg lg:text-xl font-semibold mb-2">{title}</h3>
               <button
                 onClick={() => setIsFlipped(true)}
                 className="inline-flex items-center text-orange-500 hover:text-orange-600 transition-colors"
@@ -40,8 +40,8 @@ export function ServiceCard({ title, imageUrl, details }: ServiceCardProps) {
 
         {/* Back of card */}
         <div className="absolute w-full h-full backface-hidden rotate-y-180">
-          <div className="h-full rounded-xl overflow-hidden shadow-lg bg-white p-6">
-            <h3 className="text-xl font-semibold mb-4 text-orange-500">Services Details</h3>
+          <div className="w-[310px] h-[415px] lg:w-full lg:h-full rounded-xl overflow-hidden shadow-lg bg-white p-5">
+            <h3 className="text-xl font-semibold mb-4 text-orange-500 text-start">Services Details</h3>
             <ul className="space-y-3 overflow-y-auto h-64">
               {details.map((detail, index) => (
                 <li
