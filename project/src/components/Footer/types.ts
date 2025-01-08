@@ -7,4 +7,4 @@ export interface LinkSectionProps {
     industryServed: string[];
     companyInfo: string[];
     ourServices: { title: string; link: string }[];
-  } 
+  }
