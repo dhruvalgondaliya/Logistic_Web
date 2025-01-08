@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Loader from "./components/Loader/Loader";
 import { Footer } from "./components/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Lazy load components
 const Hero = lazy(() => import("./components/Hero"));
@@ -31,6 +32,8 @@ export default function App() {
           <Header />
           <main>
             <Suspense fallback={<Loader />}>
+            {/* for any footer link press to show page first section */}
+            <ScrollToTop/>  
               <Routes>
                 <Route path="/" element={<Hero />} />
                 <Route path="/aboutus" element={<AboutHero />} />
