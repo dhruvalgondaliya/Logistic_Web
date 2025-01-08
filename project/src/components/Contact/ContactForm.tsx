@@ -130,7 +130,7 @@ const ContactForm: React.FC = () => {
             </label>
             <PhoneInput
               international
-              defaultCountry="IN"
+              defaultCountry="IN" 
               value={formData.phone || ""}
               onChange={handlePhoneChange}
               className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500  bg-white"

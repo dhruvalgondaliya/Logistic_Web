@@ -21,7 +21,7 @@ export default function LoraicTransportation() {
         <div
           className="absolute inset-0 bg-cover bg-center opacity-80"
           style={{
-            backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/output-onlinepngtools.png?alt=media&token=423f17f3-347c-4d32-a503-14574ce6d19d')`,
+            backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/home3.jpg?alt=media&token=8ca243ae-84cd-4bf3-8587-0f549ec58bdc  ')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

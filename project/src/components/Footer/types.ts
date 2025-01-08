@@ -1,10 +1,10 @@
 export interface LinkSectionProps {
     title: string;
-    links: string[];
+    links: string[] | { label: string; href: string }[]; 
   }
   
   export interface FooterSection {
     industryServed: string[];
     companyInfo: string[];
-    ourServices: string[];
-  }
+    ourServices: { title: string; link: string }[];
+  } 
