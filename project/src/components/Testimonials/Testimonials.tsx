@@ -15,7 +15,7 @@ const transportModes = [
 const testimonials = [
   {
     quote:
-      "I saved over 50% using LogiTrans over my previous provider. The customer support staff was very helpful. I will definitely be using LogiTrans for all my future shipments. Thank you!!!",
+      "I saved over 50% using  over my previous provider. The customer support staff was very helpful. I will definitely be using  for all my future shipments. Thank you!!!",
     author: "Rachel Ballinger",
     position: "CEO, Bizzbreak Inc.",
     rating: 5,
@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     quote:
-      "Outstanding service and reliability. LogiTrans has transformed our supply chain efficiency.",
+      "Outstanding service and reliability.  has transformed our supply chain efficiency.",
     author: "Michael Chen",
     position: "Operations Director, Global Tech",
     rating: 5,
@@ -75,7 +75,7 @@ export default function Testimonials() {
           What our clients say about our service
         </h2>
         <p className="text-teal-100">
-          LogiTrans delivers the knowledge & opportunity to optimize every shipment
+           delivers the knowledge & opportunity to optimize every shipment
         </p>
       </div>
 

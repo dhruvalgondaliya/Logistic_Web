@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { motion } from "framer-motion";
-import ProcessStep from './ProcessStep';
+import ProcessStep from "./ProcessStep";
 
 const steps = [
   {
@@ -25,12 +25,14 @@ const steps = [
     description:
       "After preparing the order, we focus on timely and secure shipping. NorthPole Gateway ensures fast, reliable delivery through trusted logistics partners, tracking shipments every step of the way to ensure your products reach their destination on time.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP3.webp?alt=media&token=52316103-fcc0-4675-9cae-05b0faed23f7"
+      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP3.webp?alt=media&token=1b9de38c-4054-4a90-aff2-dbaf335d2169"
   }
 ];
 
 export default function WorkProcessSection() {
-  const [imageLoading, setImageLoading] = useState<boolean[]>(new Array(steps.length).fill(true));
+  const [imageLoading, setImageLoading] = useState<boolean[]>(
+    new Array(steps.length).fill(true)
+  );
 
   const handleImageLoad = (index: number) => {
     const newLoadingState = [...imageLoading];
@@ -71,7 +73,9 @@ export default function WorkProcessSection() {
           </h2>
 
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            NorthPole Gateway offers expert warehousing services, providing the knowledge and tools to optimize storage and inventory management for your business.
+            NorthPole Gateway offers expert warehousing services, providing the
+            knowledge and tools to optimize storage and inventory management for
+            your business.
           </p>
         </motion.div>
 

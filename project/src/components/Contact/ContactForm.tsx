@@ -203,18 +203,6 @@ const ContactForm: React.FC = () => {
                     onClick={() => {
                       setFormData({
                         ...formData,
-                        service: "Fulfillment By Merchant (FBM)"
-                      });
-                      setIsOpen(false);
-                    }}
-                  >
-                    Fulfillment By Merchant (FBM)
-                  </div>
-                  <div
-                    className="p-3 cursor-pointer hover:bg-gray-100"
-                    onClick={() => {
-                      setFormData({
-                        ...formData,
                         service: "Fulfillment Services & Shipping"
                       });
                       setIsOpen(false);

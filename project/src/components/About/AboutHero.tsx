@@ -57,7 +57,7 @@ export default function AboutHero() {
                 About Us
               </span>
               <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">
-              Choose <span className="text-orange-500">NorthPole Gateway </span> <br /> Your Trusted Logistics Partner
+              Choose <span className="text-orange-500">NorthPole Gateway </span> As <br /> Your Trusted Logistics Partner
               </h2>
               <p className="text-gray-800 text-lg mb-8 leading-relaxed">
               Unlock Your Competitive Advantage with NorthPole Gateway's Premier Logistics Solutions
