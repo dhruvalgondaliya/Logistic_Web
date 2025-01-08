@@ -89,7 +89,7 @@ const ContactForm: React.FC = () => {
   return (
     <>
       <form
-        className="space-y-6 bg-[#023B4C] p-8 rounded-lg"
+        className="space-y-6 bg-[#073742] p-8 rounded-lg"
         onSubmit={handleSubmit}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -102,7 +102,7 @@ const ContactForm: React.FC = () => {
               name="from_name"
               value={formData.from_name}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white"
+              className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg"
               placeholder="First and Last Name"
               required
             />
@@ -116,7 +116,7 @@ const ContactForm: React.FC = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white"
+              className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg"
               placeholder="yourcompany@domain.com"
               required
             />
@@ -130,10 +130,10 @@ const ContactForm: React.FC = () => {
             </label>
             <PhoneInput
               international
-              defaultCountry="IN" 
+              defaultCountry="IN"
               value={formData.phone || ""}
               onChange={handlePhoneChange}
-              className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500  bg-white"
+              className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg"
               placeholder="Enter phone number"
               required
             />
@@ -145,7 +145,7 @@ const ContactForm: React.FC = () => {
             </label>
             <div className="relative">
               <div
-                className="w-full px-4 py-3 border border-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white cursor-pointer"
+                className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 cursor-pointer shadow-lg"
                 onClick={handleIconClick}
               >
                 <span>{formData.service || "Select Service"}</span>
@@ -161,7 +161,7 @@ const ContactForm: React.FC = () => {
                 </div>
               </div>
               {isOpen && (
-                <div className="absolute w-full bg-white border border-gray-200 rounded-lg shadow-md mt-1 z-10">
+                <div className="absolute w-full bg-white border border-gray-200 rounded-lg shadow-lg mt-1 z-10">
                   <div
                     className="p-3 cursor-pointer hover:bg-gray-100"
                     onClick={() => {
@@ -225,7 +225,7 @@ const ContactForm: React.FC = () => {
             value={formData.message}
             onChange={handleChange}
             rows={6}
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white resize-none"
+            className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg resize-none"
             placeholder="Type message*"
             required
           ></textarea>
