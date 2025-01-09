@@ -13,7 +13,7 @@ const ContactSection: React.FC = () => {
                 <path d="M5 12h14" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             </div>
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-4">
               Grow Your Business<br />
               With <span className="text-orange-500">Our Expertise</span>
             </h2>
