@@ -5,7 +5,7 @@ import ProcessStep from "./ProcessStep";
 const steps = [
   {
     number: 1,
-    title: "Step 1: Warehouse Storage",
+    title: "Step 1:  Strategic Storage Solutions",
     description:
       "At NorthPole Gateway, we begin by assessing your storage needs to create a customized solution. Our flexible, secure storage options and advanced technology optimize space, inventory management, and accessibility",
     image:
@@ -13,7 +13,7 @@ const steps = [
   },
   {
     number: 2,
-    title: "Step 2: Preparing Order",
+    title: "Step 2: Precision Order Fulfillment",
     description:
       "Once storage is optimized, we move to the order preparation stage. At NorthPole Gateway, we ensure accurate picking, packing, and labeling of your products, using efficient processes and real-time tracking to guarantee timely and error-free order fulfillment.",
     image:
@@ -21,7 +21,7 @@ const steps = [
   },
   {
     number: 3,
-    title: "Step 3: Ship the Order",
+    title: "Step 3: Reliable Distribution Network",
     description:
       "After preparing the order, we focus on timely and secure shipping. NorthPole Gateway ensures fast, reliable delivery through trusted logistics partners, tracking shipments every step of the way to ensure your products reach their destination on time.",
     image:
@@ -105,7 +105,7 @@ export default function WorkProcessSection() {
           </svg>
 
           {/* Process Steps */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 ">
             {steps.map((step, index) => (
               <ProcessStep
                 key={index}

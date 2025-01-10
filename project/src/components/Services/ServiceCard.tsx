@@ -5,14 +5,15 @@ import { ArrowRight } from "lucide-react";
 interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
+  description: string;
   href: string;
 }
 
-export default function ServiceCard({ icon, title, href }: ServiceCardProps) {
+export default function ServiceCard({ icon, title, description, href }: ServiceCardProps) {
   return (
     <motion.div
       whileHover={{ y: -10 }}
-      className="group relative p-8 rounded-xl transition-transform duration-300 overflow-hidden border-r-2 border-l-2 hover:border-0"
+      className="group relative p-6 md:p-8 rounded-xl transition-transform duration-300 overflow-hidden border-l-2 hover:border-0 border-r-2 border-white h-full flex flex-col"
     >
       {/* Default Background (Solid Color) */}
       <div
@@ -34,19 +35,26 @@ export default function ServiceCard({ icon, title, href }: ServiceCardProps) {
       ></div>
 
       {/* Content */}
-      <div className="relative z-10 h-56">
-        <div className="mb-6 pt-6">
-          {/* Icon changes color on card hover */}
-          <div className="inline-block group-hover:text-orange-400 transition-colors duration-300">
+      <div className="relative z-10 flex flex-col flex-grow">
+        {/* Icon */}
+        <div className="mb-4">
+          <div className="inline-block transition-colors duration-300">
             {icon}
           </div>
         </div>
-        <h3 className="text-xl font-bold text-white mb-4 group-hover:text-orange-400">
+
+        {/* Title */}
+        <h3 className="text-md md:text-xl font-bold text-white group-hover:text-orange-500 mb-2">
           {title}
         </h3>
 
-        {/* Arrow Right with "Read More" */}
-        <div className="flex items-center space-x-2 group-hover:text-orange-400 transition-colors duration-300">
+        {/* Description */}
+        <p className="text-sm md:text-base text-gray-300 group-hover:text-white mb-6 flex-grow">
+          {description}
+        </p>
+
+        {/* Read More */}
+        <div className="flex items-center space-x-2 transition-colors duration-300">
           <a
             href={href}
             className="inline-flex items-center text-white bg-orange-400 p-2 rounded-full group-hover:bg-orange-500 transition-all duration-300"

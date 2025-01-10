@@ -17,9 +17,9 @@ export default function AboutSection() {
               ABOUT NORTHPOLE GATEWAY
             </span>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-teal-900 mb-8 ps-3">
-              NorthPole Gateway Warehousing Unlocking the Future of Efficient,
-              Secure, and Scalable Storage Solutions
+            <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-teal-900 mb-8 ps-3">
+              <span className="text-orange-500">NorthPole Gateway</span> is  
+               your<br /> strategic partner in modern supply chain solutions.
             </h2>
 
             <div className="space-y-8 mb-10">
@@ -36,8 +36,6 @@ export default function AboutSection() {
             </div>
             <p className="text-gray-600 mb-10 pl-2">
             NorthPole Gateway offers advanced warehousing solutions to optimize storage, enhance efficiency, and reduce costs. With cutting-edge technology and real-time tracking, we provide secure, scalable options to keep your business competitive.
-            {/* NorthPole Gateway Warehousing services offer innovative solutions to optimize your storage and streamline inventory management. With advanced facilities and cutting-edge technology, we provide secure, scalable, and efficient storage options. Empower your supply chain with seamless warehousing solutions designed to enhance operational efficiency and reduce costs. Discover the future of logistics with NorthPole Gateway—your trusted partner in warehousing excellence. From real-time inventory tracking to customized storage solutions, we ensure your business stays ahead in the competitive landscape. */}
-
             </p>
             <AboutStats />
           </motion.div>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const stats = [
-  { value: 5, label: "Star", suffix: "Ranked Company" }, 
+  // { value: 5, label: "Star", suffix: "Ranked Company" }, 
   { value: 150, label: "+", suffix: "Successful Logistics" }
 ];
 
