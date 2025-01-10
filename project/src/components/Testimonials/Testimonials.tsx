@@ -71,7 +71,7 @@ export default function Testimonials() {
         <span className="bg-orange-400 text-white px-4 py-1 rounded-full text-sm font-semibold">
           TESTIMONIAL
         </span>
-        <h2 className="text-3xl font-bold text-white mt-4 mb-2">
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mt-4 mb-2">
           What our clients say about our service
         </h2>
         <p className="text-teal-100">
