@@ -49,8 +49,8 @@ export default function WorkProcessSection() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
-      }}
-    >
+      }}>
+        
       {/* Background Patterns */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 " />
@@ -77,6 +77,7 @@ export default function WorkProcessSection() {
             knowledge and tools to optimize storage and inventory management for
             your business.
           </p>
+
         </motion.div>
 
         <div className="relative">

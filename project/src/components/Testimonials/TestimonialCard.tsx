@@ -25,7 +25,7 @@ export default function TestimonialCard({ quote, author, position, rating, image
           style={{ aspectRatio: '1 / 1' }} 
         />
         <div>
-          <h4 className="text-gray-700 font-semibold">{author}</h4>
+          <h3 className="text-gray-700 font-semibold">{author}</h3>
           <p className="text-teal-100 text-sm">{position}</p>
         </div>
       </div>
