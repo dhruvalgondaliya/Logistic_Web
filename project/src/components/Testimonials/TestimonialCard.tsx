@@ -21,10 +21,11 @@ export default function TestimonialCard({ quote, author, position, rating, image
         <img
           src={image}
           alt={author}
-          className="w-12 h-12 rounded-full border-2 border-orange-400"
+          className="w-12 h-12 rounded-full border-2 border-orange-400 object-cover"
+          style={{ aspectRatio: '1 / 1' }} 
         />
         <div>
-          <h4 className="text-white font-semibold">{author}</h4>
+          <h4 className="text-gray-700 font-semibold">{author}</h4>
           <p className="text-teal-100 text-sm">{position}</p>
         </div>
       </div>
