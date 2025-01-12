@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import PhoneInput, { formatPhoneNumberIntl } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
@@ -11,70 +9,90 @@ const ContactForm: React.FC = () => {
     from_name: "",
     email: "",
     phone: "",
-    service: "",
-    message: ""
+    service: [] as string[], // Array for multiple services
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({
+    from_name: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    const { name, value } = e.target;
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: "",
+    }));
+
+    if (name === "from_name" && !/^[a-zA-Z\s]*$/.test(value)) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        from_name: "Name can only contain letters and spaces.",
+      }));
+      return;
+    }
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value,
     });
   };
 
   const handlePhoneChange = (value: string | undefined) => {
     if (value) {
-      const formattedNumber = formatPhoneNumberIntl(value); // Format phone number with international formatting
+      const formattedNumber = formatPhoneNumberIntl(value);
       setFormData({
         ...formData,
-        phone: formattedNumber
+        phone: formattedNumber,
       });
     } else {
       setFormData({
         ...formData,
-        phone: "" // Reset if no value
+        phone: "",
       });
     }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!formData.message.trim()) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        message: "Message field cannot be blank.",
+      }));
+      return;
+    }
+
     setIsSubmitting(true);
 
     emailjs
       .send(
         "service_xlp9o7o",
         "template_qovop2a",
-        formData,
+        { ...formData, service: formData.service.join(", ") }, // Convert array to string
         "sfzP8dARsTfHsyPE9"
       )
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
-          toast.success("Message sent successfully!", {
-            position: "top-right"
-          });
           setFormData({
             from_name: "",
             email: "",
             phone: "",
-            service: "",
-            message: ""
+            service: [],
+            message: "",
           });
         },
         (error) => {
           console.error("FAILED...", error);
-          toast.error(
-            `Failed to send the message. Please try again. ${error.message}`,
-            {
-              position: "top-right"
-            }
-          );
         }
       )
       .finally(() => {
@@ -87,160 +105,142 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <>
-      <form
-        className="space-y-6 bg-[#073742] p-8 rounded-lg"
-        onSubmit={handleSubmit}
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label className="flex justify-between text-sm mb-2">
-              <span className="text-orange-500">Name</span>
-            </label>
-            <input
-              type="text"
-              name="from_name"
-              value={formData.from_name}
-              onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg"
-              placeholder="First and Last Name"
-              required
-            />
-          </div>
-          <div>
-            <label className="flex justify-between text-sm mb-2">
-              <span className="text-orange-500">Email address</span>
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg"
-              placeholder="yourcompany@domain.com"
-              required
-            />
-          </div>
+    <form
+      className="space-y-6 bg-[#073742] p-8 rounded-lg"
+      onSubmit={handleSubmit}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="flex justify-between text-sm mb-2">
+            <span className="text-orange-500">Name</span>
+          </label>
+          <input
+            type="text"
+            name="from_name"
+            value={formData.from_name}
+            onChange={handleChange}
+            className={`w-full px-4 py-3 border ${
+              errors.from_name ? "border-red-500" : "border-gray-300"
+            } bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg`}
+            placeholder="First and Last Name"
+            required
+          />
+          {errors.from_name && (
+            <p className="text-red-500 text-sm mt-1">{errors.from_name}</p>
+          )}
         </div>
+        <div>
+          <label className="flex justify-between text-sm mb-2">
+            <span className="text-orange-500">Email address</span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg"
+            placeholder="yourcompany@domain.com"
+            required
+          />
+        </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label className="flex justify-between text-sm mb-2">
-              <span className="text-orange-500">Phone</span>
-            </label>
-            <PhoneInput
-              international
-              defaultCountry="IN"
-              value={formData.phone || ""}
-              onChange={handlePhoneChange}
-              className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg"
-              placeholder="Enter phone number"
-              required
-            />
-          </div>
-          {/* Dropdown for services */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="flex justify-between text-sm mb-2">
+            <span className="text-orange-500">Phone</span>
+          </label>
+          <PhoneInput
+            international
+            defaultCountry="IN"
+            value={formData.phone || ""}
+            onChange={handlePhoneChange}
+            className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg"
+            placeholder="Enter phone number"
+            required
+          />
+        </div>
+        <div className="relative">
+          <label className="flex justify-between text-sm mb-2">
+            <span className="text-orange-500">Services</span>
+          </label>
           <div className="relative">
-            <label className="flex justify-between text-sm mb-2">
-              <span className="text-orange-500">Services</span>
-            </label>
-            <div className="relative">
+            <div
+              className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 cursor-pointer shadow-lg"
+              onClick={handleIconClick}
+            >
+              <span>
+                {formData.service.length > 0
+                  ? formData.service.join(", ")
+                  : "Select Services"}
+              </span>
               <div
-                className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 cursor-pointer shadow-lg"
+                className="absolute top-1/2 right-4 transform -translate-y-1/2"
                 onClick={handleIconClick}
               >
-                <span>{formData.service || "Select Service"}</span>
-                <div
-                  className="absolute top-1/2 right-4 transform -translate-y-1/2"
-                  onClick={handleIconClick}
-                >
-                  {isOpen ? (
-                    <IoIosArrowUp className="text-gray-500" />
-                  ) : (
-                    <IoIosArrowDown className="text-gray-500" />
-                  )}
-                </div>
+                {isOpen ? (
+                  <IoIosArrowUp className="text-gray-500" />
+                ) : (
+                  <IoIosArrowDown className="text-gray-500" />
+                )}
               </div>
-              {isOpen && (
-                <div className="absolute w-full bg-white border border-gray-200 rounded-lg shadow-lg mt-1 z-10">
-                  <div
-                    className="p-3 cursor-pointer hover:bg-gray-100"
-                    onClick={() => {
-                      setFormData({ ...formData, service: "Wholesale FBA Prep" });
-                      setIsOpen(false);
-                    }}
-                  >
-                    Wholesale FBA Prep
-                  </div>
-                  <div
-                    className="p-3 cursor-pointer hover:bg-gray-100"
-                    onClick={() => {
-                      setFormData({ ...formData, service: "Private Labeling" });
-                      setIsOpen(false);
-                    }}
-                  >
-                    Private Labeling
-                  </div>
-                  <div
-                    className="p-3 cursor-pointer hover:bg-gray-100"
-                    onClick={() => {
-                      setFormData({ ...formData, service: "Online Arbitrage" });
-                      setIsOpen(false);
-                    }}
-                  >
-                    Online Arbitrage
-                  </div>
-                  <div
-                    className="p-3 cursor-pointer hover:bg-gray-100"
-                    onClick={() => {
-                      setFormData({ ...formData, service: "Retail Arbitrage" });
-                      setIsOpen(false);
-                    }}
-                  >
-                    Retail Arbitrage
-                  </div>
-                  <div
-                    className="p-3 cursor-pointer hover:bg-gray-100"
-                    onClick={() => {
-                      setFormData({
-                        ...formData,
-                        service: "Fulfillment Services & Shipping"
-                      });
-                      setIsOpen(false);
-                    }}
-                  >
-                    Fulfillment Services & Shipping
-                  </div>
-                </div>
-              )}
             </div>
+            {isOpen && (
+              <div className="absolute w-full bg-white border border-gray-200 rounded-lg shadow-lg mt-1 z-10">
+                {[
+                  "Wholesale FBA Prep",
+                  "Private Labeling",
+                  "Online Arbitrage",
+                  "Retail Arbitrage",
+                  "Fulfillment Services & Shipping",
+                ].map((service) => (
+                  <div
+                    key={service}
+                    className={`p-3 cursor-pointer hover:bg-gray-100 ${
+                      formData.service.includes(service) ? "bg-gray-200" : ""
+                    }`}
+                    onClick={() => {
+                      const updatedServices = formData.service.includes(service)
+                        ? formData.service.filter((s) => s !== service)
+                        : [...formData.service, service];
+                      setFormData({ ...formData, service: updatedServices });
+                    }}
+                  >
+                    {service}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
+      </div>
 
-        <div>
-          <label className="block text-sm mb-2 text-orange-500">
-            Your message
-          </label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            rows={6}
-            className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg resize-none"
-            placeholder="Type message*"
-            required
-          ></textarea>
-        </div>
+      <div>
+        <label className="block text-sm mb-2 text-orange-500">Your message</label>
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          rows={6}
+          className={`w-full px-4 py-3 border ${
+            errors.message ? "border-red-500" : "border-gray-300"
+          } bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg resize-none`}
+          placeholder="Type message*"
+          required
+        ></textarea>
+        {errors.message && (
+          <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+        )}
+      </div>
 
-        <button
-          type="submit"
-          className="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition-colors"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? "Sending..." : "Send message"}
-        </button>
-      </form>
-      <ToastContainer />
-    </>
+      <button
+        type="submit"
+        className="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition-colors"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? "Sending..." : "Send message"}
+      </button>
+    </form>
   );
 };
 
