@@ -1,4 +1,3 @@
-// BlogCard Component
 import { ArrowRight } from "lucide-react";
 
 interface BlogCardProps {
@@ -7,9 +6,19 @@ interface BlogCardProps {
   excerpt: string;
   date: string;
   readTime: string;
+  headingLevel?: keyof JSX.IntrinsicElements; 
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({ title, image, excerpt, date, readTime }) => {
+const BlogCard: React.FC<BlogCardProps> = ({
+  title,
+  image,
+  excerpt,
+  date,
+  readTime,
+  headingLevel = "h3" 
+}) => {
+  const HeadingTag = headingLevel; // Dynamic heading tag
+
   return (
     <div className="group h-full bg-white rounded-xl shadow-md overflow-hidden">
       <div className="relative h-48 overflow-hidden">
@@ -28,13 +37,16 @@ const BlogCard: React.FC<BlogCardProps> = ({ title, image, excerpt, date, readTi
           <span>{readTime}</span>
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-700 mb-2 group-hover:text-orange-500 transition-colors">
+        <HeadingTag className="text-xl font-semibold text-gray-700 mb-2 group-hover:text-orange-500 transition-colors">
           {title}
-        </h3>
+        </HeadingTag>
 
         <p className="text-gray-600 mb-4">{excerpt}</p>
 
-        <button className="inline-flex items-center text-orange-500 font-semibold group-hover:text-teal-700">
+        <button
+          className="inline-flex items-center text-orange-500 font-semibold group-hover:text-teal-700"
+          aria-label={`Read more about ${title}`}
+        >
           Read More
           <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
         </button>
