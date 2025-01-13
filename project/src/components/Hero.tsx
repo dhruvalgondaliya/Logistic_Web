@@ -51,11 +51,6 @@ export default function LoraicTransportation() {
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/home2.jpg?alt=media&token=be05024c-c550-48db-9564-293f2bcc7eee"
-                srcSet="
-                  https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/home2.jpg?alt=media&token=be05024c-c550-48db-9564-293f2bcc7eee 480w,
-                  https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/home2.jpg?alt=media&token=be05024c-c550-48db-9564-293f2bcc7eee 768w,
-                  https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/home2.jpg?alt=media&token=be05024c-c550-48db-9564-293f2bcc7eee 1200w
-                "
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
                 alt="Cargo Ship"
                 className="rounded-lg shadow-2xl w-full h-auto"

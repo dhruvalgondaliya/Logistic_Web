@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
     if (name === "from_name" && !/^[a-zA-Z\s]*$/.test(value)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        from_name: "Name can only contain letters and spaces."
+        from_name: "Name can only contain letters."
       }));
       return;
     }
