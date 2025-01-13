@@ -8,28 +8,28 @@ const services = [
     title: "Strategic Location Advantage",
     description:
       "Strategically located at key distribution points, offering seamless connectivity and reduced transportation costs for your supply chain.",
-    href: "#land-freight"
+   
   },
   {
     icon: Shield,
     title: "Tech-Powered Inventory Excellence",
     description:
       "Real-time inventory tracking and automated management systems ensure 99.9% accuracy and instant visibility of your goods.",
-    href: "#insurance"
+    
   },
   {
     icon: Plane,
     title: "Flexible Scaling Solutions",
     description:
       "From startups to enterprises, our scalable storage solutions grow with your business.",
-    href: "#air-freight"
+   
   },
   {
     icon: Building2,
     title: "End-to-End Security",
     description:
       "24/7 surveillance, controlled access, and advanced monitoring systems protect your valuable inventory around the clock.",
-    href: "#warehouse"
+  
   }
 ];
 
@@ -78,7 +78,7 @@ export default function ServicesSection() {
               icon={<service.icon className="w-8 h-8 text-orange-500" />}
               title={service.title}
               description={service.description}
-              href={service.href}
+              
             />
           ))}
         </div>

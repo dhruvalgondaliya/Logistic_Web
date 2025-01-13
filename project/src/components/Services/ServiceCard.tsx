@@ -6,10 +6,10 @@ interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
-  href: string;
+
 }
 
-export default function ServiceCard({ icon, title, description, href }: ServiceCardProps) {
+export default function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
     <motion.div
       whileHover={{ y: -10 }}
@@ -55,12 +55,11 @@ export default function ServiceCard({ icon, title, description, href }: ServiceC
 
         {/* Read More */}
         <div className="flex items-center space-x-2 transition-colors duration-300">
-          <a
-            href={href}
-            className="inline-flex items-center text-white bg-orange-400 p-2 rounded-full group-hover:bg-orange-500 transition-all duration-300"
+          <span
+            className="inline-flex items-center text-white bg-orange-500 p-2 rounded-full group-hover:bg-orange-500 transition-all duration-300"
           >
             <ArrowRight className="h-5 w-5" />
-          </a>
+          </span>
           <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             Read More
           </span>

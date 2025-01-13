@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+// import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const links = [
   { text: 'Privacy', to: '#' },
@@ -22,7 +22,7 @@ export const BottomBar: React.FC = () => (
           </React.Fragment>
         ))}
       </div>
-      <div className="flex gap-4 mt-4 md:mt-0">
+      {/* <div className="flex gap-4 mt-4 md:mt-0">
         <a
           href="https://facebook.com"
           target="_blank"
@@ -47,7 +47,7 @@ export const BottomBar: React.FC = () => (
         >
           <FaInstagram size={24} color="#E1306C" />
         </a>
-      </div>
+      </div> */}
     </div>
   </div>
 );
