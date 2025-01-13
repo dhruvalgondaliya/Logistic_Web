@@ -2,17 +2,21 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import { SkeletonLoader } from './Loader/SkeletonLoader'; 
+import { SkeletonLoader } from "./Loader/SkeletonLoader";
 
 // Lazy load the sections
 const ServicesSection = lazy(() => import("./Services/ServicesSection"));
 const AboutSection = lazy(() => import("./About/AboutSection"));
 const Testimonials = lazy(() => import("./Testimonials/Testimonials"));
-const WorkProcessSection = lazy(() => import("./WorkProces/WorkProcessSection"));
+const WorkProcessSection = lazy(
+  () => import("./WorkProces/WorkProcessSection")
+);
 const FAQSection = lazy(() => import("./FAQ/FAQSection"));
 const Blog = lazy(() => import("./Blog"));
 const PricingSection = lazy(() => import("./Pricing/PricingSection"));
-const GetRate = lazy(() => import("./GetRate").then(module => ({ default: module.GetRate })));
+const GetRate = lazy(() =>
+  import("./GetRate").then((module) => ({ default: module.GetRate }))
+);
 
 export default function LoraicTransportation() {
   return (
@@ -23,10 +27,10 @@ export default function LoraicTransportation() {
           style={{
             backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/home3.jpg?alt=media&token=8ca243ae-84cd-4bf3-8587-0f549ec58bdc  ')`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center"
           }}
         >
-          <div className="absolute inset-0 bg-black opacity-50"></div> 
+          <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
         {/* Background Decorative Circles */}
@@ -47,8 +51,16 @@ export default function LoraicTransportation() {
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/home2.jpg?alt=media&token=be05024c-c550-48db-9564-293f2bcc7eee"
+                srcSet="
+                  https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/home2.jpg?alt=media&token=be05024c-c550-48db-9564-293f2bcc7eee 480w,
+                  https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/home2.jpg?alt=media&token=be05024c-c550-48db-9564-293f2bcc7eee 768w,
+                  https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/home2.jpg?alt=media&token=be05024c-c550-48db-9564-293f2bcc7eee 1200w
+                "
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
                 alt="Cargo Ship"
-                className="rounded-lg shadow-2xl w-full"
+                className="rounded-lg shadow-2xl w-full h-auto"
+                width="1200"
+                height="800"
               />
 
               {/* Decorative Animated Circles */}
@@ -74,7 +86,7 @@ export default function LoraicTransportation() {
                     boxShadow: "0 0 10px rgba(20, 184, 166, 0.5)"
                   }}
                 ></span>
-  
+
                 <span className="inline-block bg-orange-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 group-hover:text-left group-hover:pl-10">
                   NorthPole Gateway
                 </span>

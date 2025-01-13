@@ -1,13 +1,13 @@
-import  { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navItems = [
-  { label: 'Home', to: '/'},
-  { label: 'About Us', to: '/aboutus'},
-  { label: 'Services', to: '/services'},
-  { label: 'Pricing', to: '/pricing'},
-  { label: 'Contact', to: '/contact'}
+  { label: "Home", to: "/" },
+  { label: "About Us", to: "/aboutus" },
+  { label: "Services", to: "/services" },
+  { label: "Pricing", to: "/pricing" },
+  { label: "Contact", to: "/contact" }
 ];
 
 export default function MobileMenu() {
@@ -18,6 +18,7 @@ export default function MobileMenu() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="text-gray-600 hover:text-orange-500 transition-colors"
+        aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>

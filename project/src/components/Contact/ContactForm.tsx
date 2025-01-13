@@ -10,12 +10,12 @@ const ContactForm: React.FC = () => {
     email: "",
     phone: "",
     service: [] as string[], // Array for multiple services
-    message: "",
+    message: ""
   });
 
   const [errors, setErrors] = useState({
     from_name: "",
-    message: "",
+    message: ""
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,20 +28,20 @@ const ContactForm: React.FC = () => {
 
     setErrors((prevErrors) => ({
       ...prevErrors,
-      [name]: "",
+      [name]: ""
     }));
 
     if (name === "from_name" && !/^[a-zA-Z\s]*$/.test(value)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        from_name: "Name can only contain letters and spaces.",
+        from_name: "Name can only contain letters and spaces."
       }));
       return;
     }
 
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: value
     });
   };
 
@@ -50,12 +50,12 @@ const ContactForm: React.FC = () => {
       const formattedNumber = formatPhoneNumberIntl(value);
       setFormData({
         ...formData,
-        phone: formattedNumber,
+        phone: formattedNumber
       });
     } else {
       setFormData({
         ...formData,
-        phone: "",
+        phone: ""
       });
     }
   };
@@ -66,7 +66,7 @@ const ContactForm: React.FC = () => {
     if (!formData.message.trim()) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        message: "Message field cannot be blank.",
+        message: "Message field cannot be blank."
       }));
       return;
     }
@@ -88,7 +88,7 @@ const ContactForm: React.FC = () => {
             email: "",
             phone: "",
             service: [],
-            message: "",
+            message: ""
           });
         },
         (error) => {
@@ -192,7 +192,7 @@ const ContactForm: React.FC = () => {
                   "Private Labeling",
                   "Online Arbitrage",
                   "Retail Arbitrage",
-                  "Fulfillment Services & Shipping",
+                  "Fulfillment Services & Shipping"
                 ].map((service) => (
                   <div
                     key={service}
@@ -216,7 +216,9 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label className="block text-sm mb-2 text-orange-500">Your message</label>
+        <label className="block text-sm mb-2 text-orange-500">
+          Your message
+        </label>
         <textarea
           name="message"
           value={formData.message}
