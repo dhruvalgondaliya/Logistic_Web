@@ -157,6 +157,7 @@ const ContactForm: React.FC = () => {
             onChange={handlePhoneChange}
             className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-lg"
             placeholder="Enter phone number"
+            maxLength={15}
             required
           />
         </div>
