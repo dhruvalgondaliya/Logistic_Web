@@ -57,7 +57,7 @@ export default function Testimonials() {
           {/* Transport Modes Grid */}
           <div className="p-6">
             <h2 className="text-2xl font-bold text-white text-center mb-4">
-              Interactive Global Map
+              Global Map
             </h2>
             <div
               className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
