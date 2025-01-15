@@ -36,23 +36,22 @@ const LocationMarker = ({
   onClick: () => void;
 }) => {
   return (
-    <group position={position}>
-      <Html
-        center
-        style={{
-          transition: "all 0.2s ease-in-out",
-          cursor: "pointer",
-          zIndex: 10, // Ensuring that the marker is on top
-        }}
-        onClick={onClick}
-      >
-        <div className="relative group ">
-          <div className="w-8 h-8 flex items-center justify-center text-teal-600 transition-colors duration-200">
-            <MapPin className="w-full h-full" />
+      <group position={position}>
+        <Html
+          center
+          style={{
+            transition: "all 0.2s ease-in-out",
+            cursor: "pointer",
+          }}
+          onClick={onClick}
+        >
+          <div className="relative group -z-10">
+            <div className="w-8 h-8 flex items-center justify-center text-teal-600 transition-colors duration-200 -z-10">
+              <MapPin className="w-full h-full " />
+            </div>
           </div>
-        </div>
-      </Html>
-    </group>
+        </Html>
+      </group>
   );
 };
 

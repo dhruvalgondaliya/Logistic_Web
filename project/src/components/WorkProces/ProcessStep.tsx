@@ -25,14 +25,14 @@ export default function ProcessStep({
 
   return (
     <motion.div
-      className="relative pb-2 shadow-lg p-3"
+      className="relative pb-2 shadow-lg rounded-xl p-3"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover={{ y: -8 }}
       transition={{ duration: 0.4 }}
     >
-      <div className="relative rounded-2xl overflow-hidden shadow-xl ">
+      <div className="relative overflow-hidden shadow-xl ">
         {imageLoading && (
           <div className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-50">
             <div className="w-8 h-8 border-4 border-t-4 border-orange-400 border-solid rounded-full animate-spin" />
