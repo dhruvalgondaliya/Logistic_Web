@@ -11,7 +11,7 @@ export function ServiceCard({ title, imageUrl, details }: ServiceCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-[400px] perspective-1000 mx-auto">
+    <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-[380px] perspective-1000 mx-auto">
       <div
         className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${
           isFlipped ? "rotate-y-180" : ""
@@ -26,10 +26,10 @@ export function ServiceCard({ title, imageUrl, details }: ServiceCardProps) {
               className="w-full h-64 object-cover"
             />
             <div className="p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">{title}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 hover:text-orange-500">{title}</h3>
               <button
                 onClick={() => setIsFlipped(true)}
-                className="inline-flex items-center text-orange-500 hover:text-orange-600 transition-colors"
+                className="inline-flex items-center text-orange-500 hover:text-orange-600 transition-colors mt-3"
               >
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -39,7 +39,7 @@ export function ServiceCard({ title, imageUrl, details }: ServiceCardProps) {
         </div>
 
         {/* Back of card */}
-        <div className="absolute w-full h-full backface-hidden rotate-y-180">
+        <div className="absolute w-full h-full backface-hidden rotate-y-180 ">
           <div className="w-full h-full rounded-xl overflow-hidden shadow-lg bg-white p-4 sm:p-6">
             <h3 className="text-lg sm:text-xl font-semibold mb-4 text-orange-500">
               Service Details
@@ -57,7 +57,7 @@ export function ServiceCard({ title, imageUrl, details }: ServiceCardProps) {
             </ul>
             <button
               onClick={() => setIsFlipped(false)}
-              className="mt-4 inline-flex items-center text-orange-500 hover:text-orange-600 transition-colors"
+              className="mt-3  inline-flex items-center text-orange-500 hover:text-orange-600 transition-colors "
             >
               Go Back
               <ArrowRight className="ml-2 h-4 w-4 rotate-180" />

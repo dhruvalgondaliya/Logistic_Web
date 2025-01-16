@@ -63,7 +63,7 @@ export default function WorkProcessSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block bg-orange-400 text-white px-6 py-2 rounded-full text-sm font-semibold mb-3">
+          <span className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-semibold mb-3">
             OUR WORK PROCESS
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 sm:text-4xl text-lg py-2 leading-tight sm:leading-snug md:leading-normal">

@@ -4,35 +4,35 @@ import { ServiceCard } from "./ServiceCard";
 const services = [
   {
     title: "Wholesale FBA Prep",
-    imageUrl:"https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Wholesale%20FBA%20Prep.webp?alt=media&token=8345b0d0-af30-4441-98cf-c9af551e53d5",
+    imageUrl:"https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2FS1.jpeg?alt=media&token=eb2ed066-849d-4eb6-86d2-845eeaa75899",
     details: [
       "Warehouse & FBA Prep Services streamline product preparation for Amazon FBA. We manage receiving, labeling, packaging, and shipping, ensuring fast processing and compliance with Amazon’s guidelines for efficient scaling."
     ]
   },
   {
     title: "Private Labeling",
-    imageUrl:"https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Private%20Labeling.webp?alt=media&token=d7038acd-d83e-432c-9faa-4608958df551",
+    imageUrl:"https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fth%20(1).jpeg?alt=media&token=3c0c2c47-70cc-4512-a11e-336094e15f31",
     details: [
       "Private labeling allows businesses to sell products made by another company under their own brand, saving on manufacturing costs and offering customization in packaging and design. Common in industries like food, cosmetics, and apparel, it helps businesses expand their product range without production overhead, while strengthening brand identity and appealing to their target market."
     ]
   },
   {
     title: "Online Arbitrage",
-    imageUrl:"https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Online%20Arbitrage.webp?alt=media&token=f871f84e-372c-4634-be48-c1c3b5e64715",
+    imageUrl:"https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2FS3.jpg?alt=media&token=dbe0d4c2-a304-46a6-9eb2-0d572185ff38",
     details: [
       "Online arbitrage involves purchasing products from online stores at lower prices and reselling them for a profit on platforms like Amazon or eBay. This model capitalizes on price differences across e-commerce websites, allowing entrepreneurs to earn by flipping products. It requires research into market trends, pricing strategies, and inventory management but offers a low-cost entry into e-commerce with minimal investment."
     ]
   },
   {
     title: "Retail Arbitrage",
-    imageUrl:"https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Retail%20Arbitrage.webp?alt=media&token=456a794a-4363-4d1e-bc02-c80757ad9319",
+    imageUrl:"https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2FS4.jpg?alt=media&token=320bd2e0-3f59-436b-9a2e-db6553abf5a2",
     details: [
       "Retail arbitrage involves buying discounted products from retail stores and reselling them for profit on platforms like Amazon or eBay. It’s a low-cost, scalable business model that relies on effective sourcing, market research, and pricing strategies."
     ]
   },
   {
     title: "Fulfillment Services & Shipping",
-    imageUrl:"https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Service3.webp?alt=media&token=30f16e25-97bf-4062-a281-e5cfeaaae681",
+    imageUrl:"https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2FS5.jpg?alt=media&token=7298171d-980e-4312-956f-b54f9414f34f",
     details: [
       "Fulfillment services handle the storage, packaging, and shipping of products, ensuring fast and reliable delivery to customers. These services streamline logistics for e-commerce businesses, allowing them to focus on growth while meeting customer expectations. Efficient shipping options, including same-day or international delivery, enhance customer satisfaction and boost sales."
     ]

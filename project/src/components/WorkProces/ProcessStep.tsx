@@ -50,7 +50,7 @@ export default function ProcessStep({
         <div className="absolute -left-3 -top-3 w-16 h-16 bg-orange-500 rounded-2xl rotate-12 flex items-center justify-center shadow-lg">
           <span className="text-2xl font-bold text-white -rotate-12">{number}</span>
         </div>
-      </div>
+      </div>  
 
       <div className="mt-8">
         <h3 className="text-lg font-bold text-teal-900 mb-4">{title}</h3>
