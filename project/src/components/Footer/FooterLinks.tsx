@@ -4,7 +4,7 @@ import { FooterSection } from "./types";
 
 const sections: FooterSection = {
   industryServed: ["E-commerce", "Dropshipping", "Warehousing", "Logistics"],
-  companyInfo: ["AboutUs", "Services", "Pricing", "Contact"],
+  companyInfo: ["About Us", "Services", "Pricing", "Contact Us"],
   ourServices: [
     { title: "Wholesale FBA Prep", link: "/services" },
     { title: "Private Labeling", link: "/services" },

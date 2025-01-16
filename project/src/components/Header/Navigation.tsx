@@ -12,7 +12,7 @@ const navItems = [
   { label: "About Us", to: "/aboutus" },
   { label: "Services", to: "/services" },
   { label: "Pricing", to: "/pricing" },
-  { label: "Contact", to: "/contact" },
+  { label: "Contact Us", to: "/contactus" },
 ];
 
 export default function Navigation({
