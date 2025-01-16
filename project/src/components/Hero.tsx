@@ -23,9 +23,9 @@ export default function LoraicTransportation() {
     <>
       <div className="relative bg-gradient-to-r from-teal-50 to-white overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-80"
+          className="absolute inset-0 bg-cover bg-center opacity-90"
           style={{
-            backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2FHome1.jpg?alt=media&token=5ddd630e-18d5-46cd-ade4-e4d8a030dcb1')`,
+            backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fhomesecond.jpg?alt=media&token=620bffc8-5742-486a-b140-b14820673c70')`,
             backgroundSize: "cover",
             backgroundPosition: "center"
           }}
@@ -47,10 +47,10 @@ export default function LoraicTransportation() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="relative opacity-80"
             >
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fhome2.jpg?alt=media&token=e89d36fb-a437-43d2-b36c-a5550d8ddcf7"
+                src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fhome3.jpg?alt=media&token=0635fe00-414a-4b90-bb14-00500d916927"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
                 alt="Cargo Ship"
                 className="rounded-lg shadow-2xl w-full h-auto opacity-75"
