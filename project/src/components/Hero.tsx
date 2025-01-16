@@ -111,7 +111,7 @@ export default function LoraicTransportation() {
                   to="/contact"
                   className="bg-teal-600 hover:bg-teal-700 hover:text-teal-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center transition-colors"
                 >
-                  Contact NorthPole Gateway
+                  Contact Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>
