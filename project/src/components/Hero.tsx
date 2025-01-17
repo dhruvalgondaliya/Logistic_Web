@@ -96,8 +96,8 @@ export default function LoraicTransportation() {
                 ></span>
               </span>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-white leading-tight">
-                Secure, Scalable, and Seamless <br /> Warehousing Solutions
+              <h1 className="text-2xl sm:text-4xl lg:text-4xl font-bold text-white leading-tight">
+                Secure, Scalable, and <br />Seamless  Warehousing Solutions
               </h1>
 
               <p className="text-base sm:text-lg text-white ">
