@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const links = [
   { text: 'Privacy', to: '#' },
   { text: 'Terms & Conditions', to: '#' },
-  { text: 'Contact', to: '/contact' }
+  { text: 'Contact Us', to: '/contactus' }
 ];
 
 export const BottomBar: React.FC = () => (

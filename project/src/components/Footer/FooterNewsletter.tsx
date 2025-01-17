@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Globe, Mail } from "lucide-react";
+import { Globe} from "lucide-react";
+import { IoSend } from "react-icons/io5";
 import emailjs from "emailjs-com";
 
 export default function FooterNewsletter() {
@@ -67,7 +68,7 @@ export default function FooterNewsletter() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
-            className="bg-transparent text-orange-500 placeholder-gray-500 focus:outline-none w-full"
+            className="bg-transparent text-orange-500 placeholder-gray-500 focus:outline-none w-full py-1"
             required
             aria-label="Enter your email address"
           />
@@ -75,12 +76,12 @@ export default function FooterNewsletter() {
             type="submit"
             className="py-1 px-2 rounded-md text-white bg-orange-500 hover:bg-orange-600 transition-colors"
             aria-label="Subscribe to newsletter"
-            disabled={loading} // Disable button while loading
+            disabled={loading} 
           >
             {loading ? (
               <span>Loading...</span>
             ) : (
-              <Mail className="text-white" aria-hidden="true" />
+              <IoSend className="text-white" aria-hidden="true" />
             )}
           </button>
         </form>

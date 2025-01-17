@@ -39,7 +39,7 @@ export default function App() {
                 <Route path="/aboutus" element={<AboutHero />} />
                 <Route path="/services" element={<ServicesHero />} />
                 <Route path="/pricing" element={<PricingHero />} />
-                <Route path="/contact" element={<ContactHero />} />
+                <Route path="/contactus" element={<ContactHero />} />
               </Routes>
             </Suspense>
           </main>

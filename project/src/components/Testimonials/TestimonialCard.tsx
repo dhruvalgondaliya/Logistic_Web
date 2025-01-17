@@ -24,7 +24,7 @@ export default function TestimonialCard({ quote, author, position, rating, image
           className="w-12 h-12 rounded-full border-2 border-orange-400"
         />
         <div>
-          <h4 className="text-white font-semibold">{author}</h4>
+          <h3 className="text-white font-semibold">{author}</h3>
           <p className="text-teal-100 text-sm">{position}</p>
         </div>
       </div>
