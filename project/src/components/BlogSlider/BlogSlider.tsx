@@ -72,12 +72,12 @@ const BlogSlider = () => {
       <div className="container mx-auto px-4">
         {/* Title and Subtitle */}
         <div className="text-center mb-12">
-          <h1 className="m-auto bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold w-max">
+          <h2 className="m-auto bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold w-max">
             LATEST NEWS
-          </h1>
-          <p className="text-3xl font-bold lg:text-4xl text-gray-900 pt-3 sm:text-2xl">
+          </h2>
+          <h1 className="text-3xl font-bold lg:text-4xl text-gray-900 pt-3 sm:text-2xl">
             Read All Our Logistics Blogs
-          </p>
+          </h1>
           <p className="text-lg text-gray-500 mt-2 max-w-3xl mx-auto pt-2">
             NorthPole Gateway's Warehousing Solutions: Unlock Expertise and
             Maximize Efficiency in Inventory Management and Storage. Experience

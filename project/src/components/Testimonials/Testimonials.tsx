@@ -17,7 +17,6 @@ const testimonials = [
     quote:
       "I saved over 50% using LogiTrans over my previous provider. The customer support staff was very helpful. I will definitely be using LogiTrans for all my future shipments. Thank you!!!",
     author: "Rachel Ballinger",
-    position: "CEO, Bizzbreak Inc.",
     rating: 5,
     image:
       "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
@@ -26,7 +25,6 @@ const testimonials = [
     quote:
       "Outstanding service and reliability. LogiTrans has transformed our supply chain efficiency.",
     author: "Michael Chen",
-    position: "Operations Director, Global Tech",
     rating: 5,
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
@@ -91,7 +89,7 @@ export default function Testimonials() {
                   onClick={prev}
                   type="button"
                   aria-label="Previous Testimonial"
-                  title="Previous Testimonial"
+                  title="Previous"
                   className="p-2 rounded-full bg-orange-500 hover:bg-orange-400 transition-colors"
                 >
                   <ChevronLeft className="h-6 w-6 text-white" />
@@ -100,7 +98,7 @@ export default function Testimonials() {
                   onClick={next}
                   type="button"
                   aria-label="Next Testimonial"
-                  title="Next Testimonial"
+                  title="Next"
                   className="p-2 rounded-full bg-orange-500 hover:bg-orange-400 transition-colors"
                 >
                   <ChevronRight className="h-6 w-6 text-white" />

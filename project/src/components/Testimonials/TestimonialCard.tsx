@@ -4,12 +4,11 @@ import { Star } from 'lucide-react';
 interface TestimonialCardProps {
   quote: string;
   author: string;
-  position: string;
   rating: number;
   image: string;
 }
 
-export default function TestimonialCard({ quote, author, position, rating, image }: TestimonialCardProps) {
+export default function TestimonialCard({ quote, author, rating, image }: TestimonialCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -18,14 +17,15 @@ export default function TestimonialCard({ quote, author, position, rating, image
       className="bg-teal-600 rounded-xl p-6 relative"
     >
       <div className="flex items-center space-x-4 mb-4">
-        <img
-          src={image}
-          alt={author}
-          className="w-12 h-12 rounded-full border-2 border-orange-400"
-        />
+        <div className="w-12 h-12">
+          <img
+            src={image}
+            alt={author}
+            className="w-full h-full rounded-full border-2 border-orange-400 object-cover"
+          />
+        </div>
         <div>
           <h3 className="text-white font-semibold">{author}</h3>
-          <p className="text-teal-100 text-sm">{position}</p>
         </div>
       </div>
       <p className="text-white mb-4">{quote}</p>
