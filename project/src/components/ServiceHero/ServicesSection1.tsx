@@ -43,7 +43,7 @@ const ServicesSection1: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate data loading
+    
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000); 

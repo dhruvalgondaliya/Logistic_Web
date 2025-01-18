@@ -53,7 +53,7 @@ export default function Testimonials() {
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-0 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-0 items-center">   
           {/* Transport Modes Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 ">
             {transportModes.map((mode, index) => (

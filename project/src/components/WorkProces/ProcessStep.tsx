@@ -53,7 +53,7 @@ export default function ProcessStep({
       </div>  
 
       <div className="mt-8">
-        <h3 className="text-lg font-bold text-teal-900 mb-4">{title}</h3>
+        <h3 className="text-lg font-bold text-orange-500 mb-4">{title}</h3>
         <p className="text-gray-600 leading-relaxed">{description}</p>
       </div>
     </motion.div>

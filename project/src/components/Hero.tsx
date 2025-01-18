@@ -33,14 +33,6 @@ export default function LoraicTransportation() {
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
-        {/* Background Decorative Circles */}
-        <div className="absolute right-0 bottom-0 w-64 h-64 transform translate-x-1/2 translate-y-1/2 animate-pulse">
-          <div className="absolute inset-0 bg-teal-500/10 rounded-tl-full"></div>
-        </div>
-        <div className="absolute left-0 top-0 w-64 h-64 transform -translate-x-1/2 -translate-y-1/2 animate-pulse">
-          <div className="absolute inset-0 bg-orange-500/10 rounded-br-full"></div>
-        </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-32">
           <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div
@@ -73,22 +65,20 @@ export default function LoraicTransportation() {
               className="space-y-6 sm:space-y-8"
             >
               <span className="relative inline-flex items-center group">
-                {/* Upper Left Circle */}
                 <span
-                  className="absolute top-3 left-0 bg-white w-3 h-3 rounded-full"
+                  className="absolute top-5 left-0 bg-white w-3 h-3 rounded-full"
                   style={{
                     animation: "wave 1.5s infinite ease-in-out",
                     boxShadow: "0 0 10px rgba(20, 184, 166, 0.5)"
                   }}
                 ></span>
 
-                <span className="inline-block bg-orange-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 group-hover:text-left group-hover:pl-10">
+                <span className="inline-block bg-orange-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ">
                   NorthPole Gateway
                 </span>
 
-                {/* Upper Right Circle */}
                 <span
-                  className="absolute top-3 right-0 bg-white w-3 h-3 rounded-full"
+                  className="absolute top-5 right-0 bg-white w-3 h-3 rounded-full"
                   style={{
                     animation: "wave 1.5s infinite ease-in-out",
                     boxShadow: "0 0 10px rgba(255, 165, 0, 0.5)"
@@ -97,7 +87,8 @@ export default function LoraicTransportation() {
               </span>
 
               <h1 className="text-2xl sm:text-4xl lg:text-4xl font-bold text-white leading-tight">
-                Secure, Scalable, and <br />Seamless  Warehousing Solutions
+                Secure, Scalable, and <br />
+                Seamless Warehousing Solutions
               </h1>
 
               <p className="text-base sm:text-lg text-white ">
@@ -120,15 +111,29 @@ export default function LoraicTransportation() {
         </div>
       </div>
 
-      {/* Lazy Loaded Sections with Skeleton Loader Fallback */}
+      {/* Lazy Loaded Sections with Component-Wise Skeleton Loader */}
       <Suspense fallback={<SkeletonLoader />}>
         <ServicesSection />
+      </Suspense>
+      <Suspense fallback={<SkeletonLoader />}>
         <AboutSection />
+      </Suspense>
+      <Suspense fallback={<SkeletonLoader />}>
         <Testimonials />
+      </Suspense>
+      <Suspense fallback={<SkeletonLoader />}>
         <WorkProcessSection />
+      </Suspense>
+      <Suspense fallback={<SkeletonLoader />}>
         <FAQSection />
+      </Suspense>
+      <Suspense fallback={<SkeletonLoader />}>
         <Blog />
+      </Suspense>
+      <Suspense fallback={<SkeletonLoader />}>
         <PricingSection />
+      </Suspense>
+      <Suspense fallback={<SkeletonLoader />}>
         <GetRate />
       </Suspense>
     </>
