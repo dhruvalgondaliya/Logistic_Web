@@ -28,7 +28,7 @@ export const GetRate: React.FC = () => (
 
     <div className="flex justify-center md:justify-start">
       <Link
-        to="/contact"
+        to="/contactus"
         aria-label="Get the best rate for your warehousing and supply chain needs"
         className="bg-orange-500 px-6 py-2 rounded-md font-semibold hover:bg-orange-700 transition-colors 
         md:px-6 md:py-4 flex items-center gap-2"
