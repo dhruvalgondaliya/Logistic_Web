@@ -11,10 +11,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Logo />
+          <h1>
+            <Logo />
+          </h1>
 
           {/* Desktop Navigation */}
-          <Navigation className="hidden lg:flex" />
+          <nav className="hidden lg:flex" aria-label="Main Navigation">
+            <Navigation className="hidden lg:flex" />
+          </nav>
 
           {/* Mobile Controls */}
           <div className="flex items-center space-x-4 lg:hidden">
@@ -22,7 +26,7 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-md text-gray-600 hover:text-gray-900"
               aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
-              aria-expanded={isMobileMenuOpen}
+              aria-expanded={isMobileMenuOpen ? "true" : "false"}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -32,7 +36,10 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <nav className="lg:hidden bg-white border-t border-gray-100">
+        <nav
+          className="lg:hidden bg-white border-t border-gray-100"
+          aria-label="Mobile Navigation"
+        >
           <Navigation
             className="flex flex-col py-4"
             isMobile

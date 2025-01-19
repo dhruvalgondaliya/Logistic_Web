@@ -15,16 +15,17 @@ const BlogCard: React.FC<BlogCardProps> = ({
   excerpt,
   date,
   readTime,
-  headingLevel = "h3" 
+  headingLevel = "h3",
 }) => {
   const HeadingTag = headingLevel; // Dynamic heading tag
 
   return (
-    <div className="group h-full bg-white rounded-xl shadow-md overflow-hidden">
+    <div className="group h-full bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       <div className="relative h-48 overflow-hidden">
         <img
           src={image}
-          alt={title}
+          alt={`Blog image for ${title}`}
+          loading="lazy"
           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -41,7 +42,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           {title}
         </HeadingTag>
 
-        <p className="text-gray-600 mb-4">{excerpt}</p>
+        <p className="text-gray-600 mb-4 line-clamp-3">{excerpt}</p>
 
         <button
           className="inline-flex items-center text-orange-500 font-semibold group-hover:text-teal-700"

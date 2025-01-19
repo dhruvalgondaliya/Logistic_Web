@@ -16,21 +16,22 @@ export const GetRate: React.FC = () => (
     <div className="flex flex-col md:flex items-center md:items-start gap-3 mb-5">
       <Truck className="w-12 h-12 text-orange-500" />
       <div>
-        <h2 className="text-2xl font-bold text-center md:text-left">
+        <h2 className="text-2xl md:text-3xl font-bold text-center md:text-left">
           Get the Best Rates for Your Warehousing and Supply Chain Needs.
         </h2>
-        <p className="mt-2 text-center md:text-left">
+        <p className="mt-2 text-center md:text-left text-sm md:text-base">
           24/7 customer support and expert advice. Achieve up to 70% savings on
           shipping with leading carriers – boost your efficiency.
         </p>
       </div>
     </div>
 
-    <div className="flex justify-center md:justify-start ">
+    <div className="flex justify-center md:justify-start">
       <Link
         to="/contact"
+        aria-label="Get the best rate for your warehousing and supply chain needs"
         className="bg-orange-500 px-6 py-2 rounded-md font-semibold hover:bg-orange-700 transition-colors 
-      md:px-6 md:py-4 flex items-center gap-2"
+        md:px-6 md:py-4 flex items-center gap-2"
       >
         Get the Best Rate
         <FaArrowRight className="text-white" />

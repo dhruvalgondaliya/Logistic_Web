@@ -12,6 +12,8 @@ export default function PricingCard({ title, price, features, isPopular }: Prici
   return (
     <motion.div
       whileHover={{ y: -8, scale: 1.02 }}
+      role="card"
+      aria-labelledby={`pricing-card-${title}`}
       className={`
         relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-shadow
         hover:shadow-2xl ${isPopular ? 'border-2 border-orange-500' : ''}
@@ -19,13 +21,13 @@ export default function PricingCard({ title, price, features, isPopular }: Prici
       `}
     >
       {isPopular && (
-        <div className="absolute -right-12 top-8 rotate-45 bg-orange-500 py-2 px-12">
+        <div className="absolute -right-12 top-8 rotate-45 bg-orange-500 py-2 px-12" aria-live="polite">
           <span className="text-sm font-semibold text-white">Most Popular</span>
         </div>
       )}
 
       <div className="mb-8">
-        <h3 className="text-xl font-bold text-teal-900">{title}</h3>
+        <h3 id={`pricing-card-${title}`} className="text-xl font-bold text-teal-900">{title}</h3>
       </div>
 
       <div className="mb-8">
@@ -43,6 +45,7 @@ export default function PricingCard({ title, price, features, isPopular }: Prici
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
+        aria-pressed="false"
         className={`
           w-full rounded-xl py-4 font-semibold transition-colors
           ${isPopular 

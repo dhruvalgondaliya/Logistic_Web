@@ -4,7 +4,12 @@ import { FooterSection } from "./types";
 
 const sections: FooterSection = {
   industryServed: ["E-commerce", "Dropshipping", "Warehousing", "Logistics"],
-  companyInfo: ["About Us", "Services", "Pricing", "Contact Us"],
+  companyInfo: [
+    { title: "About Us", link: "/aboutus" },
+    { title: "Services", link: "/services" },
+    { title: "Pricing", link: "/pricing" },
+    { title: "Contact Us", link: "/contactus" },
+  ],
   ourServices: [
     { title: "Wholesale FBA Prep", link: "/services" },
     { title: "Private Labeling", link: "/services" },
@@ -26,8 +31,8 @@ export const FooterLinks: React.FC = () => (
     <LinkSection
       title="Company Info"
       links={sections.companyInfo.map((info) => ({
-        label: info,
-        href: `/${info.toLowerCase().replace(" ", "-")}`
+        label: info.title, // Use the 'title' property here
+        href: info.link    // Use the 'link' property here
       }))}
     />
     <LinkSection

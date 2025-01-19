@@ -40,18 +40,22 @@ const blogs = [
 
 const BlogSlider = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage());
 
-  const getItemsPerPage = () => {
+  function getItemsPerPage() {
     if (window.innerWidth < 640) return 1;
     if (window.innerWidth < 1024) return 2;
     return 3;
-  };
+  }
 
-  const itemsPerPage = getItemsPerPage();
   const totalPages = Math.ceil(blogs.length / itemsPerPage);
 
   useEffect(() => {
-    const handleResize = () => setCurrentPage(0);
+    const handleResize = () => {
+      setItemsPerPage(getItemsPerPage());
+      setCurrentPage(0); // Reset to the first page on resize
+    };
+
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -62,7 +66,7 @@ const BlogSlider = () => {
   useEffect(() => {
     const autoSlide = setInterval(() => {
       setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
-    }, 6000); // Change slide every 5 seconds
+    }, 7000); // Change slide every 6 seconds
 
     return () => clearInterval(autoSlide);
   }, [totalPages]);

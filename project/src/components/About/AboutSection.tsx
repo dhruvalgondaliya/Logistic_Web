@@ -8,6 +8,7 @@ export default function AboutSection() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Text Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -18,8 +19,8 @@ export default function AboutSection() {
             </span>
 
             <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-teal-900 mb-8 ps-3">
-              <span className="text-orange-500">NorthPole Gateway</span> is  
-               your<br /> strategic partner in modern supply chain solutions.
+              <span className="text-orange-500">NorthPole Gateway</span> is your
+              <br /> strategic partner in modern supply chain solutions.
             </h2>
 
             <div className="space-y-8 mb-10">
@@ -34,22 +35,30 @@ export default function AboutSection() {
                 description="Full-Service Solutions for Your Storage Needs"
               />
             </div>
+
             <p className="text-gray-600 mb-10 pl-2">
-            NorthPole Gateway offers advanced warehousing solutions to optimize storage, enhance efficiency, and reduce costs. With cutting-edge technology and real-time tracking, we provide secure, scalable options to keep your business competitive.
+              NorthPole Gateway offers advanced warehousing solutions to
+              optimize storage, enhance efficiency, and reduce costs. With
+              cutting-edge technology and real-time tracking, we provide secure,
+              scalable options to keep your business competitive.
             </p>
+
             <AboutStats />
           </motion.div>
 
+          {/* Image Section */}
           <motion.div className="relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-4">
+                {/* Image Card with Overlay */}
                 <div className="relative">
                   <img
                     src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/DeWatermark.ai_1736144827824.png?alt=media&token=1a3b5a7f-3366-4bf2-a6f9-3ae254cf97cf"
-                    alt="Air Transport"
+                    alt="Air Transport Solutions"
                     className="rounded-2xl w-full h-64 md:h-80 object-cover"
+                    loading="lazy"
                   />
-                  <div className="absolute top-4 right-4 bg-orange-500 text-white p-4 rounded-xl">
+                  <div className="absolute top-4 right-4 bg-orange-500 text-white p-4 rounded-xl shadow-lg">
                     <div className="text-4xl font-bold">01</div>
                     <div className="text-sm">
                       Years of
@@ -58,17 +67,23 @@ export default function AboutSection() {
                     </div>
                   </div>
                 </div>
+
+                {/* Secondary Image */}
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/DeWatermark.ai_1736144205189.png?alt=media&token=9827e277-8108-46d4-a347-eb2a559876d4"
-                  alt="Second Image"
+                  alt="Logistics Operations"
                   className="rounded-2xl w-full h-64 md:h-80 object-cover"
+                  loading="lazy"
                 />
               </div>
+
+              {/* Large Image */}
               <div className="mt-8">
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/wmremove-transformed.jpeg?alt=media&token=0814e23a-86a4-411c-b671-79c0f4459c3b"
-                  alt="Team"
+                  alt="NorthPole Gateway Team"
                   className="rounded-2xl w-full h-80 md:h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>

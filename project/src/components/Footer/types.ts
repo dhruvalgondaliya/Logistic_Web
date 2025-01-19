@@ -5,6 +5,6 @@ export interface LinkSectionProps {
   
   export interface FooterSection {
     industryServed: string[];
-    companyInfo: string[];
+    companyInfo: { title: string; link: string }[];
     ourServices: { title: string; link: string }[];
   }

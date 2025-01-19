@@ -3,7 +3,10 @@ import { Truck, Package } from 'lucide-react';
 
 export default function Loader() {
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-teal-900 to-teal-800 flex items-center justify-center z-50">
+    <section 
+      className="fixed inset-0 bg-gradient-to-br from-teal-900 to-teal-800 flex items-center justify-center z-50"
+      aria-live="assertive"
+    >
       <div className="relative">
         {/* Animated Truck */}
         <motion.div
@@ -19,7 +22,7 @@ export default function Loader() {
           }}
           className="text-orange-500 mb-8"
         >
-          <Truck size={48} />
+          <Truck size={48} aria-label="Truck animation" />
         </motion.div>
 
         {/* Loading Track */}
@@ -47,7 +50,7 @@ export default function Loader() {
             }}
             className="text-teal-300"
           >
-            <Package size={24} />
+            <Package size={24} aria-label="Package animation" />
           </motion.div>
         </div>
         <div className="absolute -top-8 right-0">
@@ -60,7 +63,7 @@ export default function Loader() {
             }}
             className="text-teal-300"
           >
-            <Package size={20} />
+            <Package size={20} aria-label="Package animation" />
           </motion.div>
         </div>
 
@@ -72,11 +75,12 @@ export default function Loader() {
             duration: 0.8,
             repeatType: "reverse"
           }}
-          className="text-white text-center mt-6 font-medium "
+          className="text-white text-center mt-6 font-medium"
+          aria-live="polite"
         >
-          Loading...
+          Loading content, please wait...
         </motion.p>
       </div>
-    </div>
+    </section>
   );
 }

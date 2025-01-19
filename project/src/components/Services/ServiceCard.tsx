@@ -38,7 +38,7 @@ export default function ServiceCard({ icon, title, description }: ServiceCardPro
       <div className="relative z-10 flex flex-col flex-grow">
         {/* Icon */}
         <div className="mb-4">
-          <div className="inline-block transition-colors duration-300">
+          <div className="inline-block transition-colors duration-300 ">
             {icon}
           </div>
         </div>

@@ -7,9 +7,10 @@ const steps = [
     number: 1,
     title: "Step 1:  Strategic Storage Solutions",
     description:
-      "At NorthPole Gateway, we begin by assessing your storage needs to create a customized solution. Our flexible, secure storage options and advanced technology optimize space, inventory management, and accessibility",
+      "At NorthPole Gateway, we begin by assessing your storage needs to create a customized solution. Our flexible, secure storage options and advanced technology optimize space, inventory management, and accessibility.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP1.webp?alt=media&token=12d49599-1144-4553-808a-aaa08df6e988"
+      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP1.webp?alt=media&token=12d49599-1144-4553-808a-aaa08df6e988",
+    alt: "Strategic Storage Solutions"
   },
   {
     number: 2,
@@ -17,7 +18,8 @@ const steps = [
     description:
       "Once storage is optimized, we move to the order preparation stage. At NorthPole Gateway, we ensure accurate picking, packing, and labeling of your products, using efficient processes and real-time tracking to guarantee timely and error-free order fulfillment.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP2.webp?alt=media&token=c236ffc1-0398-4059-ae2c-b974143a6c95"
+      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP2.webp?alt=media&token=c236ffc1-0398-4059-ae2c-b974143a6c95",
+    alt: "Precision Order Fulfillment"
   },
   {
     number: 3,
@@ -25,7 +27,8 @@ const steps = [
     description:
       "After preparing the order, we focus on timely and secure shipping. NorthPole Gateway ensures fast, reliable delivery through trusted logistics partners, tracking shipments every step of the way to ensure your products reach their destination on time.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP3.webp?alt=media&token=1b9de38c-4054-4a90-aff2-dbaf335d2169"
+      "https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/WorkP3.webp?alt=media&token=1b9de38c-4054-4a90-aff2-dbaf335d2169",
+    alt: "Reliable Distribution Network"
   }
 ];
 
@@ -49,8 +52,8 @@ export default function WorkProcessSection() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
-      }}>
-        
+      }}
+    >
       {/* Background Patterns */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 " />
@@ -63,9 +66,6 @@ export default function WorkProcessSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-semibold mb-3">
-            OUR WORK PROCESS
-          </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 sm:text-4xl text-lg py-2 leading-tight sm:leading-snug md:leading-normal">
             Optimized Warehousing Solutions
             <br />
@@ -77,7 +77,6 @@ export default function WorkProcessSection() {
             knowledge and tools to optimize storage and inventory management for
             your business.
           </p>
-
         </motion.div>
 
         <div className="relative">
@@ -114,7 +113,8 @@ export default function WorkProcessSection() {
                 title={step.title}
                 description={step.description}
                 image={step.image}
-                onImageLoad={() => handleImageLoad(index)} // Pass onImageLoad to each ProcessStep
+                alt={step.alt} 
+                onImageLoad={() => handleImageLoad(index)} 
               />
             ))}
           </div>

@@ -53,9 +53,9 @@ export default function Testimonials() {
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-0 items-center">   
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-0 items-center">
           {/* Transport Modes Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 ">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {transportModes.map((mode, index) => (
               <TransportMode key={index} {...mode} />
             ))}
@@ -67,12 +67,12 @@ export default function Testimonials() {
               <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                 TESTIMONIAL
               </span>
-              <h2 className="text-3xl font-bold text-white mt-4 mb-2">
+              <h1 className="text-3xl font-bold text-white mt-4 mb-2">
                 What our clients say about our service
-              </h2>
+              </h1>
               <p className="text-teal-100">
-                LogiTrans delivers the knowledge & opportunity to optimize every
-                shipment
+                Warehousing delivers the knowledge & opportunity to optimize every
+                shipment.
               </p>
             </div>
 

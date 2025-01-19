@@ -20,6 +20,7 @@ const ContactForm: React.FC = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -90,9 +91,11 @@ const ContactForm: React.FC = () => {
             service: [],
             message: ""
           });
+          setSubmissionStatus("Your message has been sent successfully!");
         },
         (error) => {
           console.error("FAILED...", error);
+          setSubmissionStatus("Failed to send your message. Please try again.");
         }
       )
       .finally(() => {
@@ -235,6 +238,12 @@ const ContactForm: React.FC = () => {
           <p className="text-red-500 text-sm mt-1">{errors.message}</p>
         )}
       </div>
+
+      {submissionStatus && (
+        <div className="mt-4 text-center text-lg text-green-500">
+          {submissionStatus}
+        </div>
+      )}
 
       <button
         type="submit"

@@ -33,6 +33,7 @@ export default function TestimonialCard({ quote, author, rating, image }: Testim
         {[...Array(5)].map((_, i) => (
           <Star
             key={i}
+            aria-label={`Rating ${i + 1}`}
             className={`h-5 w-5 ${i < rating ? 'text-orange-400 fill-orange-400' : 'text-teal-400'}`}
           />
         ))}
