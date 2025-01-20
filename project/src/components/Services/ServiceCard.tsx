@@ -43,17 +43,14 @@ export default function ServiceCard({ icon, title, description }: ServiceCardPro
           </div>
         </div>
 
-        {/* Title */}
         <h3 className="text-md md:text-xl font-bold text-white group-hover:text-orange-500 mb-2">
           {title}
         </h3>
 
-        {/* Description */}
         <p className="text-sm md:text-base text-gray-300 group-hover:text-white mb-6 flex-grow">
           {description}
         </p>
 
-        {/* Read More */}
         <div className="flex items-center space-x-2 transition-colors duration-300">
           <span
             className="inline-flex items-center text-white bg-orange-500 p-2 rounded-full group-hover:bg-orange-500 transition-all duration-300"

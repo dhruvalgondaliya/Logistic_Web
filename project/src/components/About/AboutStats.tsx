@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const stats = [
-  // Example stat: { value: 5, label: "Star", suffix: "Ranked Company" },
+
   { value: 150, label: "+", suffix: "Successful Logistics" },
 ];
 
@@ -11,7 +11,7 @@ function Counter({ endValue }: { endValue: number }) {
 
   useEffect(() => {
     const duration = 2; 
-    const increment = Math.ceil(endValue / (duration * 60)); // 60 FPS approximation
+    const increment = Math.ceil(endValue / (duration * 60)); 
 
     let current = 0;
     const timer = setInterval(() => {
@@ -21,7 +21,7 @@ function Counter({ endValue }: { endValue: number }) {
         clearInterval(timer);
       }
       setCount(current);
-    }, 1000 / 60); // 60 FPS
+    }, 1000 / 60); 
 
     return () => clearInterval(timer);
   }, [endValue]);

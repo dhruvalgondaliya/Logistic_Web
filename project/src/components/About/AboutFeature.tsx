@@ -15,8 +15,6 @@ const AboutFeature: React.FC<AboutFeatureProps> = React.memo(({ icon, title, des
       >
         {icon || <span>?</span>}
       </div>
-
-      {/* Title and Description */}
       <div>
         <h3 className="text-xl font-semibold text-teal-900 mb-1">{title}</h3>
         <p className="text-gray-600">{description}</p>

@@ -8,7 +8,6 @@ export default function AboutSection() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +49,6 @@ export default function AboutSection() {
           <motion.div className="relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-4">
-                {/* Image Card with Overlay */}
                 <div className="relative">
                   <img
                     src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/DeWatermark.ai_1736144827824.png?alt=media&token=1a3b5a7f-3366-4bf2-a6f9-3ae254cf97cf"
@@ -67,8 +65,6 @@ export default function AboutSection() {
                     </div>
                   </div>
                 </div>
-
-                {/* Secondary Image */}
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/DeWatermark.ai_1736144205189.png?alt=media&token=9827e277-8108-46d4-a347-eb2a559876d4"
                   alt="Logistics Operations"

@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { FaAward } from "react-icons/fa";
 
 export default function AboutHero() {
-  // Explicitly type `content` to match the keys of `contentMap`
   const [content, setContent] = useState<"Our Mission" | "Our Vision" | "Our Value">("Our Mission");
 
   const getContent = useCallback(() => {
@@ -14,13 +13,12 @@ export default function AboutHero() {
       "Our Value": `At NorthPole Gateway, we are guided by a set of core values that shape our company culture and drive our commitment to excellence. Our values include: Integrity, Excellence, Collaboration, Accountability, Innovation, Sustainability.`,
     };
 
-    // TypeScript now knows that `content` is a valid key of `contentMap`
     return contentMap[content];
   }, [content]);
 
   return (
     <>
-      {/* Component JSX remains unchanged */}
+      
       <div className="relative h-[200px] sm:h-[200px] lg:h-[300px] bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden font-poppins">
         <div className="absolute inset-0">
           <img

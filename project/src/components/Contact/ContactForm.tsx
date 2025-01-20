@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import PhoneInput, { formatPhoneNumberIntl } from "react-phone-number-input";
@@ -9,7 +9,7 @@ const ContactForm: React.FC = () => {
     from_name: "",
     email: "",
     phone: "",
-    service: [] as string[], // Array for multiple services
+    service: [] as string[],
     message: ""
   });
 
@@ -78,7 +78,7 @@ const ContactForm: React.FC = () => {
       .send(
         "service_xlp9o7o",
         "template_qovop2a",
-        { ...formData, service: formData.service.join(", ") }, // Convert array to string
+        { ...formData, service: formData.service.join(", ") },
         "sfzP8dARsTfHsyPE9"
       )
       .then(
@@ -102,6 +102,16 @@ const ContactForm: React.FC = () => {
         setIsSubmitting(false);
       });
   };
+
+  useEffect(() => {
+    if (submissionStatus) {
+      const timer = setTimeout(() => {
+        setSubmissionStatus(null);
+      }, 7000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [submissionStatus]);
 
   const handleIconClick = () => {
     setIsOpen(!isOpen);

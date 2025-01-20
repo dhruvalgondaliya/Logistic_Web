@@ -6,7 +6,8 @@ interface ProcessStepProps {
   title: string;
   description: string;
   image: string;
-  onImageLoad: () => void; // Function to notify parent when the image is loaded
+  alt:string;
+  onImageLoad: () => void; 
 }
 
 export default function ProcessStep({
@@ -20,7 +21,7 @@ export default function ProcessStep({
 
   const handleImageLoad = () => {
     setImageLoading(false);
-    onImageLoad(); // Notify parent that the image has loaded
+    onImageLoad();
   };
 
   return (
@@ -40,10 +41,10 @@ export default function ProcessStep({
         )}
         <img
           src={image}
-          alt={`Image for ${title}`} // More descriptive alt text
+          alt={`Image for ${title}`} 
           className="w-full h-64 object-cover transform transition-transform duration-700 hover:scale-110"
           onLoad={handleImageLoad}
-          loading="lazy" // Enable lazy loading for performance
+          loading="lazy"
         />
         <div className="absolute inset-0" />
 

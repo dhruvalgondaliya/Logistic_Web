@@ -4,8 +4,7 @@ import { ChevronRight } from "lucide-react";
 
 const ContactHero: React.FC = () => {
   return (
-    <>
-      {/* Meta Tags for SEO */}
+    <>  
       <head>
         <meta
           name="description"

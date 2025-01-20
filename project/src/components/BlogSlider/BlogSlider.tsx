@@ -66,7 +66,7 @@ const BlogSlider = () => {
   useEffect(() => {
     const autoSlide = setInterval(() => {
       setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
-    }, 7000); // Change slide every 6 seconds
+    }, 7000); 
 
     return () => clearInterval(autoSlide);
   }, [totalPages]);
@@ -74,7 +74,6 @@ const BlogSlider = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        {/* Title and Subtitle */}
         <div className="text-center mb-12">
           <h2 className="m-auto bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold w-max">
             LATEST NEWS
