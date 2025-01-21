@@ -9,7 +9,9 @@ import { Helmet } from "react-helmet";
 const ServicesSection = lazy(() => import("./Services/ServicesSection"));
 const AboutSection = lazy(() => import("./About/AboutSection"));
 const Testimonials = lazy(() => import("./Testimonials/Testimonials"));
-const WorkProcessSection = lazy(() => import("./WorkProces/WorkProcessSection"));
+const WorkProcessSection = lazy(
+  () => import("./WorkProces/WorkProcessSection")
+);
 const FAQSection = lazy(() => import("./FAQ/FAQSection"));
 const Blog = lazy(() => import("./Blog"));
 const PricingSection = lazy(() => import("./Pricing/PricingSection"));
@@ -23,13 +25,14 @@ export default function LoraicTransportation() {
       <Helmet>
         <title>NorthPole Gateway - Transportation Solutions</title>
       </Helmet>
+
       <div className="relative bg-gradient-to-r from-teal-50 to-white overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-90"
           style={{
             backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fhomesecond.jpg?alt=media&token=620bffc8-5742-486a-b140-b14820673c70')`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center"
           }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -49,6 +52,12 @@ export default function LoraicTransportation() {
                 alt="Cargo Ship"
                 className="rounded-lg shadow-2xl w-full h-auto opacity-75"
               />
+
+              {/* Decorative Animated Circles */}
+              <div className="absolute -right-8 -bottom-8 w-40 sm:w-48 h-40 sm:h-48 animate-spin-slow">
+                <div className="absolute right-0 bottom-0 w-24 sm:w-32 h-24 sm:h-32 border-4 border-orange-500 rounded-tr-3xl"></div>
+                <div className="absolute left-0 top-0 w-24 sm:w-32 h-24 sm:h-32 border-4 border-teal-500 rounded-bl-3xl"></div>
+              </div>
             </motion.div>
 
             <motion.div
@@ -69,9 +78,9 @@ export default function LoraicTransportation() {
               </h1>
 
               <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white leading-tight">
-                Elevate Your Business with Innovative Management Tools
-                Discover new horizons and unlock limitless possibilities with
-                NorthPole Gateway.
+                Elevate Your Business with Innovative Management Tools Discover
+                new horizons and unlock limitless possibilities with NorthPole
+                Gateway.
               </h2>
 
               <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">

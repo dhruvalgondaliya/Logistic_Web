@@ -20,7 +20,9 @@ const ContactInfo: React.FC = () => {
             </svg>
           </div>
           <div>
-            <h3 className="font-bold text-orange-500 text-lg mb-2">Office address</h3>
+            <h3 className="font-bold text-orange-500 text-lg mb-2">
+              Office address
+            </h3>
             <address className="text-white">
               70 Lynmont Road, <br /> Toronto ON M9V3X2 Canada
             </address>
@@ -47,7 +49,9 @@ const ContactInfo: React.FC = () => {
             </svg>
           </div>
           <div>
-            <h3 className="font-bold text-orange-500 text-lg mb-2">Telephone number</h3>
+            <h3 className="font-bold text-orange-500 text-lg mb-2">
+              Telephone number
+            </h3>
             <p className="text-white">+1 (548) 333-9453</p>
           </div>
         </div>
@@ -69,12 +73,24 @@ const ContactInfo: React.FC = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-              <path d="M22 6l-10 7L2 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path
+                d="M22 6l-10 7L2 6"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </div>
           <div>
-            <h3 className="font-bold text-orange-500 text-lg mb-2">Mail address</h3>
-            <p className="text-white">contact@zeetechusa3pl.com</p>
+            <h3 className="font-bold text-orange-500 text-lg mb-2">
+              Mail address
+            </h3>
+            <a
+              href="mailto:contact@zeetechusa3pl.com"
+              className="text-white"
+            >
+              contact@zeetechusa3pl.com
+            </a>
           </div>
         </div>
       </div>
