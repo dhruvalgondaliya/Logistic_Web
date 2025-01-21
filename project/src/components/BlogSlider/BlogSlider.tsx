@@ -53,7 +53,7 @@ const BlogSlider = () => {
   useEffect(() => {
     const handleResize = () => {
       setItemsPerPage(getItemsPerPage());
-      setCurrentPage(0); // Reset to the first page on resize
+      setCurrentPage(0); 
     };
 
     window.addEventListener("resize", handleResize);
@@ -118,7 +118,7 @@ const BlogSlider = () => {
             <button
               key={index}
               onClick={() => setCurrentPage(index)}
-              className={`w-4 h-4 rounded-full transition-colors ${
+              className={`w-3 h-3 lg:w-4 lg:h-4 rounded-full transition-colors ${
                 currentPage === index ? "bg-orange-500" : "bg-gray-300"
               }`}
               aria-label={`Go to page ${index + 1}`}

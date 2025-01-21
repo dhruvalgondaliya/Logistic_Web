@@ -2,15 +2,18 @@ import { ChevronRight } from "lucide-react";
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { FaAward } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 export default function AboutHero() {
-  const [content, setContent] = useState<"Our Mission" | "Our Vision" | "Our Value">("Our Mission");
+  const [content, setContent] = useState<
+    "Our Mission" | "Our Vision" | "Our Value"
+  >("Our Mission");
 
   const getContent = useCallback(() => {
     const contentMap = {
       "Our Mission": `At NorthPole Gateway, our mission is to empower your business with exceptional third-party logistics (3PL) and warehousing solutions. We streamline operations, optimize supply chains, and deliver outstanding customer experiences. Our key principles include: Efficiency, Scalability, Customer-Centricity, Sustainability, Innovation.`,
       "Our Vision": `At NorthPole Gateway, our vision is to be a transformative force in the logistics industry. We envision a future where businesses thrive by leveraging our innovative solutions. Key Elements of Our Vision: Innovation, Collaboration, Global Reach, Sustainability, Customer-Centricity.`,
-      "Our Value": `At NorthPole Gateway, we are guided by a set of core values that shape our company culture and drive our commitment to excellence. Our values include: Integrity, Excellence, Collaboration, Accountability, Innovation, Sustainability.`,
+      "Our Value": `At NorthPole Gateway, we are guided by a set of core values that shape our company culture and drive our commitment to excellence. Our values include: Integrity, Excellence, Collaboration, Accountability, Innovation, Sustainability.`
     };
 
     return contentMap[content];
@@ -18,7 +21,10 @@ export default function AboutHero() {
 
   return (
     <>
-      
+      <Helmet>
+        <title>NorthPole Gateway - AboutUs</title>
+      </Helmet>
+
       <div className="relative h-[200px] sm:h-[200px] lg:h-[300px] bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden font-poppins">
         <div className="absolute inset-0">
           <img
@@ -54,10 +60,15 @@ export default function AboutHero() {
                 About Us
               </span>
               <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
-                Choose <span className="text-orange-500">NorthPole Gateway</span> As <br /> Your Trusted Logistics Partner
+                Choose{" "}
+                <span className="text-orange-500">NorthPole Gateway</span> As{" "}
+                <br /> Your Trusted Logistics Partner
               </h2>
               <p className="text-gray-800 text-lg mb-8 leading-relaxed">
-                Unlock Your Competitive Advantage with NorthPole Gateway's Premier Logistics Solutions. Experience a world of seamless operations, optimized efficiency, and comprehensive supply chain management tailored to your business needs.
+                Unlock Your Competitive Advantage with NorthPole Gateway's
+                Premier Logistics Solutions. Experience a world of seamless
+                operations, optimized efficiency, and comprehensive supply chain
+                management tailored to your business needs.
               </p>
 
               {/* Tab Buttons */}
@@ -66,9 +77,14 @@ export default function AboutHero() {
                   <button
                     key={tab}
                     className={`text-gray-700 hover:text-orange-500 pb-2 text-lg ${
-                      content === tab && "text-orange-500 border-b-2 border-orange-500"
+                      content === tab &&
+                      "text-orange-500 border-b-2 border-orange-500"
                     }`}
-                    onClick={() => setContent(tab as "Our Mission" | "Our Vision" | "Our Value")}
+                    onClick={() =>
+                      setContent(
+                        tab as "Our Mission" | "Our Vision" | "Our Value"
+                      )
+                    }
                   >
                     {tab}
                   </button>
@@ -102,7 +118,8 @@ export default function AboutHero() {
                         Best NorthPole Gateway Company
                       </h3>
                       <p className="text-sm text-gray-600">
-                        We deliver our services to the very best work, whether as an external provider.
+                        We deliver our services to the very best work, whether
+                        as an external provider.
                       </p>
                     </div>
                   </div>

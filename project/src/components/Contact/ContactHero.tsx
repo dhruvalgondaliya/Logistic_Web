@@ -1,29 +1,14 @@
 import React from "react";
 import ContactSection from "./ContactSection";
 import { ChevronRight } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 const ContactHero: React.FC = () => {
   return (
-    <>  
-      <head>
-        <meta
-          name="description"
-          content="Contact us for more information. We provide various services like Wholesale FBA Prep, Private Labeling, and more."
-        />
-        <meta
-          property="og:title"
-          content="Contact Us - Your Company Name"
-        />
-        <meta
-          property="og:description"
-          content="Get in touch with us for inquiries, support, or to learn more about our services."
-        />
-        <meta
-          property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/photo-1600880292203-757bb62b4baf%20(1).jpg?alt=media&token=c8d3af73-ba3b-4fce-832b-5f43ad25ec31"
-        />
-        
-      </head>
+    <>
+      <Helmet>
+        <title>NorthPole Gateway - ContactUs</title>
+      </Helmet>
 
       {/* Hero Section */}
       <section className="relative h-[200px] sm:h-[200px] lg:h-[300px] flex items-center justify-center text-white">

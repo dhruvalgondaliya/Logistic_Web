@@ -1,10 +1,15 @@
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import PricingSection from "./PricingSection";
+import { Helmet } from "react-helmet";
 
 function PricingHero() {
   return (
     <>
+      <Helmet>
+        <title>NorthPole Gateway - Pricing</title>
+      </Helmet>
+
       <div>
         {/* First section */}
         <div className="relative h-[200px] sm:h-[200px] lg:h-[300px] bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden">
@@ -19,8 +24,15 @@ function PricingHero() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Pricing
             </h1>
-            <div className="flex items-center text-gray-300 text-sm" aria-label="Breadcrumb navigation">
-              <Link to="/" className="hover:text-white transition-colors" aria-label="Go to homepage">
+            <div
+              className="flex items-center text-gray-300 text-sm"
+              aria-label="Breadcrumb navigation"
+            >
+              <Link
+                to="/"
+                className="hover:text-white transition-colors"
+                aria-label="Go to homepage"
+              >
                 Home
               </Link>
               <ChevronRight className="w-4 h-4 mx-2" />

@@ -3,14 +3,13 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { SkeletonLoader } from "./Loader/SkeletonLoader";
+import { Helmet } from "react-helmet";
 
 // Lazy load the sections
 const ServicesSection = lazy(() => import("./Services/ServicesSection"));
 const AboutSection = lazy(() => import("./About/AboutSection"));
 const Testimonials = lazy(() => import("./Testimonials/Testimonials"));
-const WorkProcessSection = lazy(
-  () => import("./WorkProces/WorkProcessSection")
-);
+const WorkProcessSection = lazy(() => import("./WorkProces/WorkProcessSection"));
 const FAQSection = lazy(() => import("./FAQ/FAQSection"));
 const Blog = lazy(() => import("./Blog"));
 const PricingSection = lazy(() => import("./Pricing/PricingSection"));
@@ -21,13 +20,16 @@ const GetRate = lazy(() =>
 export default function LoraicTransportation() {
   return (
     <>
+      <Helmet>
+        <title>NorthPole Gateway - Transportation Solutions</title>
+      </Helmet>
       <div className="relative bg-gradient-to-r from-teal-50 to-white overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-90"
           style={{
             backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fhomesecond.jpg?alt=media&token=620bffc8-5742-486a-b140-b14820673c70')`,
             backgroundSize: "cover",
-            backgroundPosition: "center"
+            backgroundPosition: "center",
           }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -44,21 +46,11 @@ export default function LoraicTransportation() {
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fhome3.jpg?alt=media&token=0635fe00-414a-4b90-bb14-00500d916927"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
                 alt="Cargo Ship"
                 className="rounded-lg shadow-2xl w-full h-auto opacity-75"
-                width="1200"
-                height="800"
               />
-
-              {/* Decorative Animated Circles */}
-              <div className="absolute -right-8 -bottom-8 w-40 sm:w-48 h-40 sm:h-48 animate-spin-slow">
-                <div className="absolute right-0 bottom-0 w-24 sm:w-32 h-24 sm:h-32 border-4 border-orange-500 rounded-tr-3xl"></div>
-                <div className="absolute left-0 top-0 w-24 sm:w-32 h-24 sm:h-32 border-4 border-teal-500 rounded-bl-3xl"></div>
-              </div>
             </motion.div>
 
-      
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -71,22 +63,16 @@ export default function LoraicTransportation() {
                 </span>
               </span>
 
-              {/* Main Heading */}
               <h1 className="text-2xl sm:text-4xl lg:text-4xl font-bold text-white leading-tight">
                 Secure, Scalable, and <br />
                 Seamless Warehousing Solutions
               </h1>
 
-              {/* Subheading */}
               <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white leading-tight">
                 Elevate Your Business with Innovative Management Tools
                 Discover new horizons and unlock limitless possibilities with
                 NorthPole Gateway.
               </h2>
-              {/* Supporting Paragraph */}
-              <p className="text-base sm:text-lg text-white ">
-                
-              </p>
 
               <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link
