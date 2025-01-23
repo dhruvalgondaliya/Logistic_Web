@@ -12,7 +12,7 @@ export default function FooterNewsletter() {
     e.preventDefault();
     setLoading(true);
     // EmailJS configuration
-    const serviceID = "service_4sl1kt3";
+    const serviceID = "service_xlp9o7o";
     const templateID = "template_9jtuqah";
     const userID = "sfzP8dARsTfHsyPE9";
 
