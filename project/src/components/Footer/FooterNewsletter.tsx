@@ -12,9 +12,9 @@ export default function FooterNewsletter() {
     e.preventDefault();
     setLoading(true);
     // EmailJS configuration
-    const serviceID = "service_xlp9o7o";
-    const templateID = "template_9jtuqah";
-    const userID = "sfzP8dARsTfHsyPE9";
+    const serviceID = "service_3xsbzui"; // Northpolegateway email services
+    const templateID = "template_x6up23u";   
+    const userID = "CKlwW3VmCwV9Rd_te";
 
     emailjs.send(serviceID, templateID, { email }, userID).then(
       (response) => {
