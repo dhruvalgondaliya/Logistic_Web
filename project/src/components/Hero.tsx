@@ -2,24 +2,16 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Suspense, lazy } from "react";
-import { SkeletonLoader } from "./Loader/SkeletonLoader";
 import { Helmet } from "react-helmet";
-
-// Lazy load the sections
-const ServicesSection = lazy(() => import("./Services/ServicesSection"));
-const AboutSection = lazy(() => import("./About/AboutSection"));
-const Testimonials = lazy(() => import("./Testimonials/Testimonials"));
-const WorkProcessSection = lazy(
-  () => import("./WorkProces/WorkProcessSection")
-);
-const FAQSection = lazy(() => import("./FAQ/FAQSection"));
-const Blog = lazy(() => import("./Blog"));
-const PricingSection = lazy(() => import("./Pricing/PricingSection"));
-const GetRate = lazy(() =>
-  import("./GetRate").then((module) => ({ default: module.GetRate }))
-);
-
+import ServicesSection from "./Services/ServicesSection";
+import AboutSection from "./About/AboutSection";
+import Testimonials from "./Testimonials/Testimonials";
+import WorkProcessSection from "./WorkProces/WorkProcessSection";
+import FAQSection from "./FAQ/FAQSection";
+import Blog from "./Blog";
+import PricingSection from "./Pricing/PricingSection";
+import { GetRate } from "./GetRate";
+ 
 export default function LoraicTransportation() {
   const [imageLoaded, setImageLoaded] = useState(false); // State to manage image loading
 
@@ -35,7 +27,7 @@ export default function LoraicTransportation() {
           style={{
             backgroundImage: `url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/homesecond.jpg')`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center"
           }}
         >
           {/* Optional alternative background image */}
@@ -126,31 +118,14 @@ export default function LoraicTransportation() {
         </div>
       </div>
 
-      {/* Lazy Loaded Sections with Component-Wise Skeleton Loader */}
-      <Suspense fallback={<SkeletonLoader />}>
-        <ServicesSection />
-      </Suspense>
-      <Suspense fallback={<SkeletonLoader />}>
-        <AboutSection />
-      </Suspense>
-      <Suspense fallback={<SkeletonLoader />}>
-        <Testimonials />
-      </Suspense>
-      <Suspense fallback={<SkeletonLoader />}>
-        <WorkProcessSection />
-      </Suspense>
-      <Suspense fallback={<SkeletonLoader />}>
-        <FAQSection />
-      </Suspense>
-      <Suspense fallback={<SkeletonLoader />}>
-        <Blog />
-      </Suspense>
-      <Suspense fallback={<SkeletonLoader />}>
-        <PricingSection />
-      </Suspense>
-      <Suspense fallback={<SkeletonLoader />}>
-        <GetRate />
-      </Suspense>
+      <ServicesSection />
+      <AboutSection />
+      <Testimonials />
+      <WorkProcessSection />
+      <FAQSection />
+      <Blog />
+      <PricingSection />
+      <GetRate />
     </>
   );
 }
