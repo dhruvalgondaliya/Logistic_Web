@@ -13,12 +13,12 @@ import PricingSection from "./Pricing/PricingSection";
 import { GetRate } from "./GetRate";
  
 export default function LoraicTransportation() {
-  const [imageLoaded, setImageLoaded] = useState(false); // State to manage image loading
+  const [imageLoaded, setImageLoaded] = useState(false); 
 
   return (
     <>
       <Helmet>
-        <title>NorthPole Gateway - Transportation Solutions</title>
+        <title>NorthPole Gateway - 3PL services</title>
       </Helmet>
 
       <div className="relative bg-gradient-to-r from-teal-50 to-white overflow-hidden">
@@ -30,15 +30,6 @@ export default function LoraicTransportation() {
             backgroundPosition: "center"
           }}
         >
-          {/* Optional alternative background image */}
-          {/* <div
-            className="absolute inset-0 bg-cover bg-center opacity-90"
-            style={{
-              backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fhomesecond.jpg?alt=media&token=620bffc8-5742-486a-b140-b14820673c70')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          ></div> */}
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
@@ -63,16 +54,7 @@ export default function LoraicTransportation() {
                   }`}
                   onLoad={() => setImageLoaded(true)}
                 />
-                {/* Optional alternative image */}
-                {/* <img
-                  src="https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2Fhome3.jpg?alt=media&token=0635fe00-414a-4b90-bb14-00500d916927"
-                  alt="Cargo Ship"
-                  className={`rounded-lg shadow-2xl w-full h-auto opacity-75 ${
-                    imageLoaded ? "block" : "hidden"
-                  }`}
-                  onLoad={() => setImageLoaded(true)}
-                /> */}
-              </div>
+                            </div>
 
               {/* Decorative Animated Circles */}
               <div className="absolute -right-8 -bottom-8 w-40 sm:w-48 h-40 sm:h-48 animate-spin-slow">
@@ -117,6 +99,8 @@ export default function LoraicTransportation() {
           </div>
         </div>
       </div>
+
+      {/* main other section */}
 
       <ServicesSection />
       <AboutSection />
