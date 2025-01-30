@@ -65,3 +65,17 @@
 }
 
 
+/* maps css */
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate360 50s linear infinite;
+}
