@@ -66,16 +66,15 @@
 
 
 /* maps css */
-
 @keyframes rotate360 {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
 
-.rotate-animation {
-  animation: rotate360 50s linear infinite;
+.animate-rotate {
+  animation: rotate360 59s linear infinite;
 }
