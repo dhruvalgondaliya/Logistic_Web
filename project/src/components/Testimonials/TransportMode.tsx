@@ -1,5 +1,3 @@
-
-
 interface TransportModeProps {
   image: string;
   alt: string;
