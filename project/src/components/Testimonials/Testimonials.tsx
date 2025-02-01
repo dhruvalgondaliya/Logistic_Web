@@ -8,7 +8,6 @@ const transportModes = [
   {
     image:
     "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/earth-Photoroom+(1).png",
-      // "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/testimony_map.png",
     alt: "Road Transport"
   }
 ];
@@ -51,7 +50,6 @@ export default function Testimonials() {
       style={{
         backgroundImage:
           "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/bg-h6.jpg')"
-          // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg-h6.jpg?alt=media&token=94136f7f-13dd-40e3-a836-757827503293
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
