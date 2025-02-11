@@ -32,7 +32,6 @@ const services = [
 export default function ServicesSection() {
   return (
     <section className="relative py-24 overflow-hidden">
-     {/* https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/bg3-h6.jpg?alt=media&token=d2b58599-5e50-4c2a-82ba-86e5cd7c5800 */}
       {/* new */}
       <div className="absolute inset-0">
         <div
@@ -40,7 +39,6 @@ export default function ServicesSection() {
           style={{
             backgroundImage:
               "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/ServicesHome1.webp')",
-              // https://firebasestorage.googleapis.com/v0/b/fir-crud-beb70.appspot.com/o/Northpole%2FServices1.webp?alt=media&token=5d6abf5e-16f9-4fc1-84a4-2596163d222f
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed"

@@ -47,9 +47,9 @@ const ContactHero: React.FC = () => {
           style={{
             backgroundImage: isInView
               ? "url('https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/mainsection_img.jpg')"
-              : "none", // Set background image only when in view
+              : "none", 
             filter: "brightness(0.3)",
-            transition: "background-image 0.5s ease-in-out", // Smooth transition
+            transition: "background-image 0.5s ease-in-out",
           }}
         ></div>
 

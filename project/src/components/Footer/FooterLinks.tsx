@@ -31,8 +31,8 @@ export const FooterLinks: React.FC = () => (
     <LinkSection
       title="Company Info"
       links={sections.companyInfo.map((info) => ({
-        label: info.title, // Use the 'title' property here
-        href: info.link    // Use the 'link' property here
+        label: info.title, 
+        href: info.link    
       }))}
     />
     <LinkSection

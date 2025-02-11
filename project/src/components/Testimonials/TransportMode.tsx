@@ -3,6 +3,7 @@ interface TransportModeProps {
   alt: string;
 }
 
+// this is transport section 
 export default function TransportMode({ image, alt }: TransportModeProps) {
   return (
     <div className="relative w-full h-auto pb-[100%] md:pb-0 md:h-96 lg:w-[590px]  md:w-screen">
