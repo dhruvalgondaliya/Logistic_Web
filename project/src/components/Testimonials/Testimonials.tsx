@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import TransportMode from "./TransportMode";
 import TestimonialCard from "./TestimonialCard";
+import EarthScene from "./RotatingEarth";
 
-const transportModes = [
-  {
-    image:
-      "https://northpolewarehouse.s3.ca-central-1.amazonaws.com/IMage/earth-Photoroom+(1).png",
-    alt: "Road Transport"
-  }
-];
+// const transportModes = [
+//   {
+//     image:
+//       ",
+//     alt: "Road Transport"
+//   }
+// ];
 
 const testimonials = [
   {
@@ -55,12 +55,8 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-0 items-center">
           {/* Transport Modes Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {transportModes.map((mode, index) => (
-              <TransportMode key={index} {...mode} />
-            ))}
-          </div>
-
+            <EarthScene/>
+        
           {/* Testimonials */}
           <div>
             <div className="mb-8">
