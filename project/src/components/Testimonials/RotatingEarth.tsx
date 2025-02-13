@@ -3,7 +3,8 @@ import { OrbitControls, Sphere, useTexture } from "@react-three/drei";
 import { useRef, useState } from "react";
 import * as THREE from "three";
 
-const EarthTextureURL ="https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg";
+const EarthTextureURL =
+  "https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg";
 
 function RotatingEarth({ isDragging }) {
   const earthRef = useRef<THREE.Mesh>(null);
