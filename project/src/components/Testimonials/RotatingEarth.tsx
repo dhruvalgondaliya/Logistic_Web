@@ -3,8 +3,8 @@ import { OrbitControls, Sphere, useTexture } from "@react-three/drei";
 import { useRef, useState } from "react";
 import * as THREE from "three";
 
-const EarthTextureURL =
-  "https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg";
+// img in earth
+const EarthTextureURL ="https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg";
 
 function RotatingEarth({ isDragging }) {
   const earthRef = useRef<THREE.Mesh>(null);
@@ -35,8 +35,8 @@ export default function EarthScene() {
         minWidth: "250px",
         height: "auto",
         aspectRatio: "1 / 1",
-      }}
-    >
+      }}>
+      
       <Canvas
         camera={{ position: [0, 0, 3] }}
         style={{ width: "100%", height: "100%" }}

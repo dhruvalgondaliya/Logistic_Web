@@ -18,6 +18,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   headingLevel = "h3",
 }) => {
   const HeadingTag = headingLevel; 
+
   return (
     <div className="group h-full bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       <div className="relative h-48 overflow-hidden">
