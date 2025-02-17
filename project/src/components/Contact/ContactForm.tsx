@@ -4,6 +4,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import PhoneInput, { formatPhoneNumberIntl } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
+// contact form component
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     from_name: "",
